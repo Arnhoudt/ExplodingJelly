@@ -33,9 +33,11 @@ export default class GameScene extends Phaser.Scene {
         );
       });
     }
+
     this.reload.on(`pointerdown`, () => {
       this.reload.setScale(1.1);
     });
+
     this.reload.on(`pointerup`, () => {
       this.scene.restart();
     });
