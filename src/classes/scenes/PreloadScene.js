@@ -39,21 +39,32 @@ export default class PreloadScene extends Phaser.Scene {
 
   onProgress(value) {
     console.log(`Loading: ${Math.round(value * 100)}%`);
+
     this.preloader.clear();
-    this.preloader.fillStyle(0xff0000, 1);
+    this.preloader.fillStyle(0xfdfdfd, 1);
     this.preloader.fillRect(
-      0,
+      this.game.config.width / 2 - 100,
       this.game.config.height / 2,
-      this.game.config.width * value,
-      5
+      (this.game.config.width / 3) * value,
+      8
     );
   }
 
   onComplete() {
     this.preloader.destroy();
+  }
+
+  completed() {
     this.scene.start(`start`);
   }
 
-  create() {}
+  create() {
+    this.add.image(
+      this.sys.game.config.width / 2,
+      this.sys.game.config.height / 2,
+      `player1`
+    );
+    this.time.delayedCall(1200, this.completed, [], this);
+  }
   update() {}
 }

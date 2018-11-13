@@ -30,6 +30,7 @@ export default class StartScene extends Phaser.Scene {
     });
     this.start.on('pointerup', () => {
       this.scene.start(`game`);
+      this.start.setScale(1);
     });
   }
 }
