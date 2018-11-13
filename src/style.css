@@ -1,0 +1,28 @@
+@import './css/reset.css';
+@import './css/vars.css';
+@import './css/header.css';
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+
+/* stylelint-disable */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* stylelint-enable */
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
