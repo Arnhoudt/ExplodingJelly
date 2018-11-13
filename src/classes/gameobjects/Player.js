@@ -8,6 +8,7 @@ export default class Player {
   play() {
     this.active = true;
   }
+
   standby() {
     this.active = false;
   }

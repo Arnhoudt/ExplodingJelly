@@ -18,6 +18,7 @@ export default class PreloadScene extends Phaser.Scene {
       key: `preload`
     });
   }
+
   preload() {
     this.preloader = this.add.graphics();
     this.load.on(`progress`, this.onProgress, this);
@@ -46,7 +47,7 @@ export default class PreloadScene extends Phaser.Scene {
       this.game.config.width / 2 - 100,
       this.game.config.height / 2,
       (this.game.config.width / 3) * value,
-      8
+      6
     );
   }
 
@@ -66,5 +67,6 @@ export default class PreloadScene extends Phaser.Scene {
     );
     this.time.delayedCall(1200, this.completed, [], this);
   }
+
   update() {}
 }

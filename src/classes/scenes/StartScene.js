@@ -4,24 +4,14 @@ export default class StartScene extends Phaser.Scene {
       key: `start`
     });
   }
-  init() {
-    this.start = false;
-  }
-  preload() {}
-  create() {
-    this.add.image(
-      this.sys.game.config.width / 2,
-      this.sys.game.config.height / 2,
-      `bg`
-    );
 
-    this.start = this.add
-      .sprite(
-        this.sys.game.config.width / 2,
-        this.sys.game.config.height / 2 + 250,
-        `start`
-      )
-      .setInteractive();
+  init() {}
+
+  preload() {}
+
+  create() {
+    this.add.image(310, 410, `bg`);
+    this.start = this.add.sprite(310, 660, `start`).setInteractive();
   }
 
   update() {

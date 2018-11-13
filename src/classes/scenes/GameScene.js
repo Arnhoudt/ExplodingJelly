@@ -56,7 +56,6 @@ export default class GameScene extends Phaser.Scene {
     this.add.image(160, 160, `player1`);
     this.add.image(460, 160, `player2`);
     this.reload = this.add.sprite(600, 20, `reload_game`).setInteractive();
-
     this.createVakjes();
   }
 
@@ -97,7 +96,7 @@ export default class GameScene extends Phaser.Scene {
           this.vakjes[aantalVakjes].y,
           `player1_jelly1`
         );
-        this.updatePlayer();
+        //this.updatePlayer();
       });
     }
   }
@@ -108,6 +107,7 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.reload.on(`pointerup`, () => {
+      this.reload.setScale(1);
       this.scene.restart();
     });
   }
