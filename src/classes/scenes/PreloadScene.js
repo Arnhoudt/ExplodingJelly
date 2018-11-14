@@ -3,10 +3,12 @@ import './../../assets/start.png';
 import './../../assets/bg_game.png';
 import './../../assets/vakje.png';
 import './../../assets/player1.png';
+import './../../assets/player1.json';
 import './../../assets/player1_jelly1.png';
 import './../../assets/player1_jelly2.png';
 import './../../assets/player1_jelly3.png';
 import './../../assets/player2.png';
+import './../../assets/player2.json';
 import './../../assets/player2_jelly1.png';
 import './../../assets/player2_jelly2.png';
 import './../../assets/player2_jelly3.png';
@@ -27,11 +29,19 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`start`, `./assets/start.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);
     this.load.image(`vakje`, `./assets/vakje.png`);
-    this.load.atlas('player1', './assets/player1.png', './src/assets/player1.json');
+    this.load.atlas(
+      'player1',
+      './assets/player1.png',
+      './src/assets/player1.json'
+    );
     this.load.image(`player1_jelly1`, `./assets/player1_jelly1.png`);
     this.load.image(`player1_jelly2`, `./assets/player1_jelly2.png`);
     this.load.image(`player1_jelly3`, `./assets/player1_jelly3.png`);
-    this.load.atlas('player2', './assets/player2.png', './src/assets/player2.json');
+    this.load.atlas(
+      'player2',
+      './assets/player2.png',
+      './src/assets/player2.json'
+    );
     this.load.image(`player2_jelly1`, `./assets/player2_jelly1.png`);
     this.load.image(`player2_jelly2`, `./assets/player2_jelly2.png`);
     this.load.image(`player2_jelly3`, `./assets/player2_jelly3.png`);
@@ -65,7 +75,7 @@ export default class PreloadScene extends Phaser.Scene {
       this.sys.game.config.height / 2,
       `player1`
     );
-    this.time.delayedCall(1200, this.completed, [], this);
+    this.time.delayedCall(600, this.completed, [], this);
   }
 
   update() {}

@@ -53,26 +53,45 @@ export default class GameScene extends Phaser.Scene {
         color: '#ffffff'
       }
     );
+
     this.anims.create({
-      key: 'player1',
-      frames: this.anims.generateFrameNames('player1'),
-      frameRate: 20,
-      repeat: -1 });
+      key: `player1Animatie`,
+      frames: this.anims.generateFrameNames(`player1`, {
+        prefix: `assets_`,
+        start: 900,
+        end: 989,
+        zeroPad: 0,
+        suffix: `.png`
+      }),
+      frameRate: 22,
+      repeat: - 1
+    });
     this.anims.create({
-      key: 'player2',
-      frames: this.anims.generateFrameNames('player2'),
-      frameRate:21,
-      repeat: -1});
-    this.add.sprite(160, 160, `player1`).play('player1');
-    this.add.sprite(460, 160, `player2`).play('player2');
+      key: `player2Animatie`,
+      frames: this.anims.generateFrameNames(`player2`, {
+        prefix: `assets_`,
+        start: 1000,
+        end: 1089,
+        zeroPad: 0,
+        suffix: `.png`
+      }),
+      frameRate: 23,
+      repeat: - 1
+    });
+    this.add
+      .sprite(160, 160, `player1`, `assets_900.png`)
+      .play('player1Animatie');
+    this.add
+      .sprite(460, 160, `player2`, `assets_1000.png`)
+      .play('player2Animatie');
+
     this.reload = this.add.sprite(600, 20, `reload_game`).setInteractive();
+
     this.createVakjes();
+    this.createReload();
   }
 
-  update() {
-    this.updateVakjes();
-    this.updateReload();
-  }
+  update() {}
 
   updatePlayer() {
     if (this.player2.active) {
@@ -89,29 +108,20 @@ export default class GameScene extends Phaser.Scene {
   createVakjes() {
     for (let i = 0;i < 8;i ++) {
       for (let j = 0;j < 8;j ++) {
-        this.vakjes.push(
-          (this.vakje = this.add
-            .sprite(100 + i * 60, 315 + j * 60, `vakje`)
-            .setInteractive())
-        );
+        this.vakje = this.add
+          .sprite(100 + i * 60, 315 + j * 60, `vakje`)
+          .setInteractive()
+          .on(`pointerup`, () => this.addJelly(100 + i * 60, 315 + j * 60));
       }
     }
   }
 
-  updateVakjes() {
-    for (let aantalVakjes = 0;aantalVakjes < 64;aantalVakjes ++) {
-      this.vakjes[aantalVakjes].on(`pointerup`, () => {
-        this.jelly = this.add.sprite(
-          this.vakjes[aantalVakjes].x,
-          this.vakjes[aantalVakjes].y,
-          `player1_jelly1`
-        );
-        //this.updatePlayer();
-      });
-    }
+  addJelly(x, y) {
+    this.jelly = this.add.sprite(x, y, `player1_jelly1`);
+    //this.updatePlayer();
   }
 
-  updateReload() {
+  createReload() {
     this.reload.on(`pointerdown`, () => {
       this.reload.setScale(1.1);
     });
