@@ -17,12 +17,12 @@ Als het terug aan jou is kun je kiezen om nog een jelly op het bord te plaatsen 
   Als speler kan je een spel starten door op de 'Start' knop te duwen.
   Als een speler kan je je naam invoeren als player-name in het spel.
   Er kunnen 2 tot 4 speler spelen.
-  Als een speler kan je jelly's toevoegen op het spelbord en growen als er al een jelly staat.
-  Als een speler kan ik geen jelly's plaatsen op de vakjes waar jelly's staan van de tegenstander.
+  De spelers kunnen jelly's toevoegen op het spelbord en growen als er al een jelly staat.
+  Een speler kan geen jelly's plaatsen op de vakjes waar jelly's staan van de tegenstander.
   Als een speler een zet gezet heeft wisselt de beurt naar de andere speler.
-  Als een jelly het maximum overschrijd splasht deze uit over de 4 zijvakjes.
+  Wanneer een jelly het maximum overschrijd splasht deze uit over de 4 zijvakjes.
   Als een jelly splasht over andere vakjes neemt hij de andere jelly's over die op die vakjes stonden.
-  Als een speler kan je een spel herstarten door op de 'restart' knop te drukken.
+  Eén van de spelers kan een spel herstarten door op de 'restart' knop te drukken.
   Als een speler gewonnen is word er een overwinnigsscene getoond en daar achter word het scorebord getoond.
-  Als een speler kan je het scorebord bekijken met de nieuwste veranderingen.
+  Daarachter kan je het scorebord bekijken met de nieuwste veranderingen.
 </p>
