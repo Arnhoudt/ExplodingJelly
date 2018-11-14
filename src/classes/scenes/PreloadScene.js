@@ -25,6 +25,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.preloader = this.add.graphics();
     this.load.on(`progress`, this.onProgress, this);
     this.load.on(`complete`, this.onComplete, this);
+
     this.load.image(`bg`, `./assets/bg_start.jpg`);
     this.load.image(`start`, `./assets/start.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);

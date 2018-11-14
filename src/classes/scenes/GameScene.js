@@ -1,4 +1,5 @@
 import Player from '../gameobjects/Player';
+import Jelly from '../gameobjects/Jelly';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -8,17 +9,17 @@ export default class GameScene extends Phaser.Scene {
   }
 
   init() {
-    this.vakjes = [];
+    this.jellys = [];
     this.player1 = new Player(`Fredje`);
     this.player2 = new Player(`Anton`);
-    this.playerName1 = this.add.text(125, 215, `${this.player1.name}`, {
+    this.playerName1 = this.add.text(128, 220, `${this.player1.name}`, {
       fontFamily: 'Ubuntu',
-      fontSize: 24,
+      fontSize: 22,
       color: '#000000'
     });
-    this.playerName2 = this.add.text(425, 215, `${this.player2.name}`, {
+    this.playerName2 = this.add.text(428, 220, `${this.player2.name}`, {
       fontFamily: 'Ubuntu',
-      fontSize: 24,
+      fontSize: 22,
       color: '#000000'
     });
     this.player1.play();
@@ -97,11 +98,9 @@ export default class GameScene extends Phaser.Scene {
     if (this.player2.active) {
       this.player1.play();
       this.player2.standby();
-      console.log(this.player2.name);
     } else if (this.player1.active) {
       this.player2.play();
       this.player1.standby();
-      console.log(this.player1.name);
     }
   }
 
@@ -117,8 +116,63 @@ export default class GameScene extends Phaser.Scene {
   }
 
   addJelly(x, y) {
-    this.jelly = this.add.sprite(x, y, `player1_jelly1`);
-    //this.updatePlayer();
+    if (this.player1.active) {
+      if (this.jellys.length > 0) {
+        const BreakException = {};
+
+        try {
+          this.jellys.forEach(existingJelly => {
+            if (existingJelly.get().x === x && existingJelly.get().y === y) {
+              switch (existingJelly.jelly.texture.key) {
+              case `player1_jelly1`:
+                this.add.sprite(x, y, `player1_jelly2`);
+                break;
+              case `player2_jelly1`:
+                throw BreakException;
+              }
+              throw BreakException;
+            } else {
+              this.jelly = this.add.sprite(x, y, `player1_jelly1`);
+              this.jellys.push(new Jelly(this.jelly));
+            }
+          });
+        } catch (e) {
+          if (e === BreakException) console.log(`can't`);
+        }
+      } else {
+        this.jelly = this.add.sprite(x, y, `player1_jelly1`);
+        this.jellys.push(new Jelly(this.jelly));
+      }
+    } else if (this.player2.active) {
+      if (this.jellys.length > 0) {
+        const BreakException = {};
+
+        try {
+          this.jellys.forEach(existingJelly => {
+            if (existingJelly.get().x === x && existingJelly.get().y === y) {
+              switch (existingJelly.jelly.texture.key) {
+              case `player2_jelly1`:
+                this.add.sprite(x, y, `player2_jelly2`);
+                break;
+              case `player1_jelly1`:
+                throw BreakException;
+              }
+              throw BreakException;
+            } else {
+              this.jelly = this.add.sprite(x, y, `player2_jelly1`);
+              this.jellys.push(new Jelly(this.jelly));
+            }
+          });
+        } catch (e) {
+          if (e === BreakException) console.log(`can't`);
+        }
+      } else {
+        this.jelly = this.add.sprite(x, y, `player2_jelly1`);
+        this.jellys.push(new Jelly(this.jelly));
+      }
+    }
+
+    this.updatePlayer();
   }
 
   createReload() {
