@@ -42,7 +42,7 @@ export default class PreloadScene extends Phaser.Scene {
     console.log(`Loading: ${Math.round(value * 100)}%`);
 
     this.preloader.clear();
-    this.preloader.fillStyle(0xfdfdfd, 1);
+    this.preloader.fillStyle(0xff0000, 1);
     this.preloader.fillRect(
       this.game.config.width / 2 - 100,
       this.game.config.height / 2,
