@@ -53,8 +53,18 @@ export default class GameScene extends Phaser.Scene {
         color: '#ffffff'
       }
     );
-    this.add.image(160, 160, `player1`);
-    this.add.image(460, 160, `player2`);
+    this.anims.create({
+      key: 'player1',
+      frames: this.anims.generateFrameNames('player1'),
+      frameRate: 20,
+      repeat: -1 });
+    this.anims.create({
+      key: 'player2',
+      frames: this.anims.generateFrameNames('player2'),
+      frameRate:21,
+      repeat: -1});
+    this.add.sprite(160, 160, `player1`).play('player1');
+    this.add.sprite(460, 160, `player2`).play('player2');
     this.reload = this.add.sprite(600, 20, `reload_game`).setInteractive();
     this.createVakjes();
   }
