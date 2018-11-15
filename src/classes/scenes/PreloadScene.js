@@ -1,7 +1,7 @@
 import './../../assets/bg_start.jpg';
 import './../../assets/start.png';
 import './../../assets/bg_game.png';
-import './../../assets/vakje.png';
+import './../../assets/purpleVakje.png';
 import './../../assets/redJellys.png';
 import './../../assets/redJellys.json';
 import './../../assets/redJelly1.png';
@@ -13,6 +13,7 @@ import './../../assets/purpleJelly1.png';
 import './../../assets/purpleJelly2.png';
 import './../../assets/purpleJelly3.png';
 import './../../assets/reload_game.png';
+import './../../assets/redVakje.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -29,7 +30,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`bg`, `./assets/bg_start.jpg`);
     this.load.image(`start`, `./assets/start.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);
-    this.load.image(`vakje`, `./assets/vakje.png`);
+    this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
     this.load.atlas(
       'redJellys',
       './assets/redJellys.png',
@@ -47,6 +48,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`purpleJelly2`, `./assets/purpleJelly2.png`);
     this.load.image(`purpleJelly3`, `./assets/purpleJelly3.png`);
     this.load.image(`reload_game`, `./assets/reload_game.png`);
+    this.load.image(`redVakje`, `./assets/redVakje.png`);
   }
 
   onProgress(value) {

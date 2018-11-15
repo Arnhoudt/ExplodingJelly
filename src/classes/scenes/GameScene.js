@@ -9,10 +9,12 @@ export default class GameScene extends Phaser.Scene {
   }
 
   init() {
+    this.vakjes = [];
     this.jellys = new Array(8);
     for (let i = 0;i < 8;i ++) {
       this.jellys[i] = new Array(8);
     }
+
     this.player1 = new Player(`Fredje`, `red`);
     this.player2 = new Player(`Anton`, `purple`);
     this.player1.set(`play`);
@@ -99,12 +101,19 @@ export default class GameScene extends Phaser.Scene {
 
   updatePlayer(verify) {
     if (verify === true) {
+      //voor als de speler op een verkeerde jelly druk dat de beurt niet veranderd.
       if (this.player2.active) {
         this.player1.set(`play`);
         this.player2.set(`standby`);
+        this.vakjes.forEach(vakje => {
+          vakje.setTexture(`${this.player1.color}Vakje`);
+        });
       } else if (this.player1.active) {
         this.player2.set(`play`);
         this.player1.set(`standby`);
+        this.vakjes.forEach(vakje => {
+          vakje.setTexture(`${this.player2.color}Vakje`);
+        });
       }
     }
   }
@@ -112,12 +121,14 @@ export default class GameScene extends Phaser.Scene {
   createVakjes() {
     for (let i = 0;i < 8;i ++) {
       for (let j = 0;j < 8;j ++) {
-        this.vakje = this.add
-          .sprite(100 + i * 60, 315 + j * 60, `vakje`)
-          .setInteractive()
-          .on(`pointerup`, () =>
-            this.addJelly(i, j, 100 + i * 60, 315 + j * 60)
-          );
+        this.vakjes.push(
+          this.add
+            .sprite(100 + i * 60, 315 + j * 60, `redVakje`)
+            .setInteractive()
+            .on(`pointerup`, () =>
+              this.addJelly(i, j, 100 + i * 60, 315 + j * 60)
+            )
+        );
       }
     }
   }
