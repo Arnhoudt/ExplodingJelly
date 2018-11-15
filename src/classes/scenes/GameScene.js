@@ -154,6 +154,11 @@ export default class GameScene extends Phaser.Scene {
         if (this.jellys[x][y].grow > 3) {
           console.log(`splash`);
           this.jellys[x][y] = undefined;
+
+          this.splash(x + 1, y, xPosition + 60, yPosition, player);
+          this.splash(x - 1, y, xPosition - 60, yPosition, player);
+          this.splash(x, y + 1, xPosition, yPosition + 60, player);
+          this.splash(x, y - 1, xPosition, yPosition - 60, player);
         } else {
           this.jellys[x][y].sprite = this.add.sprite(
             xPosition,
@@ -171,6 +176,43 @@ export default class GameScene extends Phaser.Scene {
         `${player.color}Jelly${this.jellys[x][y].grow}`
       );
       return true;
+    }
+  }
+
+  splash(x, y, xPosition, yPosition, player) {
+    if (x >= 0 && y >= 0 && x <= 7 && y <= 7) {
+      //voor te controleren of dat er gaan jelly buiten het scherm gaan
+      if (this.jellys[x][y] !== undefined) {
+        if (this.jellys[x][y].grow < 3) {
+          this.tokenJellys = this.jellys[x][y].grow + 1;
+          this.jellys[x][y].sprite.destroy();
+          this.jellys[x][y] = new Jelly(player.color);
+          this.jellys[x][y].color = player.color;
+          this.jellys[x][y].grow = this.tokenJellys;
+          this.jellys[x][y].sprite = this.add.sprite(
+            xPosition,
+            yPosition,
+            `${player.color}Jelly${this.jellys[x][y].grow}`
+          );
+        } else {
+          console.log(`splash2`); //voor een kettingreactie van splaches te maken
+          this.jellys[x][y].sprite.destroy();
+          this.jellys[x][y] = undefined;
+
+          this.splash(x + 1, y, xPosition + 60, yPosition, player);
+          this.splash(x - 1, y, xPosition - 60, yPosition, player);
+          this.splash(x, y + 1, xPosition, yPosition + 60, player);
+          this.splash(x, y - 1, xPosition, yPosition - 60, player);
+        }
+      } else {
+        this.jellys[x][y] = new Jelly(player.color);
+        this.jellys[x][y].color = player.color;
+        this.jellys[x][y].sprite = this.add.sprite(
+          xPosition,
+          yPosition,
+          `${player.color}Jelly${this.jellys[x][y].grow}`
+        );
+      }
     }
   }
 
