@@ -1,12 +1,19 @@
 export default class Jelly {
-  constructor(jelly) {
-    this.jelly = jelly;
-    this.x = jelly.x;
-    this.y = jelly.y;
+  constructor(color) {
+    //this.jellyManager();
+    //this.id = id;
+    this.color = color;
     this.grow = 1;
+    this.sprite;
   }
 
   get() {
-    return this.jelly;
+    return this.id;
+  }
+
+  set(parameter) {
+    if (parameter === `grow`) {
+      this.grow ++;
+    }
   }
 }

@@ -9,9 +9,14 @@ export default class GameScene extends Phaser.Scene {
   }
 
   init() {
-    this.jellys = [];
-    this.player1 = new Player(`Fredje`);
-    this.player2 = new Player(`Anton`);
+    this.jellys = new Array(8);
+    for (let i = 0;i < 8;i ++) {
+      this.jellys[i] = new Array(8);
+    }
+    this.player1 = new Player(`Fredje`, `red`);
+    this.player2 = new Player(`Anton`, `purple`);
+    this.player1.set(`play`);
+    this.player2.set(`standby`);
     this.playerName1 = this.add.text(128, 220, `${this.player1.name}`, {
       fontFamily: 'Ubuntu',
       fontSize: 22,
@@ -22,8 +27,6 @@ export default class GameScene extends Phaser.Scene {
       fontSize: 22,
       color: '#000000'
     });
-    this.player1.play();
-    this.player2.standby();
   }
 
   preload() {}
@@ -56,8 +59,8 @@ export default class GameScene extends Phaser.Scene {
     );
 
     this.anims.create({
-      key: `player1Animatie`,
-      frames: this.anims.generateFrameNames(`player1`, {
+      key: `redAnimatie`,
+      frames: this.anims.generateFrameNames(`redJellys`, {
         prefix: `assets_`,
         start: 900,
         end: 989,
@@ -68,8 +71,8 @@ export default class GameScene extends Phaser.Scene {
       repeat: - 1
     });
     this.anims.create({
-      key: `player2Animatie`,
-      frames: this.anims.generateFrameNames(`player2`, {
+      key: `purpleAnimatie`,
+      frames: this.anims.generateFrameNames(`purpleJellys`, {
         prefix: `assets_`,
         start: 1000,
         end: 1089,
@@ -80,11 +83,11 @@ export default class GameScene extends Phaser.Scene {
       repeat: - 1
     });
     this.add
-      .sprite(160, 160, `player1`, `assets_900.png`)
-      .play('player1Animatie');
+      .sprite(160, 160, `redJellys`, `assets_900.png`)
+      .play('redAnimatie');
     this.add
-      .sprite(460, 160, `player2`, `assets_1000.png`)
-      .play('player2Animatie');
+      .sprite(460, 160, `purpleJellys`, `assets_1000.png`)
+      .play('purpleAnimatie');
 
     this.reload = this.add.sprite(600, 20, `reload_game`).setInteractive();
 
@@ -94,13 +97,15 @@ export default class GameScene extends Phaser.Scene {
 
   update() {}
 
-  updatePlayer() {
-    if (this.player2.active) {
-      this.player1.play();
-      this.player2.standby();
-    } else if (this.player1.active) {
-      this.player2.play();
-      this.player1.standby();
+  updatePlayer(verify) {
+    if (verify === true) {
+      if (this.player2.active) {
+        this.player1.set(`play`);
+        this.player2.set(`standby`);
+      } else if (this.player1.active) {
+        this.player2.set(`play`);
+        this.player1.set(`standby`);
+      }
     }
   }
 
@@ -110,69 +115,63 @@ export default class GameScene extends Phaser.Scene {
         this.vakje = this.add
           .sprite(100 + i * 60, 315 + j * 60, `vakje`)
           .setInteractive()
-          .on(`pointerup`, () => this.addJelly(100 + i * 60, 315 + j * 60));
+          .on(`pointerup`, () =>
+            this.addJelly(i, j, 100 + i * 60, 315 + j * 60)
+          );
       }
     }
   }
 
-  addJelly(x, y) {
+  addJelly(x, y, xPosition, yPosition) {
     if (this.player1.active) {
-      if (this.jellys.length > 0) {
-        const BreakException = {};
-
-        try {
-          this.jellys.forEach(existingJelly => {
-            if (existingJelly.get().x === x && existingJelly.get().y === y) {
-              switch (existingJelly.jelly.texture.key) {
-              case `player1_jelly1`:
-                this.add.sprite(x, y, `player1_jelly2`);
-                break;
-              case `player2_jelly1`:
-                throw BreakException;
-              }
-              throw BreakException;
-            } else {
-              this.jelly = this.add.sprite(x, y, `player1_jelly1`);
-              this.jellys.push(new Jelly(this.jelly));
-            }
-          });
-        } catch (e) {
-          if (e === BreakException) console.log(`can't`);
-        }
-      } else {
-        this.jelly = this.add.sprite(x, y, `player1_jelly1`);
-        this.jellys.push(new Jelly(this.jelly));
-      }
+      this.verify = this.verifyPlayerMove(
+        x,
+        y,
+        xPosition,
+        yPosition,
+        this.player1
+      );
     } else if (this.player2.active) {
-      if (this.jellys.length > 0) {
-        const BreakException = {};
-
-        try {
-          this.jellys.forEach(existingJelly => {
-            if (existingJelly.get().x === x && existingJelly.get().y === y) {
-              switch (existingJelly.jelly.texture.key) {
-              case `player2_jelly1`:
-                this.add.sprite(x, y, `player2_jelly2`);
-                break;
-              case `player1_jelly1`:
-                throw BreakException;
-              }
-              throw BreakException;
-            } else {
-              this.jelly = this.add.sprite(x, y, `player2_jelly1`);
-              this.jellys.push(new Jelly(this.jelly));
-            }
-          });
-        } catch (e) {
-          if (e === BreakException) console.log(`can't`);
-        }
-      } else {
-        this.jelly = this.add.sprite(x, y, `player2_jelly1`);
-        this.jellys.push(new Jelly(this.jelly));
-      }
+      this.verify = this.verifyPlayerMove(
+        x,
+        y,
+        xPosition,
+        yPosition,
+        this.player2
+      );
     }
+    this.updatePlayer(this.verify);
+  }
 
-    this.updatePlayer();
+  verifyPlayerMove(x, y, xPosition, yPosition, player) {
+    if (this.jellys[x][y] !== undefined) {
+      if (this.jellys[x][y].color !== player.color) {
+        console.log(`wrong jelly`);
+        return false;
+      } else {
+        this.jellys[x][y].grow ++;
+        this.jellys[x][y].sprite.destroy();
+        if (this.jellys[x][y].grow > 3) {
+          console.log(`splash`);
+          this.jellys[x][y] = undefined;
+        } else {
+          this.jellys[x][y].sprite = this.add.sprite(
+            xPosition,
+            yPosition,
+            `${player.color}Jelly${this.jellys[x][y].grow}`
+          );
+        }
+        return true;
+      }
+    } else {
+      this.jellys[x][y] = new Jelly(player.color);
+      this.jellys[x][y].sprite = this.add.sprite(
+        xPosition,
+        yPosition,
+        `${player.color}Jelly${this.jellys[x][y].grow}`
+      );
+      return true;
+    }
   }
 
   createReload() {

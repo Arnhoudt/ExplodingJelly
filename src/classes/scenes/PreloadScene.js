@@ -2,16 +2,16 @@ import './../../assets/bg_start.jpg';
 import './../../assets/start.png';
 import './../../assets/bg_game.png';
 import './../../assets/vakje.png';
-import './../../assets/player1.png';
-import './../../assets/player1.json';
-import './../../assets/player1_jelly1.png';
-import './../../assets/player1_jelly2.png';
-import './../../assets/player1_jelly3.png';
-import './../../assets/player2.png';
-import './../../assets/player2.json';
-import './../../assets/player2_jelly1.png';
-import './../../assets/player2_jelly2.png';
-import './../../assets/player2_jelly3.png';
+import './../../assets/redJellys.png';
+import './../../assets/redJellys.json';
+import './../../assets/redJelly1.png';
+import './../../assets/redJelly2.png';
+import './../../assets/redJelly3.png';
+import './../../assets/purpleJellys.png';
+import './../../assets/purpleJellys.json';
+import './../../assets/purpleJelly1.png';
+import './../../assets/purpleJelly2.png';
+import './../../assets/purpleJelly3.png';
 import './../../assets/reload_game.png';
 
 export default class PreloadScene extends Phaser.Scene {
@@ -31,21 +31,21 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`bg_game`, `./assets/bg_game.png`);
     this.load.image(`vakje`, `./assets/vakje.png`);
     this.load.atlas(
-      'player1',
-      './assets/player1.png',
-      './src/assets/player1.json'
+      'redJellys',
+      './assets/redJellys.png',
+      './src/assets/redJellys.json'
     );
-    this.load.image(`player1_jelly1`, `./assets/player1_jelly1.png`);
-    this.load.image(`player1_jelly2`, `./assets/player1_jelly2.png`);
-    this.load.image(`player1_jelly3`, `./assets/player1_jelly3.png`);
+    this.load.image(`redJelly1`, `./assets/redJelly1.png`);
+    this.load.image(`redJelly2`, `./assets/redJelly2.png`);
+    this.load.image(`redJelly3`, `./assets/redJelly3.png`);
     this.load.atlas(
-      'player2',
-      './assets/player2.png',
-      './src/assets/player2.json'
+      'purpleJellys',
+      './assets/purpleJellys.png',
+      './src/assets/purpleJellys.json'
     );
-    this.load.image(`player2_jelly1`, `./assets/player2_jelly1.png`);
-    this.load.image(`player2_jelly2`, `./assets/player2_jelly2.png`);
-    this.load.image(`player2_jelly3`, `./assets/player2_jelly3.png`);
+    this.load.image(`purpleJelly1`, `./assets/purpleJelly1.png`);
+    this.load.image(`purpleJelly2`, `./assets/purpleJelly2.png`);
+    this.load.image(`purpleJelly3`, `./assets/purpleJelly3.png`);
     this.load.image(`reload_game`, `./assets/reload_game.png`);
   }
 
@@ -74,7 +74,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.add.image(
       this.sys.game.config.width / 2,
       this.sys.game.config.height / 2,
-      `player1`
+      `redJellys`
     );
     this.time.delayedCall(600, this.completed, [], this);
   }
