@@ -1,4 +1,4 @@
-import './../../assets/bg_start.jpg';
+import './../../assets/bg_start.png';
 import './../../assets/start.png';
 import './../../assets/bg_game.png';
 import './../../assets/purpleVakje.png';
@@ -14,6 +14,18 @@ import './../../assets/purpleJelly2.png';
 import './../../assets/purpleJelly3.png';
 import './../../assets/reload_game.png';
 import './../../assets/redVakje.png';
+import './../../assets/blueJelly1.png';
+import './../../assets/blueJelly2.png';
+import './../../assets/blueJelly3.png';
+import './../../assets/blueVakje.png';
+import './../../assets/orangeJelly1.png';
+import './../../assets/orangeJelly2.png';
+import './../../assets/orangeJelly3.png';
+import './../../assets/orangeVakje.png';
+import './../../assets/redJelly.png';
+import './../../assets/purpleJelly.png';
+import './../../assets/orangeJelly.png';
+import './../../assets/blueJelly.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -27,7 +39,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.on(`progress`, this.onProgress, this);
     this.load.on(`complete`, this.onComplete, this);
 
-    this.load.image(`bg`, `./assets/bg_start.jpg`);
+    this.load.image(`bg`, `./assets/bg_start.png`);
     this.load.image(`start`, `./assets/start.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);
     this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
@@ -49,6 +61,18 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`purpleJelly3`, `./assets/purpleJelly3.png`);
     this.load.image(`reload_game`, `./assets/reload_game.png`);
     this.load.image(`redVakje`, `./assets/redVakje.png`);
+    this.load.image(`blueJelly1`, `./assets/blueJelly1.png`);
+    this.load.image(`blueJelly2`, `./assets/blueJelly2.png`);
+    this.load.image(`blueJelly3`, `./assets/blueJelly3.png`);
+    this.load.image(`blueVakje`, `./assets/blueVakje.png`);
+    this.load.image(`orangeJelly1`, `./assets/orangeJelly1.png`);
+    this.load.image(`orangeJelly2`, `./assets/orangeJelly2.png`);
+    this.load.image(`orangeJelly3`, `./assets/orangeJelly3.png`);
+    this.load.image(`orangeVakje`, `./assets/orangeVakje.png`);
+    this.load.image(`redJelly`, `./assets/redJelly.png`);
+    this.load.image(`purpleJelly`, `./assets/purpleJelly.png`);
+    this.load.image(`orangeJelly`, `./assets/orangeJelly.png`);
+    this.load.image(`blueJelly`, `./assets/blueJelly.png`);
   }
 
   onProgress(value) {

@@ -10,8 +10,8 @@ export default class StartScene extends Phaser.Scene {
   preload() {}
 
   create() {
-    this.add.image(310, 410, `bg`);
-    this.start = this.add.sprite(310, 660, `start`).setInteractive();
+    this.add.image(318, 382, `bg`);
+    this.start = this.add.sprite(311, 664, `start`).setInteractive();
   }
 
   update() {

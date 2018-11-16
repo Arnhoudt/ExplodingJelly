@@ -1,5 +1,5 @@
-import Player from '../gameobjects/Player';
-import Jelly from '../gameobjects/Jelly';
+import JellyManager from '../gameobjects/JellyManager';
+import PlayerManager from '../gameobjects/PlayerManager';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -10,27 +10,18 @@ export default class GameScene extends Phaser.Scene {
 
   init() {
     this.vakjes = [];
-    this.jellys = new Array(8);
-    for (let i = 0;i < 8;i ++) {
-      this.jellys[i] = new Array(8);
-    }
-
-    this.player1 = new Player(`Fredje`, `red`);
-    this.player2 = new Player(`Anton`, `purple`);
-    this.player1.set(`play`);
-    this.player2.set(`standby`);
-    this.playerName1 = this.add.text(125, 220, `${this.player1.name}`, {
-      fontFamily: 'Ubuntu',
-      fontStyle: 'Bold',
-      fontSize: 24,
-      color: `${this.player1.color}`
-    });
-    this.playerName2 = this.add.text(425, 220, `${this.player2.name}`, {
-      fontFamily: 'Ubuntu',
-      fontStyle: 'Bold',
-      fontSize: 24,
-      color: `${this.player2.color}`
-    });
+    this.jellyManager = new JellyManager(this);
+    this.playerManager = new PlayerManager(this);
+    this.playerManager.addPlayers(
+      `Jasper`,
+      `blue`,
+      `Frederik`,
+      `red`,
+      `Jasper`,
+      `orange`,
+      `Hello`,
+      `purple`
+    );
   }
 
   preload() {}
@@ -41,18 +32,6 @@ export default class GameScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
-    this.playerScore1 = this.add.text(110, 10, `${this.player1.score}`, {
-      fontFamily: 'Ubuntu',
-      fontStyle: 'Bold',
-      fontSize: 20,
-      color: '#ffffff'
-    });
-    this.playerScore2 = this.add.text(410, 10, `${this.player2.score}`, {
-      fontFamily: 'Ubuntu',
-      fontStyle: 'Bold',
-      fontSize: 20,
-      color: '#ffffff'
-    });
 
     this.anims.create({
       key: `redAnimatie`,
@@ -78,22 +57,26 @@ export default class GameScene extends Phaser.Scene {
       frameRate: 23,
       repeat: - 1
     });
-    this.add
-      .sprite(160, 160, `redJellys`, `assets_900.png`)
-      .play('redAnimatie');
-    this.add
-      .sprite(460, 160, `purpleJellys`, `assets_1000.png`)
-      .play('purpleAnimatie');
+    // this.add
+    //   .sprite(160, 100, `redJellys`, `assets_900.png`)
+    //   .play('redAnimatie');
+    // this.add
+    //   .sprite(460, 100, `purpleJellys`, `assets_1000.png`)
+    //   .play('purpleAnimatie');
 
-    this.reload = this.add.sprite(600, 20, `reload_game`).setInteractive();
+    this.reload = this.add.sprite(590, 30, `reload_game`).setInteractive();
 
     this.createVakjes();
     this.createReload();
   }
 
   update() {
-    this.playerScore1.setText(`score ${this.player1.score}`);
-    this.playerScore2.setText(`score ${this.player2.score}`);
+    this.playerManager.playerScore1.setText(
+      `${this.playerManager.player1.score}`
+    );
+    this.playerManager.playerScore2.setText(
+      `${this.playerManager.player2.score}`
+    );
   }
 
   createVakjes() {
@@ -101,144 +84,124 @@ export default class GameScene extends Phaser.Scene {
       for (let j = 0;j < 8;j ++) {
         this.vakjes.push(
           this.add
-            .sprite(100 + i * 60, 335 + j * 60, `redVakje`)
+            .sprite(100 + i * 60, 335 + j * 60, `blueVakje`)
             .setInteractive()
             .on(`pointerup`, () =>
-              this.updateJelly(i, j, 100 + i * 60, 335 + j * 60)
+              this.updateJelly(
+                i,
+                j,
+                100 + i * 60,
+                335 + j * 60,
+                this.playerManager.player1,
+                this.playerManager.player2,
+                this.playerManager.player3,
+                this.playerManager.player4
+              )
             )
         );
       }
     }
   }
 
-  updatePlayer(verify) {
-    if (verify === true) {
-      //voor als de speler op een verkeerde jelly druk dat de beurt niet veranderd.
-      if (this.player2.active) {
-        this.player1.set(`play`);
-        this.player2.set(`standby`);
-        this.vakjes.forEach(vakje => {
-          vakje.setTexture(`${this.player1.color}Vakje`);
-        });
-      } else if (this.player1.active) {
-        this.player2.set(`play`);
-        this.player1.set(`standby`);
-        this.vakjes.forEach(vakje => {
-          vakje.setTexture(`${this.player2.color}Vakje`);
-        });
+  updateJelly(x, y, xPosition, yPosition, player1, player2, player3, player4) {
+    if (
+      player1 !== undefined &&
+      player2 !== undefined &&
+      player3 !== undefined &&
+      player4 !== undefined
+    ) {
+      if (player1.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player1
+        );
+      } else if (player2.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player2
+        );
+      } else if (player3.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player3
+        );
+      } else if (player4.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player4
+        );
       }
+      this.playerManager.updatePlayer(this.verify);
     }
-  }
-
-  updateJelly(x, y, xPosition, yPosition) {
-    if (this.player1.active) {
-      this.verify = this.verifyPlayerMove(
-        x,
-        y,
-        xPosition,
-        yPosition,
-        this.player1
-      );
-    } else if (this.player2.active) {
-      this.verify = this.verifyPlayerMove(
-        x,
-        y,
-        xPosition,
-        yPosition,
-        this.player2
-      );
-    }
-    this.updatePlayer(this.verify);
-  }
-
-  verifyPlayerMove(x, y, xPosition, yPosition, player) {
-    if (this.jellys[x][y] !== undefined) {
-      if (this.jellys[x][y].color !== player.color) {
-        console.log(`wrong jelly`);
-        return false;
-      } else {
-        this.jellys[x][y].grow ++;
-        if (x === 0 || y === 0 || x === 7 || y === 7) {
-          //controle rand
-          if (this.jellys[x][y].grow > 2) {
-            this.executeSplash(x, y, xPosition, yPosition, player);
-          } else {
-            this.changeJelly(x, y, xPosition, yPosition, player);
-          }
-          return true;
-        } else {
-          if (this.jellys[x][y].grow > 3) {
-            this.executeSplash(x, y, xPosition, yPosition, player);
-          } else {
-            this.changeJelly(x, y, xPosition, yPosition, player);
-          }
-          return true;
-        }
+    if (
+      player1 !== undefined &&
+      player2 !== undefined &&
+      player3 !== undefined &&
+      player4 === undefined
+    ) {
+      if (player1.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player1
+        );
+      } else if (player2.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player2
+        );
+      } else if (player3.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player3
+        );
       }
-    } else {
-      this.addJelly(x, y, xPosition, yPosition, player);
-      return true;
+      this.playerManager.updatePlayer(this.verify);
     }
-  }
-
-  addJelly(x, y, xPosition, yPosition, player) {
-    this.jellys[x][y] = new Jelly(player.color);
-    this.jellys[x][y].color = player.color;
-    this.jellys[x][y].sprite = this.add.sprite(
-      xPosition,
-      yPosition,
-      `${player.color}Jelly${this.jellys[x][y].grow}`
-    );
-    player.score ++;
-  }
-
-  changeJelly(x, y, xPosition, yPosition, player) {
-    this.jellys[x][y].sprite.destroy();
-    this.jellys[x][y].sprite = this.add.sprite(
-      xPosition,
-      yPosition,
-      `${player.color}Jelly${this.jellys[x][y].grow}`
-    );
-  }
-
-  executeSplash(x, y, xPosition, yPosition, player) {
-    this.jellys[x][y].sprite.destroy();
-    this.jellys[x][y] = undefined;
-    this.splash(x + 1, y, xPosition + 60, yPosition, player);
-    this.splash(x - 1, y, xPosition - 60, yPosition, player);
-    this.splash(x, y + 1, xPosition, yPosition + 60, player);
-    this.splash(x, y - 1, xPosition, yPosition - 60, player);
-  }
-
-  splash(x, y, xPosition, yPosition, player) {
-    if (x >= 0 && y >= 0 && x <= 7 && y <= 7) {
-      //voor te controleren of dat er gaan jelly buiten het scherm gaan
-      if (this.jellys[x][y] !== undefined) {
-        if (x === 0 || y === 0 || x === 7 || y === 7) {
-          //controle rand
-          if (this.jellys[x][y].grow === 2) {
-            this.executeSplash(x, y, xPosition, yPosition, player);
-          }
-        } else {
-          if (this.jellys[x][y].grow < 3) {
-            this.tokenJellys = this.jellys[x][y].grow + 1;
-            this.jellys[x][y].sprite.destroy();
-            this.jellys[x][y] = new Jelly(player.color);
-            this.jellys[x][y].color = player.color;
-            this.jellys[x][y].grow = this.tokenJellys;
-            this.jellys[x][y].sprite = this.add.sprite(
-              xPosition,
-              yPosition,
-              `${player.color}Jelly${this.jellys[x][y].grow}`
-            );
-          } else {
-            player.score ++;
-            this.executeSplash(x, y, xPosition, yPosition, player);
-          }
-        }
-      } else {
-        this.addJelly(x, y, xPosition, yPosition, player);
+    if (
+      player1 !== undefined &&
+      player2 !== undefined &&
+      player3 === undefined &&
+      player4 === undefined
+    ) {
+      if (player1.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player1
+        );
+      } else if (player2.active) {
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player2
+        );
       }
+      this.playerManager.updatePlayer(this.verify);
     }
   }
 

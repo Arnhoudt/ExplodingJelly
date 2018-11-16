@@ -4,14 +4,4 @@ export default class Jelly {
     this.grow = 1;
     this.sprite;
   }
-
-  get() {
-    return this.id;
-  }
-
-  set(parameter) {
-    if (parameter === `grow`) {
-      this.grow ++;
-    }
-  }
 }
