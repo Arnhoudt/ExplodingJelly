@@ -19,15 +19,17 @@ export default class GameScene extends Phaser.Scene {
     this.player2 = new Player(`Anton`, `purple`);
     this.player1.set(`play`);
     this.player2.set(`standby`);
-    this.playerName1 = this.add.text(128, 220, `${this.player1.name}`, {
+    this.playerName1 = this.add.text(125, 220, `${this.player1.name}`, {
       fontFamily: 'Ubuntu',
-      fontSize: 22,
-      color: '#000000'
+      fontStyle: 'Bold',
+      fontSize: 24,
+      color: `${this.player1.color}`
     });
-    this.playerName2 = this.add.text(428, 220, `${this.player2.name}`, {
+    this.playerName2 = this.add.text(425, 220, `${this.player2.name}`, {
       fontFamily: 'Ubuntu',
-      fontSize: 22,
-      color: '#000000'
+      fontStyle: 'Bold',
+      fontSize: 24,
+      color: `${this.player2.color}`
     });
   }
 
@@ -39,26 +41,18 @@ export default class GameScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
-    this.playerScore1 = this.add.text(
-      130,
-      10,
-      `${this.player1.score} jelly's`,
-      {
-        fontFamily: 'Ubuntu',
-        fontSize: 18,
-        color: '#ffffff'
-      }
-    );
-    this.playerScore2 = this.add.text(
-      430,
-      10,
-      `${this.player2.score} jelly's`,
-      {
-        fontFamily: 'Ubuntu',
-        fontSize: 18,
-        color: '#ffffff'
-      }
-    );
+    this.playerScore1 = this.add.text(110, 10, `${this.player1.score}`, {
+      fontFamily: 'Ubuntu',
+      fontStyle: 'Bold',
+      fontSize: 20,
+      color: '#ffffff'
+    });
+    this.playerScore2 = this.add.text(410, 10, `${this.player2.score}`, {
+      fontFamily: 'Ubuntu',
+      fontStyle: 'Bold',
+      fontSize: 20,
+      color: '#ffffff'
+    });
 
     this.anims.create({
       key: `redAnimatie`,
@@ -97,7 +91,25 @@ export default class GameScene extends Phaser.Scene {
     this.createReload();
   }
 
-  update() {}
+  update() {
+    this.playerScore1.setText(`score ${this.player1.score}`);
+    this.playerScore2.setText(`score ${this.player2.score}`);
+  }
+
+  createVakjes() {
+    for (let i = 0;i < 8;i ++) {
+      for (let j = 0;j < 8;j ++) {
+        this.vakjes.push(
+          this.add
+            .sprite(100 + i * 60, 335 + j * 60, `redVakje`)
+            .setInteractive()
+            .on(`pointerup`, () =>
+              this.updateJelly(i, j, 100 + i * 60, 335 + j * 60)
+            )
+        );
+      }
+    }
+  }
 
   updatePlayer(verify) {
     if (verify === true) {
@@ -118,22 +130,7 @@ export default class GameScene extends Phaser.Scene {
     }
   }
 
-  createVakjes() {
-    for (let i = 0;i < 8;i ++) {
-      for (let j = 0;j < 8;j ++) {
-        this.vakjes.push(
-          this.add
-            .sprite(100 + i * 60, 315 + j * 60, `redVakje`)
-            .setInteractive()
-            .on(`pointerup`, () =>
-              this.addJelly(i, j, 100 + i * 60, 315 + j * 60)
-            )
-        );
-      }
-    }
-  }
-
-  addJelly(x, y, xPosition, yPosition) {
+  updateJelly(x, y, xPosition, yPosition) {
     if (this.player1.active) {
       this.verify = this.verifyPlayerMove(
         x,
@@ -161,68 +158,86 @@ export default class GameScene extends Phaser.Scene {
         return false;
       } else {
         this.jellys[x][y].grow ++;
-        this.jellys[x][y].sprite.destroy();
-        if (this.jellys[x][y].grow > 3) {
-          console.log(`splash`);
-          this.jellys[x][y] = undefined;
-
-          this.splash(x + 1, y, xPosition + 60, yPosition, player);
-          this.splash(x - 1, y, xPosition - 60, yPosition, player);
-          this.splash(x, y + 1, xPosition, yPosition + 60, player);
-          this.splash(x, y - 1, xPosition, yPosition - 60, player);
+        if (x === 0 || y === 0 || x === 7 || y === 7) {
+          //controle rand
+          if (this.jellys[x][y].grow > 2) {
+            this.executeSplash(x, y, xPosition, yPosition, player);
+          } else {
+            this.changeJelly(x, y, xPosition, yPosition, player);
+          }
+          return true;
         } else {
-          this.jellys[x][y].sprite = this.add.sprite(
-            xPosition,
-            yPosition,
-            `${player.color}Jelly${this.jellys[x][y].grow}`
-          );
+          if (this.jellys[x][y].grow > 3) {
+            this.executeSplash(x, y, xPosition, yPosition, player);
+          } else {
+            this.changeJelly(x, y, xPosition, yPosition, player);
+          }
+          return true;
         }
-        return true;
       }
     } else {
-      this.jellys[x][y] = new Jelly(player.color);
-      this.jellys[x][y].sprite = this.add.sprite(
-        xPosition,
-        yPosition,
-        `${player.color}Jelly${this.jellys[x][y].grow}`
-      );
+      this.addJelly(x, y, xPosition, yPosition, player);
       return true;
     }
+  }
+
+  addJelly(x, y, xPosition, yPosition, player) {
+    this.jellys[x][y] = new Jelly(player.color);
+    this.jellys[x][y].color = player.color;
+    this.jellys[x][y].sprite = this.add.sprite(
+      xPosition,
+      yPosition,
+      `${player.color}Jelly${this.jellys[x][y].grow}`
+    );
+    player.score ++;
+  }
+
+  changeJelly(x, y, xPosition, yPosition, player) {
+    this.jellys[x][y].sprite.destroy();
+    this.jellys[x][y].sprite = this.add.sprite(
+      xPosition,
+      yPosition,
+      `${player.color}Jelly${this.jellys[x][y].grow}`
+    );
+  }
+
+  executeSplash(x, y, xPosition, yPosition, player) {
+    this.jellys[x][y].sprite.destroy();
+    this.jellys[x][y] = undefined;
+    this.splash(x + 1, y, xPosition + 60, yPosition, player);
+    this.splash(x - 1, y, xPosition - 60, yPosition, player);
+    this.splash(x, y + 1, xPosition, yPosition + 60, player);
+    this.splash(x, y - 1, xPosition, yPosition - 60, player);
   }
 
   splash(x, y, xPosition, yPosition, player) {
     if (x >= 0 && y >= 0 && x <= 7 && y <= 7) {
       //voor te controleren of dat er gaan jelly buiten het scherm gaan
       if (this.jellys[x][y] !== undefined) {
-        if (this.jellys[x][y].grow < 3) {
-          this.tokenJellys = this.jellys[x][y].grow + 1;
-          this.jellys[x][y].sprite.destroy();
-          this.jellys[x][y] = new Jelly(player.color);
-          this.jellys[x][y].color = player.color;
-          this.jellys[x][y].grow = this.tokenJellys;
-          this.jellys[x][y].sprite = this.add.sprite(
-            xPosition,
-            yPosition,
-            `${player.color}Jelly${this.jellys[x][y].grow}`
-          );
+        if (x === 0 || y === 0 || x === 7 || y === 7) {
+          //controle rand
+          if (this.jellys[x][y].grow === 2) {
+            this.executeSplash(x, y, xPosition, yPosition, player);
+          }
         } else {
-          console.log(`splash2`); //voor een kettingreactie van splaches te maken
-          this.jellys[x][y].sprite.destroy();
-          this.jellys[x][y] = undefined;
-
-          this.splash(x + 1, y, xPosition + 60, yPosition, player);
-          this.splash(x - 1, y, xPosition - 60, yPosition, player);
-          this.splash(x, y + 1, xPosition, yPosition + 60, player);
-          this.splash(x, y - 1, xPosition, yPosition - 60, player);
+          if (this.jellys[x][y].grow < 3) {
+            this.tokenJellys = this.jellys[x][y].grow + 1;
+            this.jellys[x][y].sprite.destroy();
+            this.jellys[x][y] = new Jelly(player.color);
+            this.jellys[x][y].color = player.color;
+            this.jellys[x][y].grow = this.tokenJellys;
+            this.jellys[x][y].sprite = this.add.sprite(
+              xPosition,
+              yPosition,
+              `${player.color}Jelly${this.jellys[x][y].grow}`
+            );
+          } else {
+            player.score ++;
+            this.executeSplash(x, y, xPosition, yPosition, player);
+          }
         }
       } else {
-        this.jellys[x][y] = new Jelly(player.color);
-        this.jellys[x][y].color = player.color;
-        this.jellys[x][y].sprite = this.add.sprite(
-          xPosition,
-          yPosition,
-          `${player.color}Jelly${this.jellys[x][y].grow}`
-        );
+        this.addJelly(x, y, xPosition, yPosition, player);
       }
     }
   }
