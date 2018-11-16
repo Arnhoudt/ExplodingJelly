@@ -1,4 +1,7 @@
 import './../../assets/bg_start.png';
+import './../../assets/back.png';
+import './../../assets/bg_choose.png';
+import './../../assets/play.png';
 import './../../assets/start.png';
 import './../../assets/bg_game.png';
 import './../../assets/purpleVakje.png';
@@ -40,7 +43,10 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.on(`complete`, this.onComplete, this);
 
     this.load.image(`bg`, `./assets/bg_start.png`);
+    this.load.image(`bg_choose`, `./assets/bg_choose.png`);
+    this.load.image(`play`, `./assets/play.png`);
     this.load.image(`start`, `./assets/start.png`);
+    this.load.image(`back`, `./assets/back.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);
     this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
     this.load.atlas(
@@ -81,29 +87,19 @@ export default class PreloadScene extends Phaser.Scene {
     this.preloader.clear();
     this.preloader.fillStyle(0xff0000, 1);
     this.preloader.fillRect(
-      this.game.config.width / 2 - 100,
+      this.game.config.width / 2 - 150,
       this.game.config.height / 2,
-      (this.game.config.width / 3) * value,
-      6
+      (this.game.config.width / 2) * value,
+      8
     );
   }
 
   onComplete() {
     this.preloader.destroy();
-  }
-
-  completed() {
     this.scene.start(`start`);
   }
 
-  create() {
-    this.add.image(
-      this.sys.game.config.width / 2,
-      this.sys.game.config.height / 2,
-      `redJellys`
-    );
-    this.time.delayedCall(600, this.completed, [], this);
-  }
+  create() {}
 
   update() {}
 }

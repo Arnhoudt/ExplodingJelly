@@ -14,13 +14,13 @@ export default class GameScene extends Phaser.Scene {
     this.playerManager = new PlayerManager(this);
     this.playerManager.addPlayers(
       `Jasper`,
-      `blue`,
-      `Frederik`,
       `red`,
-      `Jasper`,
+      `Frederik`,
       `orange`,
-      `Hello`,
-      `purple`
+      `Anton`,
+      `purple`,
+      undefined,
+      undefined
     );
   }
 
@@ -64,10 +64,9 @@ export default class GameScene extends Phaser.Scene {
     //   .sprite(460, 100, `purpleJellys`, `assets_1000.png`)
     //   .play('purpleAnimatie');
 
-    this.reload = this.add.sprite(590, 30, `reload_game`).setInteractive();
-
     this.createVakjes();
     this.createReload();
+    this.createBack();
   }
 
   update() {
@@ -77,6 +76,16 @@ export default class GameScene extends Phaser.Scene {
     this.playerManager.playerScore2.setText(
       `${this.playerManager.player2.score}`
     );
+    if (this.playerManager.player3 !== undefined) {
+      this.playerManager.playerScore3.setText(
+        `${this.playerManager.player3.score}`
+      );
+    }
+    if (this.playerManager.player4 !== undefined) {
+      this.playerManager.playerScore4.setText(
+        `${this.playerManager.player4.score}`
+      );
+    }
   }
 
   createVakjes() {
@@ -84,7 +93,7 @@ export default class GameScene extends Phaser.Scene {
       for (let j = 0;j < 8;j ++) {
         this.vakjes.push(
           this.add
-            .sprite(100 + i * 60, 335 + j * 60, `blueVakje`)
+            .sprite(100 + i * 60, 335 + j * 60, `redVakje`)
             .setInteractive()
             .on(`pointerup`, () =>
               this.updateJelly(
@@ -206,6 +215,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   createReload() {
+    this.reload = this.add.sprite(590, 30, `reload_game`).setInteractive();
     this.reload.on(`pointerdown`, () => {
       this.reload.setScale(1.1);
     });
@@ -213,6 +223,18 @@ export default class GameScene extends Phaser.Scene {
     this.reload.on(`pointerup`, () => {
       this.reload.setScale(1);
       this.scene.restart();
+    });
+  }
+
+  createBack() {
+    this.back = this.add.sprite(30, 30, `back`).setInteractive();
+    this.back.on(`pointerdown`, () => {
+      this.back.setScale(1.1);
+    });
+
+    this.back.on(`pointerup`, () => {
+      this.back.setScale(1);
+      this.scene.start(`choose`);
     });
   }
 }

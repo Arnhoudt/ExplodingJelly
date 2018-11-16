@@ -39,33 +39,33 @@ export default class PlayerManager {
       player3 !== undefined &&
       player4 !== undefined
     ) {
-      this.gameScene.add.sprite(80, 100, `${color1}Jelly`);
-      this.gameScene.add.sprite(235, 100, `${color2}Jelly`);
-      this.gameScene.add.sprite(390, 100, `${color3}Jelly`);
-      this.gameScene.add.sprite(540, 100, `${color4}Jelly`);
+      this.gameScene.add.sprite(80, 125, `${color1}Jelly`);
+      this.gameScene.add.sprite(235, 125, `${color2}Jelly`);
+      this.gameScene.add.sprite(390, 125, `${color3}Jelly`);
+      this.gameScene.add.sprite(540, 125, `${color4}Jelly`);
       this.gameScene.add
-        .text(80, 160, `${this.player1.name}`, this.textConfig(this.player1))
+        .text(80, 185, `${this.player1.name}`, this.textConfig(this.player1))
         .setOrigin(0.5, 0);
       this.gameScene.add
-        .text(235, 160, `${this.player2.name}`, this.textConfig(this.player2))
+        .text(235, 185, `${this.player2.name}`, this.textConfig(this.player2))
         .setOrigin(0.5, 0);
       this.gameScene.add
-        .text(390, 160, `${this.player3.name}`, this.textConfig(this.player3))
+        .text(390, 185, `${this.player3.name}`, this.textConfig(this.player3))
         .setOrigin(0.5, 0);
       this.gameScene.add
-        .text(540, 160, `${this.player4.name}`, this.textConfig(this.player4))
+        .text(540, 185, `${this.player4.name}`, this.textConfig(this.player4))
         .setOrigin(0.5, 0);
       this.playerScore1 = this.gameScene.add
-        .text(80, 190, `${this.player1.score}`, this.textConfig(this.player1))
+        .text(80, 220, `${this.player1.score}`, this.textConfig(this.player1))
         .setOrigin(0.5, 0);
       this.playerScore2 = this.gameScene.add
-        .text(235, 190, `${this.player2.score}`, this.textConfig(this.player2))
+        .text(235, 220, `${this.player2.score}`, this.textConfig(this.player2))
         .setOrigin(0.5, 0);
       this.playerScore3 = this.gameScene.add
-        .text(390, 190, `${this.player3.score}`, this.textConfig(this.player3))
+        .text(390, 220, `${this.player3.score}`, this.textConfig(this.player3))
         .setOrigin(0.5, 0);
       this.playerScore4 = this.gameScene.add
-        .text(540, 190, `${this.player4.score}`, this.textConfig(this.player4))
+        .text(540, 220, `${this.player4.score}`, this.textConfig(this.player4))
         .setOrigin(0.5, 0);
     }
     if (
@@ -74,26 +74,26 @@ export default class PlayerManager {
       player3 !== undefined &&
       player4 === undefined
     ) {
-      this.gameScene.add.sprite(125, 100, `${color1}Jelly`);
-      this.gameScene.add.sprite(310, 100, `${color2}Jelly`);
-      this.gameScene.add.sprite(495, 100, `${color3}Jelly`);
+      this.gameScene.add.sprite(125, 125, `${color1}Jelly`);
+      this.gameScene.add.sprite(310, 125, `${color2}Jelly`);
+      this.gameScene.add.sprite(495, 125, `${color3}Jelly`);
       this.gameScene.add
-        .text(125, 160, `${this.player1.name}`, this.textConfig(this.player1))
+        .text(125, 185, `${this.player1.name}`, this.textConfig(this.player1))
         .setOrigin(0.5, 0);
       this.gameScene.add
-        .text(310, 160, `${this.player2.name}`, this.textConfig(this.player2))
+        .text(310, 185, `${this.player2.name}`, this.textConfig(this.player2))
         .setOrigin(0.5, 0);
       this.gameScene.add
-        .text(495, 160, `${this.player3.name}`, this.textConfig(this.player3))
+        .text(495, 185, `${this.player3.name}`, this.textConfig(this.player3))
         .setOrigin(0.5, 0);
       this.playerScore1 = this.gameScene.add
-        .text(125, 190, `${this.player1.score}`, this.textConfig(this.player1))
+        .text(125, 220, `${this.player1.score}`, this.textConfig(this.player1))
         .setOrigin(0.5, 0);
       this.playerScore2 = this.gameScene.add
-        .text(310, 190, `${this.player2.score}`, this.textConfig(this.player2))
+        .text(310, 220, `${this.player2.score}`, this.textConfig(this.player2))
         .setOrigin(0.5, 0);
       this.playerScore3 = this.gameScene.add
-        .text(495, 190, `${this.player3.score}`, this.textConfig(this.player3))
+        .text(495, 220, `${this.player3.score}`, this.textConfig(this.player3))
         .setOrigin(0.5, 0);
     }
     if (
@@ -103,19 +103,19 @@ export default class PlayerManager {
       player4 === undefined
     ) {
       console.log(player1.color);
-      this.gameScene.add.sprite(150, 100, `${color1}Jelly`);
-      this.gameScene.add.sprite(470, 100, `${color2}Jelly`);
+      this.gameScene.add.sprite(150, 125, `${color1}Jelly`);
+      this.gameScene.add.sprite(470, 125, `${color2}Jelly`);
       this.gameScene.add
-        .text(150, 160, `${this.player1.name}`, this.textConfig(this.player1))
+        .text(150, 185, `${this.player1.name}`, this.textConfig(this.player1))
         .setOrigin(0.5, 0);
       this.gameScene.add
-        .text(470, 160, `${this.player2.name}`, this.textConfig(this.player2))
+        .text(470, 185, `${this.player2.name}`, this.textConfig(this.player2))
         .setOrigin(0.5, 0);
       this.playerScore1 = this.gameScene.add
-        .text(150, 190, `${this.player1.score}`, this.textConfig(this.player1))
+        .text(150, 220, `${this.player1.score}`, this.textConfig(this.player1))
         .setOrigin(0.5, 0);
       this.playerScore2 = this.gameScene.add
-        .text(470, 190, `${this.player2.score}`, this.textConfig(this.player2))
+        .text(470, 220, `${this.player2.score}`, this.textConfig(this.player2))
         .setOrigin(0.5, 0);
     }
   }
