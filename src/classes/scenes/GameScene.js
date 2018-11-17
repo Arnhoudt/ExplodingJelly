@@ -8,19 +8,20 @@ export default class GameScene extends Phaser.Scene {
     });
   }
 
-  init() {
+  init(data) {
     this.vakjes = [];
     this.jellyManager = new JellyManager(this);
     this.playerManager = new PlayerManager(this);
+
     this.playerManager.addPlayers(
-      `Jasper`,
-      `red`,
-      `Frederik`,
-      `orange`,
-      `Anton`,
-      `purple`,
-      undefined,
-      undefined
+      data.name1,
+      data.color1,
+      data.name2,
+      data.color2,
+      data.name3,
+      data.color3,
+      data.name4,
+      data.color4
     );
   }
 

@@ -29,6 +29,10 @@ import './../../assets/redJelly.png';
 import './../../assets/purpleJelly.png';
 import './../../assets/orangeJelly.png';
 import './../../assets/blueJelly.png';
+import './../../assets/redTextEntry.png';
+import './../../assets/orangeTextEntry.png';
+import './../../assets/purpleTextEntry.png';
+import './../../assets/blueTextEntry.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -79,6 +83,10 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`purpleJelly`, `./assets/purpleJelly.png`);
     this.load.image(`orangeJelly`, `./assets/orangeJelly.png`);
     this.load.image(`blueJelly`, `./assets/blueJelly.png`);
+    this.load.image(`redTextEntry`, `./assets/redTextEntry.png`);
+    this.load.image(`orangeTextEntry`, `./assets/orangeTextEntry.png`);
+    this.load.image(`purpleTextEntry`, `./assets/purpleTextEntry.png`);
+    this.load.image(`blueTextEntry`, `./assets/blueTextEntry.png`);
   }
 
   onProgress(value) {
