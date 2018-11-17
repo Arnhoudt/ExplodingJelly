@@ -1,4 +1,4 @@
-export default class StartScene extends Phaser.Scene {
+export default class ChooseScene extends Phaser.Scene {
   constructor() {
     super({
       key: `choose`
@@ -47,10 +47,12 @@ export default class StartScene extends Phaser.Scene {
         this.textEntryRed.destroy();
         this.textEntryRed = undefined;
       } else {
-        this.textEntryRed = this.add.text(80, 432, '', {
-          font: '30px Ubuntu',
-          fill: `red`
-        });
+        this.textEntryRed = this.add
+          .text(170, 432, '', {
+            font: '30px Ubuntu',
+            fill: `red`
+          })
+          .setOrigin(0.5, 0);
         this.input.keyboard.off(`keydown`);
         this.updateText(this.textEntryRed);
       }
@@ -64,10 +66,12 @@ export default class StartScene extends Phaser.Scene {
         this.textEntryOrange.destroy();
         this.textEntryOrange = undefined;
       } else {
-        this.textEntryOrange = this.add.text(360, 432, '', {
-          font: '30px Ubuntu',
-          fill: `orange`
-        });
+        this.textEntryOrange = this.add
+          .text(450, 432, '', {
+            font: '30px Ubuntu',
+            fill: `orange`
+          })
+          .setOrigin(0.5, 0);
         this.input.keyboard.off(`keydown`);
         this.updateText(this.textEntryOrange);
       }
@@ -81,10 +85,12 @@ export default class StartScene extends Phaser.Scene {
         this.textEntryPurple.destroy();
         this.textEntryPurple = undefined;
       } else {
-        this.textEntryPurple = this.add.text(80, 637, '', {
-          font: '30px Ubuntu',
-          fill: `purple`
-        });
+        this.textEntryPurple = this.add
+          .text(170, 637, '', {
+            font: '30px Ubuntu',
+            fill: `purple`
+          })
+          .setOrigin(0.5, 0);
         this.input.keyboard.off(`keydown`);
         this.updateText(this.textEntryPurple);
       }
@@ -98,10 +104,12 @@ export default class StartScene extends Phaser.Scene {
         this.textEntryBlue.destroy();
         this.textEntryBlue = undefined;
       } else {
-        this.textEntryBlue = this.add.text(360, 637, '', {
-          font: '30px Ubuntu',
-          fill: `blue`
-        });
+        this.textEntryBlue = this.add
+          .text(450, 637, '', {
+            font: '30px Ubuntu',
+            fill: `blue`
+          })
+          .setOrigin(0.5, 0);
         this.input.keyboard.off(`keydown`);
         this.updateText(this.textEntryBlue);
       }

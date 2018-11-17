@@ -4,6 +4,8 @@ import './../../assets/bg_choose.png';
 import './../../assets/play.png';
 import './../../assets/start.png';
 import './../../assets/bg_game.png';
+import './../../assets/bg_win.png';
+import './../../assets/goToStart.png';
 import './../../assets/purpleVakje.png';
 import './../../assets/redJellys.png';
 import './../../assets/redJellys.json';
@@ -52,6 +54,8 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`start`, `./assets/start.png`);
     this.load.image(`back`, `./assets/back.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);
+    this.load.image(`bg_win`, `./assets/bg_win.png`);
+    this.load.image(`goToStart`, `./assets/goToStart.png`);
     this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
     this.load.atlas(
       'redJellys',

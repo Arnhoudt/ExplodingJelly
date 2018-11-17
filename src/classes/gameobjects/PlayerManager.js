@@ -102,7 +102,6 @@ export default class PlayerManager {
       player3 === undefined &&
       player4 === undefined
     ) {
-      console.log(player1.color);
       this.gameScene.add.sprite(150, 125, `${color1}Jelly`);
       this.gameScene.add.sprite(470, 125, `${color2}Jelly`);
       this.gameScene.add

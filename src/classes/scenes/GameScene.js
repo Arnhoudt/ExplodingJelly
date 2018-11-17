@@ -213,6 +213,37 @@ export default class GameScene extends Phaser.Scene {
       }
       this.playerManager.updatePlayer(this.verify);
     }
+
+    this.checkWon();
+  }
+
+  checkWon() {
+    this.color1;
+    this.color2;
+    this.i = 0;
+    this.same = 1;
+    //console.log(this.jellyManager.jellys);
+    this.jellyManager.jellys.forEach(jellys => {
+      jellys.forEach(jelly => {
+        if (jelly !== undefined) {
+          console.log(jelly);
+
+          if (this.i === 0) {
+            this.color1 = jelly.color;
+          } else {
+            this.color2 = jelly.color;
+          }
+          if (this.color1 === this.color2) {
+            this.same ++;
+          }
+          this.i ++;
+        }
+      });
+    });
+
+    if (this.same === this.i && this.same > 1) {
+      this.scene.start(`win`);
+    }
   }
 
   createReload() {
