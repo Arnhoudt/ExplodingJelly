@@ -221,28 +221,26 @@ export default class GameScene extends Phaser.Scene {
     this.color1;
     this.color2;
     this.i = 0;
-    this.same = 1;
-    //console.log(this.jellyManager.jellys);
+    this.allTheSame = true;
     this.jellyManager.jellys.forEach(jellys => {
       jellys.forEach(jelly => {
         if (jelly !== undefined) {
-          console.log(jelly);
-
-          if (this.i === 0) {
+          this.i ++;
+          if (this.i === 1) {
             this.color1 = jelly.color;
-          } else {
+            this.i ++;
+          }
+          if (this.i > 2) {
             this.color2 = jelly.color;
           }
-          if (this.color1 === this.color2) {
-            this.same ++;
+          if (this.color1 !== this.color2 && this.i > 2) {
+            this.allTheSame = false;
           }
-          this.i ++;
         }
       });
     });
-
-    if (this.same === this.i && this.same > 1) {
-      this.scene.start(`win`);
+    if (this.allTheSame === true && this.i > 2) {
+      this.scene.start(`win`, {color: this.color1});
     }
   }
 

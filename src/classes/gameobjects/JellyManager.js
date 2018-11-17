@@ -12,8 +12,7 @@ export default class JellyManager {
   verifyPlayerMove(x, y, xPosition, yPosition, player) {
     if (this.jellys[x][y] !== undefined) {
       if (this.jellys[x][y].color !== player.color) {
-        this.gameScene.cameras.main.shake(300, 0.003, false);
-        console.log(`wrong jelly`);
+        this.gameScene.cameras.main.shake(250, 0.0015, false);
         return false;
       } else {
         this.jellys[x][y].grow ++;
