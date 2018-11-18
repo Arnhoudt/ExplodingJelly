@@ -6,6 +6,7 @@ export default class ChooseScene extends Phaser.Scene {
   }
 
   init() {
+    this.textEntrys = [];
     if (this.textEntryRed) {
       this.textEntryRed = undefined;
     }
@@ -140,193 +141,29 @@ export default class ChooseScene extends Phaser.Scene {
   }
 
   startGame() {
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryOrange.text,
-        color2: `orange`,
-        name3: this.textEntryPurple.text,
-        color3: `purple`,
-        name4: this.textEntryBlue.text,
-        color4: `blue`
-      });
+    if (this.textEntryRed !== undefined) {
+      this.textEntrys.push(this.textEntryRed);
     }
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue === undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryOrange.text,
-        color2: `orange`,
-        name3: this.textEntryPurple.text,
-        color3: `purple`,
-        name4: undefined,
-        color4: undefined
-      });
+    if (this.textEntryOrange !== undefined) {
+      this.textEntrys.push(this.textEntryOrange);
     }
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple === undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryOrange.text,
-        color2: `orange`,
-        name3: this.textEntryBlue.text,
-        color3: `blue`,
-        name4: undefined,
-        color4: undefined
-      });
+    if (this.textEntryPurple !== undefined) {
+      this.textEntrys.push(this.textEntryPurple);
     }
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange === undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryPurple.text,
-        color2: `purple`,
-        name3: this.textEntryBlue.text,
-        color3: `blue`,
-        name4: undefined,
-        color4: undefined
-      });
+    if (this.textEntryBlue !== undefined) {
+      this.textEntrys.push(this.textEntryBlue);
     }
-    if (
-      this.textEntryRed === undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryOrange.text,
-        color1: `orange`,
-        name2: this.textEntryPurple.text,
-        color2: `purple`,
-        name3: this.textEntryBlue.text,
-        color3: `blue`,
-        name4: undefined,
-        color4: undefined
-      });
-    }
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple === undefined &&
-      this.textEntryBlue === undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryOrange.text,
-        color2: `orange`,
-        name3: undefined,
-        color3: undefined,
-        name4: undefined,
-        color4: undefined
-      });
-    }
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange === undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue === undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryPurple.text,
-        color2: `purple`,
-        name3: undefined,
-        color3: undefined,
-        name4: undefined,
-        color4: undefined
-      });
-    }
-    if (
-      this.textEntryRed !== undefined &&
-      this.textEntryOrange === undefined &&
-      this.textEntryPurple === undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryRed.text,
-        color1: `red`,
-        name2: this.textEntryBlue.text,
-        color2: `blue`,
-        name3: undefined,
-        color3: undefined,
-        name4: undefined,
-        color4: undefined
-      });
-    }
-    if (
-      this.textEntryRed === undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue === undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryOrange.text,
-        color1: `orange`,
-        name2: this.textEntryPurple.text,
-        color2: `purple`,
-        name3: undefined,
-        color3: undefined,
-        name4: undefined,
-        color4: undefined
-      });
-    }
-    if (
-      this.textEntryRed === undefined &&
-      this.textEntryOrange !== undefined &&
-      this.textEntryPurple === undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryOrange.text,
-        color1: `orange`,
-        name2: this.textEntryBlue.text,
-        color2: `blue`,
-        name3: undefined,
-        color3: undefined,
-        name4: undefined,
-        color4: undefined
-      });
-    }
-    if (
-      this.textEntryRed === undefined &&
-      this.textEntryOrange === undefined &&
-      this.textEntryPurple !== undefined &&
-      this.textEntryBlue !== undefined
-    ) {
-      this.scene.start(`game`, {
-        name1: this.textEntryPurple.text,
-        color1: `purple`,
-        name2: this.textEntryBlue.text,
-        color2: `blue`,
-        name3: undefined,
-        color3: undefined,
-        name4: undefined,
-        color4: undefined
-      });
-    }
+
+    this.entrys = new Array(4);
+    this.i = 0;
+    this.textEntrys.forEach(textEntry => {
+      this.entrys[this.i] = new Array(2);
+      this.entrys[this.i][0] = textEntry.text;
+      this.entrys[this.i][1] = textEntry.style.color;
+      this.i ++;
+    });
+
+    this.scene.start(`game`, this.entrys);
   }
 
   update() {}

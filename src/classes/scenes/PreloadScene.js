@@ -27,14 +27,12 @@ import './../../assets/svg/orangeJelly1.svg';
 import './../../assets/svg/orangeJelly2.svg';
 import './../../assets/svg/orangeJelly3.svg';
 import './../../assets/orangeVakje.png';
-import './../../assets/redJelly.png';
-import './../../assets/purpleJelly.png';
-import './../../assets/orangeJelly.png';
-import './../../assets/blueJelly.png';
 import './../../assets/redTextEntry.png';
 import './../../assets/orangeTextEntry.png';
 import './../../assets/purpleTextEntry.png';
 import './../../assets/blueTextEntry.png';
+import './../../assets/star.png';
+import './../../assets/specialButton.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -57,10 +55,25 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`bg_win`, `./assets/bg_win.png`);
     this.load.image(`goToStart`, `./assets/goToStart.png`);
     this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
+    this.load.image(`star`, `./assets/star.png`);
+    this.load.image(`specialButton`, `./assets/specialButton.png`);
+    this.load.image(`reload_game`, `./assets/reload_game.png`);
+    this.load.image(`redVakje`, `./assets/redVakje.png`);
+    this.load.image(`blueVakje`, `./assets/blueVakje.png`);
+    this.load.image(`redTextEntry`, `./assets/redTextEntry.png`);
+    this.load.image(`orangeTextEntry`, `./assets/orangeTextEntry.png`);
+    this.load.image(`purpleTextEntry`, `./assets/purpleTextEntry.png`);
+    this.load.image(`blueTextEntry`, `./assets/blueTextEntry.png`);
+    this.load.image(`orangeVakje`, `./assets/orangeVakje.png`);
     this.load.atlas(
       'redJellys',
       './assets/redJellys.png',
       './src/assets/redJellys.json'
+    );
+    this.load.atlas(
+      'purpleJellys',
+      './assets/purpleJellys.png',
+      './src/assets/purpleJellys.json'
     );
     this.load.svg(`redJelly1`, `./assets/svg/redJelly1.svg`, {
       width: 33,
@@ -74,11 +87,6 @@ export default class PreloadScene extends Phaser.Scene {
       width: 48,
       height: 35.5
     });
-    this.load.atlas(
-      'purpleJellys',
-      './assets/purpleJellys.png',
-      './src/assets/purpleJellys.json'
-    );
     this.load.svg(`purpleJelly1`, `./assets/svg/purpleJelly1.svg`, {
       width: 33,
       height: 31.5
@@ -91,8 +99,6 @@ export default class PreloadScene extends Phaser.Scene {
       width: 48,
       height: 35.5
     });
-    this.load.image(`reload_game`, `./assets/reload_game.png`);
-    this.load.image(`redVakje`, `./assets/redVakje.png`);
     this.load.svg(`blueJelly1`, `./assets/svg/blueJelly1.svg`, {
       width: 33,
       height: 31.5
@@ -105,7 +111,6 @@ export default class PreloadScene extends Phaser.Scene {
       width: 48,
       height: 35.5
     });
-    this.load.image(`blueVakje`, `./assets/blueVakje.png`);
     this.load.svg(`orangeJelly1`, `./assets/svg/orangeJelly1.svg`, {
       width: 33,
       height: 31.5
@@ -118,15 +123,18 @@ export default class PreloadScene extends Phaser.Scene {
       width: 48,
       height: 35.5
     });
-    this.load.image(`orangeVakje`, `./assets/orangeVakje.png`);
-    this.load.image(`redJelly`, `./assets/redJelly.png`);
-    this.load.image(`purpleJelly`, `./assets/purpleJelly.png`);
-    this.load.image(`orangeJelly`, `./assets/orangeJelly.png`);
-    this.load.image(`blueJelly`, `./assets/blueJelly.png`);
-    this.load.image(`redTextEntry`, `./assets/redTextEntry.png`);
-    this.load.image(`orangeTextEntry`, `./assets/orangeTextEntry.png`);
-    this.load.image(`purpleTextEntry`, `./assets/purpleTextEntry.png`);
-    this.load.image(`blueTextEntry`, `./assets/blueTextEntry.png`);
+    this.load.svg(`redJelly`, `./assets/svg/redJelly1.svg`, {
+      scale: 3
+    });
+    this.load.svg(`purpleJelly`, `./assets/svg/purpleJelly1.svg`, {
+      scale: 3
+    });
+    this.load.svg(`orangeJelly`, `./assets/svg/orangeJelly1.svg`, {
+      scale: 3
+    });
+    this.load.svg(`blueJelly`, `./assets/svg/blueJelly1.svg`, {
+      scale: 3
+    });
   }
 
   onProgress(value) {

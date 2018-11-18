@@ -41,6 +41,8 @@ export default class JellyManager {
 
   addJelly(x, y, xPosition, yPosition, player) {
     this.jellys[x][y] = new Jelly(player.color);
+    this.jellys[x][y].xPosition = xPosition;
+    this.jellys[x][y].yPosition = yPosition;
     this.jellys[x][y].color = player.color;
     this.jellys[x][y].sprite = this.gameScene.add.sprite(
       xPosition,
@@ -78,28 +80,16 @@ export default class JellyManager {
             this.executeSplash(x, y, xPosition, yPosition, player);
           } else {
             this.tokenJellys = this.jellys[x][y].grow + 1;
-            this.jellys[x][y].sprite.destroy();
-            this.jellys[x][y] = new Jelly(player.color);
             this.jellys[x][y].color = player.color;
             this.jellys[x][y].grow = this.tokenJellys;
-            this.jellys[x][y].sprite = this.gameScene.add.sprite(
-              xPosition,
-              yPosition,
-              `${player.color}Jelly${this.jellys[x][y].grow}`
-            );
+            this.changeJelly(x, y, xPosition, yPosition, player);
           }
         } else {
           if (this.jellys[x][y].grow < 3) {
             this.tokenJellys = this.jellys[x][y].grow + 1;
-            this.jellys[x][y].sprite.destroy();
-            this.jellys[x][y] = new Jelly(player.color);
             this.jellys[x][y].color = player.color;
             this.jellys[x][y].grow = this.tokenJellys;
-            this.jellys[x][y].sprite = this.gameScene.add.sprite(
-              xPosition,
-              yPosition,
-              `${player.color}Jelly${this.jellys[x][y].grow}`
-            );
+            this.changeJelly(x, y, xPosition, yPosition, player);
           } else {
             player.score ++;
             this.executeSplash(x, y, xPosition, yPosition, player);

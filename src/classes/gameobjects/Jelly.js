@@ -3,5 +3,7 @@ export default class Jelly {
     this.color = color;
     this.grow = 1;
     this.sprite;
+    this.xPosition;
+    this.yPosition;
   }
 }

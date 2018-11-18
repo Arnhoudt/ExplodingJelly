@@ -8,21 +8,11 @@ export default class GameScene extends Phaser.Scene {
     });
   }
 
-  init(data) {
+  init(players) {
     this.vakjes = [];
     this.jellyManager = new JellyManager(this);
     this.playerManager = new PlayerManager(this);
-
-    this.playerManager.addPlayers(
-      data.name1,
-      data.color1,
-      data.name2,
-      data.color2,
-      data.name3,
-      data.color3,
-      data.name4,
-      data.color4
-    );
+    this.playerManager.addPlayers(players);
   }
 
   preload() {}
@@ -33,6 +23,14 @@ export default class GameScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
+    // this.specialButton = this.add
+    //   .image(
+    //     this.sys.game.config.width / 2,
+    //     this.sys.game.config.height / 2 - 150,
+    //     `specialButton`
+    //   )
+    //   .setInteractive()
+    //   .on(`pointerup`, () => this.destroyTripleJellys());
 
     this.anims.create({
       key: `redAnimatie`,
@@ -71,22 +69,27 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update() {
-    this.playerManager.playerScore1.setText(
-      `${this.playerManager.player1.score}`
-    );
-    this.playerManager.playerScore2.setText(
-      `${this.playerManager.player2.score}`
-    );
-    if (this.playerManager.player3 !== undefined) {
-      this.playerManager.playerScore3.setText(
-        `${this.playerManager.player3.score}`
-      );
-    }
-    if (this.playerManager.player4 !== undefined) {
-      this.playerManager.playerScore4.setText(
-        `${this.playerManager.player4.score}`
-      );
-    }
+    this.i = 0;
+    this.playerManager.playerScores.forEach(score => {
+      score.setText(`${this.playerManager.players[this.i].score}`);
+      this.i ++;
+    });
+  }
+
+  destroyTripleJellys() {
+    this.jellyManager.jellys.forEach(jellys => {
+      jellys.forEach(jelly => {
+        if (jelly.grow === 3) {
+          jelly.grow = 2;
+          jelly.sprite.destroy();
+          jelly.sprite = this.add.sprite(
+            jelly.xPosition,
+            jelly.yPosition,
+            `${jelly.color}Jelly${jelly.grow}`
+          );
+        }
+      });
+    });
   }
 
   createVakjes() {
@@ -96,124 +99,33 @@ export default class GameScene extends Phaser.Scene {
           this.add
             .sprite(100 + i * 60, 335 + j * 60, `redVakje`)
             .setInteractive()
-            .on(`pointerup`, () =>
+            .on(`pointerup`, () => {
               this.updateJelly(
                 i,
                 j,
                 100 + i * 60,
                 335 + j * 60,
-                this.playerManager.player1,
-                this.playerManager.player2,
-                this.playerManager.player3,
-                this.playerManager.player4
-              )
-            )
+                this.playerManager.players
+              );
+            })
         );
       }
     }
   }
 
-  updateJelly(x, y, xPosition, yPosition, player1, player2, player3, player4) {
-    if (
-      player1 !== undefined &&
-      player2 !== undefined &&
-      player3 !== undefined &&
-      player4 !== undefined
-    ) {
-      if (player1.active) {
+  updateJelly(x, y, xPosition, yPosition, players) {
+    players.forEach(player => {
+      if (player.active) {
         this.verify = this.jellyManager.verifyPlayerMove(
           x,
           y,
           xPosition,
           yPosition,
-          player1
+          player
         );
-      } else if (player2.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player2
-        );
-      } else if (player3.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player3
-        );
-      } else if (player4.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player4
-        );
+        this.playerManager.updatePlayer(this.verify);
       }
-      this.playerManager.updatePlayer(this.verify);
-    }
-    if (
-      player1 !== undefined &&
-      player2 !== undefined &&
-      player3 !== undefined &&
-      player4 === undefined
-    ) {
-      if (player1.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player1
-        );
-      } else if (player2.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player2
-        );
-      } else if (player3.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player3
-        );
-      }
-      this.playerManager.updatePlayer(this.verify);
-    }
-    if (
-      player1 !== undefined &&
-      player2 !== undefined &&
-      player3 === undefined &&
-      player4 === undefined
-    ) {
-      if (player1.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player1
-        );
-      } else if (player2.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player2
-        );
-      }
-      this.playerManager.updatePlayer(this.verify);
-    }
-
+    });
     this.checkWon();
   }
 
