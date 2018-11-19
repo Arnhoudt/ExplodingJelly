@@ -13,7 +13,7 @@ export default class GameScene extends Phaser.Scene {
     this.jellyManager = new JellyManager(this);
     this.playerManager = new PlayerManager(this);
     this.playerManager.addPlayers(players);
-    this.pushed = false;
+    this.pushed = 0;
   }
 
   preload() {}
@@ -69,12 +69,12 @@ export default class GameScene extends Phaser.Scene {
     });
   }
 
-  destroyTripleJellys() {
+  destroyTripleJellys(grow) {
     this.jellyManager.jellys.forEach(jellys => {
       jellys.forEach(jelly => {
         if (jelly) {
           if (jelly.grow === 3) {
-            jelly.grow = 2;
+            jelly.grow = grow;
             jelly.sprite.destroy();
             jelly.sprite = this.add.sprite(
               jelly.xPosition,
@@ -92,7 +92,11 @@ export default class GameScene extends Phaser.Scene {
       for (let j = 0;j < 8;j ++) {
         this.vakjes.push(
           this.add
-            .sprite(100 + i * 60, 335 + j * 60, `redVakje`)
+            .sprite(
+              100 + i * 60,
+              335 + j * 60,
+              `${this.playerManager.players[0].color}Vakje`
+            )
             .setInteractive()
             .on(`pointerup`, () => {
               this.updateJelly(
@@ -102,36 +106,58 @@ export default class GameScene extends Phaser.Scene {
                 335 + j * 60,
                 this.playerManager.players
               );
-
-              this.playerManager.players.forEach(player => {
-                if (
-                  player.score > 100 &&
-                  this.pushed === false &&
-                  this.specialButton === undefined
-                ) {
-                  this.specialButton = this.add
-                    .image(
-                      this.sys.game.config.width / 2,
-                      this.sys.game.config.height / 2 - 150,
-                      `specialButton`
-                    )
-                    .setInteractive()
-                    .on(`pointerup`, () => {
-                      this.destroyTripleJellys();
-                      this.specialButton.destroy();
-                      this.pushed = true;
-                    });
-                }
-              });
+              this.specialAbility();
             })
         );
       }
     }
   }
 
+  specialAbility() {
+    this.playerManager.players.forEach(player => {
+      if (
+        player.score > 100 &&
+        this.pushed === 0 &&
+        this.specialButton === undefined
+      ) {
+        this.specialButton = this.add
+          .image(
+            this.sys.game.config.width / 2,
+            this.sys.game.config.height / 2 - 150,
+            `specialButton`
+          )
+          .setInteractive()
+          .on(`pointerup`, () => {
+            this.destroyTripleJellys(2);
+            this.specialButton.destroy();
+            this.specialButton = undefined;
+            this.pushed ++;
+          });
+      } else if (
+        player.score > 200 &&
+        this.pushed === 1 &&
+        this.specialButton === undefined
+      ) {
+        this.specialButton = this.add
+          .image(
+            this.sys.game.config.width / 2,
+            this.sys.game.config.height / 2 - 150,
+            `specialButton`
+          )
+          .setInteractive()
+          .on(`pointerup`, () => {
+            this.destroyTripleJellys(1);
+            this.specialButton.destroy();
+            this.specialButton = undefined;
+            this.pushed ++;
+          });
+      }
+    });
+  }
+
   updateJelly(x, y, xPosition, yPosition, players) {
     players.forEach(player => {
-      if (player.active) {
+      if (player.active)
         this.verify = this.jellyManager.verifyPlayerMove(
           x,
           y,
@@ -139,7 +165,6 @@ export default class GameScene extends Phaser.Scene {
           yPosition,
           player
         );
-      }
     });
     this.playerManager.updatePlayer(this.verify);
     this.checkWon();
@@ -158,18 +183,14 @@ export default class GameScene extends Phaser.Scene {
             this.color1 = jelly.color;
             this.i ++;
           }
-          if (this.i > 2) {
-            this.color2 = jelly.color;
-          }
-          if (this.color1 !== this.color2 && this.i > 2) {
+          if (this.i > 2) this.color2 = jelly.color;
+          if (this.color1 !== this.color2 && this.i > 2)
             this.allTheSame = false;
-          }
         }
       });
     });
-    if (this.allTheSame === true && this.i > 2) {
+    if (this.allTheSame === true && this.i > 2)
       this.scene.start(`win`, {color: this.color1});
-    }
   }
 
   createReload() {

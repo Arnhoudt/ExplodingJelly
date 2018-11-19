@@ -7,18 +7,10 @@ export default class ChooseScene extends Phaser.Scene {
 
   init() {
     this.textEntrys = [];
-    if (this.textEntryRed) {
-      this.textEntryRed = undefined;
-    }
-    if (this.textEntryOrange) {
-      this.textEntryOrange = undefined;
-    }
-    if (this.textEntryPurple) {
-      this.textEntryPurple = undefined;
-    }
-    if (this.textEntryBlue) {
-      this.textEntryBlue = undefined;
-    }
+    if (this.textEntryRed) this.textEntryRed = undefined;
+    if (this.textEntryOrange) this.textEntryOrange = undefined;
+    if (this.textEntryPurple) this.textEntryPurple = undefined;
+    if (this.textEntryBlue) this.textEntryBlue = undefined;
   }
 
   preload() {}
@@ -31,17 +23,13 @@ export default class ChooseScene extends Phaser.Scene {
     this.blue = this.add.sprite(450, 590, `blueTextEntry`).setInteractive();
     this.start = this.add.sprite(311, 750, `start`).setInteractive();
 
-    this.start.on('pointerdown', () => {
-      this.start.setScale(1.03);
-    });
+    this.start.on('pointerdown', () => this.start.setScale(1.03));
     this.start.on('pointerup', () => {
       this.start.setScale(1);
       this.startGame();
     });
 
-    this.red.on('pointerdown', () => {
-      this.red.setScale(1.1);
-    });
+    this.red.on('pointerdown', () => this.red.setScale(1.1));
     this.red.on('pointerup', () => {
       if (this.textEntryRed) {
         this.red.setScale(1);
@@ -58,9 +46,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.updateText(this.textEntryRed);
       }
     });
-    this.orange.on('pointerdown', () => {
-      this.orange.setScale(1.1);
-    });
+    this.orange.on('pointerdown', () => this.orange.setScale(1.1));
     this.orange.on('pointerup', () => {
       if (this.textEntryOrange) {
         this.orange.setScale(1);
@@ -77,9 +63,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.updateText(this.textEntryOrange);
       }
     });
-    this.purple.on('pointerdown', () => {
-      this.purple.setScale(1.1);
-    });
+    this.purple.on('pointerdown', () => this.purple.setScale(1.1));
     this.purple.on('pointerup', () => {
       if (this.textEntryPurple) {
         this.purple.setScale(1);
@@ -96,9 +80,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.updateText(this.textEntryPurple);
       }
     });
-    this.blue.on('pointerdown', () => {
-      this.blue.setScale(1.1);
-    });
+    this.blue.on('pointerdown', () => this.blue.setScale(1.1));
     this.blue.on('pointerup', () => {
       if (this.textEntryBlue) {
         this.blue.setScale(1);
@@ -126,33 +108,26 @@ export default class ChooseScene extends Phaser.Scene {
     );
     this.input.keyboard.on(`keydown`, event => {
       if (event.keyCode === 8 && textEntry.text.length > 0) {
-        if (textEntry.text.length < 12) {
+        if (textEntry.text.length < 12)
           textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
-        }
       } else if (
         event.keyCode === 32 ||
         (event.keyCode >= 48 && event.keyCode < 90)
       ) {
-        if (textEntry.text.length < 11) {
-          textEntry.text += event.key;
-        }
+        if (textEntry.text.length < 11) textEntry.text += event.key;
       }
     });
   }
 
   startGame() {
-    if (this.textEntryRed !== undefined) {
+    if (this.textEntryRed !== undefined)
       this.textEntrys.push(this.textEntryRed);
-    }
-    if (this.textEntryOrange !== undefined) {
+    if (this.textEntryOrange !== undefined)
       this.textEntrys.push(this.textEntryOrange);
-    }
-    if (this.textEntryPurple !== undefined) {
+    if (this.textEntryPurple !== undefined)
       this.textEntrys.push(this.textEntryPurple);
-    }
-    if (this.textEntryBlue !== undefined) {
+    if (this.textEntryBlue !== undefined)
       this.textEntrys.push(this.textEntryBlue);
-    }
 
     this.entrys = new Array(this.textEntrys.length);
 
@@ -165,6 +140,11 @@ export default class ChooseScene extends Phaser.Scene {
     });
     if (this.textEntrys.length >= 2) {
       this.scene.start(`game`, this.entrys);
+    } else {
+      if (this.textEntryRed) this.textEntryRed = undefined;
+      if (this.textEntryOrange) this.textEntryOrange = undefined;
+      if (this.textEntryPurple) this.textEntryPurple = undefined;
+      if (this.textEntryBlue) this.textEntryBlue = undefined;
     }
   }
 
