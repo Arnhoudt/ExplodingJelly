@@ -16,14 +16,37 @@ export default class PlayerManager {
     this.players[0].set(`play`);
 
     this.i = 0;
+    this.placex = 0;
+    this.placex2 = 0;
+    if (players.length === 2) {
+      this.placex = 180;
+      this.placex2 = 260;
+    }
+    if (players.length === 3) {
+      this.placex = 110;
+      this.placex2 = 200;
+    }
+    if (players.length === 4) {
+      this.placex = 80;
+      this.placex2 = 155;
+    }
     this.players.forEach(player => {
-      this.gameScene.add.sprite(80 + this.i * 155, 125, `${player.color}Jelly`);
+      this.gameScene.add.sprite(
+        this.placex + this.i * this.placex2,
+        125,
+        `${player.color}Jelly`
+      );
       this.gameScene.add
-        .text(80 + this.i * 155, 185, `${player.name}`, this.textConfig(player))
+        .text(
+          this.placex + this.i * this.placex2,
+          185,
+          `${player.name}`,
+          this.textConfig(player)
+        )
         .setOrigin(0.5, 0);
       this.playerScores[this.i] = this.gameScene.add
         .text(
-          80 + this.i * 155,
+          this.placex + this.i * this.placex2,
           220,
           `${player.score}`,
           this.textConfig(player)
@@ -92,6 +115,7 @@ export default class PlayerManager {
           this.players[1].set(`standby`);
         }
       }
+
       this.players.forEach(player => {
         if (player.active) {
           this.gameScene.vakjes.forEach(vakje => {

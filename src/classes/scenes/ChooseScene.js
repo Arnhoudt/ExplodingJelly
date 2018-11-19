@@ -154,7 +154,8 @@ export default class ChooseScene extends Phaser.Scene {
       this.textEntrys.push(this.textEntryBlue);
     }
 
-    this.entrys = new Array(4);
+    this.entrys = new Array(this.textEntrys.length);
+
     this.i = 0;
     this.textEntrys.forEach(textEntry => {
       this.entrys[this.i] = new Array(2);
@@ -162,8 +163,9 @@ export default class ChooseScene extends Phaser.Scene {
       this.entrys[this.i][1] = textEntry.style.color;
       this.i ++;
     });
-
-    this.scene.start(`game`, this.entrys);
+    if (this.textEntrys.length >= 2) {
+      this.scene.start(`game`, this.entrys);
+    }
   }
 
   update() {}

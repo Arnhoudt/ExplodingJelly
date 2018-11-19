@@ -13,6 +13,7 @@ export default class GameScene extends Phaser.Scene {
     this.jellyManager = new JellyManager(this);
     this.playerManager = new PlayerManager(this);
     this.playerManager.addPlayers(players);
+    this.pushed = false;
   }
 
   preload() {}
@@ -23,14 +24,6 @@ export default class GameScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
-    // this.specialButton = this.add
-    //   .image(
-    //     this.sys.game.config.width / 2,
-    //     this.sys.game.config.height / 2 - 150,
-    //     `specialButton`
-    //   )
-    //   .setInteractive()
-    //   .on(`pointerup`, () => this.destroyTripleJellys());
 
     this.anims.create({
       key: `redAnimatie`,
@@ -79,14 +72,16 @@ export default class GameScene extends Phaser.Scene {
   destroyTripleJellys() {
     this.jellyManager.jellys.forEach(jellys => {
       jellys.forEach(jelly => {
-        if (jelly.grow === 3) {
-          jelly.grow = 2;
-          jelly.sprite.destroy();
-          jelly.sprite = this.add.sprite(
-            jelly.xPosition,
-            jelly.yPosition,
-            `${jelly.color}Jelly${jelly.grow}`
-          );
+        if (jelly) {
+          if (jelly.grow === 3) {
+            jelly.grow = 2;
+            jelly.sprite.destroy();
+            jelly.sprite = this.add.sprite(
+              jelly.xPosition,
+              jelly.yPosition,
+              `${jelly.color}Jelly${jelly.grow}`
+            );
+          }
         }
       });
     });
@@ -107,6 +102,27 @@ export default class GameScene extends Phaser.Scene {
                 335 + j * 60,
                 this.playerManager.players
               );
+
+              this.playerManager.players.forEach(player => {
+                if (
+                  player.score > 100 &&
+                  this.pushed === false &&
+                  this.specialButton === undefined
+                ) {
+                  this.specialButton = this.add
+                    .image(
+                      this.sys.game.config.width / 2,
+                      this.sys.game.config.height / 2 - 150,
+                      `specialButton`
+                    )
+                    .setInteractive()
+                    .on(`pointerup`, () => {
+                      this.destroyTripleJellys();
+                      this.specialButton.destroy();
+                      this.pushed = true;
+                    });
+                }
+              });
             })
         );
       }
@@ -123,9 +139,9 @@ export default class GameScene extends Phaser.Scene {
           yPosition,
           player
         );
-        this.playerManager.updatePlayer(this.verify);
       }
     });
+    this.playerManager.updatePlayer(this.verify);
     this.checkWon();
   }
 
