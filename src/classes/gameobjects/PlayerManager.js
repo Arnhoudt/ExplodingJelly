@@ -44,7 +44,7 @@ export default class PlayerManager {
       //   this.spaceBetween = this.placex2 += (this.placex * (index));
       // }
       this.gameScene.add.sprite(this.placex + this.i * this.placex2
-        , 125, `${player.color}Jelly's`).setScale(0.8)
+        , 125, `${player.color}Jelly's`).setScale(0.45)
         .play(`${player.color}Animatie`);
 
       // this.gameScene.add.sprite(
