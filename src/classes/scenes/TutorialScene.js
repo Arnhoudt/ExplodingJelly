@@ -18,10 +18,12 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   preload() {
-    this.shadow = this.add.graphics();
+    this.load.image('mask', 'src/assets/mask1.png');
+    this.load.image('shadow', 'src/assets/shadow.png');
   }
 
   create() {
+
     this.add.image(
       this.sys.game.config.width / 2 + 9,
       this.sys.game.config.height - 181,
@@ -29,8 +31,28 @@ export default class TutorialScene extends Phaser.Scene {
     );
     this.scene = 0;
     this.createVakjes();
-    this.createReload();
-    this.createBack();
+    this.shadow = this.add.graphics();
+
+    const spotlight = this.make.sprite({
+      x: 400,
+      y: 300,
+      key: 'mask',
+      add: false
+    });
+
+
+
+    this.input.on('pointermove', function (pointer) {
+
+      spotlight.x = pointer.x;
+      spotlight.y = pointer.y;
+
+    });
+
+    const shadow = this.add.image(0, 0, 'shadow');
+    shadow.setScale(20);
+    shadow.mask = new Phaser.Display.Masks.BitmapMask(this, spotlight);
+    shadow.mask.invertAlpha = true;
   }
 
   update() {
@@ -39,6 +61,11 @@ export default class TutorialScene extends Phaser.Scene {
       score.setText(`${this.playerManager.players[this.i].score}`);
       this.i ++;
     });
+    if (this.input.activePointer.isDown)
+    {
+      this.makeScene();
+    }
+
   }
 
   destroyTripleJellys(grow) {
@@ -139,60 +166,13 @@ export default class TutorialScene extends Phaser.Scene {
         );
     });
     this.playerManager.updatePlayer(this.verify);
-    this.checkWon();
   }
 
-  checkWon() {
-    this.color1;
-    this.color2;
-    this.i = 0;
-    this.allTheSame = true;
-    this.jellyManager.jellys.forEach(jellys => {
-      jellys.forEach(jelly => {
-        if (jelly !== undefined) {
-          this.i ++;
-          if (this.i === 1) {
-            this.color1 = jelly.color;
-            this.i ++;
-          }
-          if (this.i > 2) this.color2 = jelly.color;
-          if (this.color1 !== this.color2 && this.i > 2)
-            this.allTheSame = false;
-        }
-      });
-    });
-    if (this.allTheSame === true && this.i > 2)
-      this.scene.start(`win`, {color: this.color1});
-  }
 
-  createReload() {
-    this.reload = this.add.sprite(590, 30, `reload_game`).setInteractive();
-    this.reload.on(`pointerdown`, () => {
-      this.reload.setScale(1.1);
-    });
-
-    this.reload.on(`pointerup`, () => {
-      this.reload.setScale(1);
-      this.scene.restart();
-    });
-  }
-
-  createBack() {
-    this.back = this.add.sprite(30, 30, `back`).setInteractive();
-    this.back.on(`pointerdown`, () => {
-      this.back.setScale(1.1);
-    });
-
-    this.back.on(`pointerup`, () => {
-      this.back.setScale(1);
-      this.scene.start(`choose`);
-    });
-  }
   makeScene() {
-    this.shadow.clear();
-    this.shadow.fillStyle(0x000000, 0.5);
-    this.shadow.fillRect(0, 0,
-      this.game.config.width,
-      this.game.config.height);
+    const circle = new Phaser.Geom.Circle(180, 130, 175);
+    const graphics = this.add.graphics();
+    graphics.lineStyle(100, 0x000000, 0.1);
+    graphics.strokeCircleShape(circle);
   }
 }
