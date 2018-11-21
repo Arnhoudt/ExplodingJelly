@@ -35,6 +35,8 @@ export default class GameScene extends Phaser.Scene {
       score.setText(`${this.playerManager.players[this.i].score}`);
       this.i ++;
     });
+
+    this.jellyManager.update();
   }
 
   destroyTripleJellys(grow) {

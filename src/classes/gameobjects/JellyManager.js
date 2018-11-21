@@ -7,6 +7,14 @@ export default class JellyManager {
     for (let i = 0;i < 8;i ++) {
       this.jellys[i] = new Array(8);
     }
+    this.movingJelly1 = 0;
+    this.movingJelly2 = 0;
+    this.movingJelly3 = 0;
+    this.movingJelly4 = 0;
+    this.jellyMove1 = 0;
+    this.jellyMove2 = 0;
+    this.jellyMove3 = 0;
+    this.jellyMove4 = 0;
   }
 
   verifyPlayerMove(x, y, xPosition, yPosition, player) {
@@ -65,10 +73,40 @@ export default class JellyManager {
   executeSplash(x, y, xPosition, yPosition, player) {
     this.jellys[x][y].sprite.destroy();
     this.jellys[x][y] = undefined;
+
+    this.movingJelly1 = this.gameScene.physics.add
+      .sprite(xPosition, yPosition, `${player.color}Jelly1`)
+      .setVelocityX(100);
+    this.jellyMove1 = xPosition;
+    this.movingJelly2 = this.gameScene.physics.add
+      .sprite(xPosition, yPosition, `${player.color}Jelly1`)
+      .setVelocityX(- 100);
+    this.jellyMove2 = xPosition;
+    this.movingJelly3 = this.gameScene.physics.add
+      .sprite(xPosition, yPosition, `${player.color}Jelly1`)
+      .setVelocityY(100);
+    this.jellyMove3 = yPosition;
+    this.movingJelly4 = this.gameScene.physics.add
+      .sprite(xPosition, yPosition, `${player.color}Jelly1`)
+      .setVelocityY(- 100);
+    this.jellyMove4 = yPosition;
+    console.log(this.movingJelly1.x);
+
     this.splash(x + 1, y, xPosition + 60, yPosition, player);
     this.splash(x - 1, y, xPosition - 60, yPosition, player);
     this.splash(x, y + 1, xPosition, yPosition + 60, player);
     this.splash(x, y - 1, xPosition, yPosition - 60, player);
+  }
+
+  update() {
+    if (Math.round(this.movingJelly1.x) === this.jellyMove1 + 60)
+      this.movingJelly1.setVelocityX(0);
+    if (Math.round(this.movingJelly2.x) === this.jellyMove2 - 60)
+      this.movingJelly2.setVelocityX(0);
+    if (Math.round(this.movingJelly3.y) === this.jellyMove3 + 60)
+      this.movingJelly3.setVelocityX(0);
+    if (Math.round(this.movingJelly4.y) === this.jellyMove4 - 60)
+      this.movingJelly4.setVelocityX(0);
   }
 
   splash(x, y, xPosition, yPosition, player) {
