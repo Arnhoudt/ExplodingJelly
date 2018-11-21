@@ -1,15 +1,17 @@
 export default class Player {
-  constructor(name) {
+  constructor(name, color) {
     this.name = name;
     this.score = 0;
     this.active = false;
+    this.color = color;
   }
 
-  play() {
-    this.active = true;
-  }
-
-  standby() {
-    this.active = false;
+  set(state) {
+    if (state === `play`) {
+      this.active = true;
+    }
+    if (state === `standby`) {
+      this.active = false;
+    }
   }
 }

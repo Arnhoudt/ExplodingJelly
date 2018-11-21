@@ -3,14 +3,9 @@ export default class BootScene extends Phaser.Scene {
     super({
       key: `boot`
     });
-    console.log(`In de Bootscene`);
   }
-  preload() {
-    console.log(`preload van de bootscene`);
-    //Maybe load a preloader graphic...
-  }
+  preload() {}
   create() {
-    console.log(`create van de bootscene`);
     this.scene.start(`preload`);
   }
   update() {}

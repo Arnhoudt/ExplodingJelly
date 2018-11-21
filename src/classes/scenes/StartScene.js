@@ -10,17 +10,14 @@ export default class StartScene extends Phaser.Scene {
   preload() {}
 
   create() {
-    this.add.image(310, 410, `bg`);
-    this.start = this.add.sprite(310, 660, `start`).setInteractive();
+    this.add.image(318, 382, `bg`);
+    this.play = this.add.sprite(311, 664, `play`).setInteractive();
+    this.play.on('pointerdown', () => this.play.setScale(1.03));
+    this.play.on('pointerup', () => {
+      this.scene.start(`choose`);
+      this.play.setScale(1);
+    });
   }
 
-  update() {
-    this.start.on('pointerdown', () => {
-      this.start.setScale(1.03);
-    });
-    this.start.on('pointerup', () => {
-      this.scene.start(`game`);
-      this.start.setScale(1);
-    });
-  }
+  update() {}
 }

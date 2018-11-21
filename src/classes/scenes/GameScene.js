@@ -1,4 +1,5 @@
-import Player from '../gameobjects/Player';
+import JellyManager from '../gameobjects/JellyManager';
+import PlayerManager from '../gameobjects/PlayerManager';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -7,22 +8,12 @@ export default class GameScene extends Phaser.Scene {
     });
   }
 
-  init() {
+  init(players) {
     this.vakjes = [];
-    this.player1 = new Player(`Fredje`);
-    this.player2 = new Player(`Anton`);
-    this.playerName1 = this.add.text(125, 215, `${this.player1.name}`, {
-      fontFamily: 'Ubuntu',
-      fontSize: 24,
-      color: '#000000'
-    });
-    this.playerName2 = this.add.text(425, 215, `${this.player2.name}`, {
-      fontFamily: 'Ubuntu',
-      fontSize: 24,
-      color: '#000000'
-    });
-    this.player1.play();
-    this.player2.standby();
+    this.jellyManager = new JellyManager(this);
+    this.playerManager = new PlayerManager(this);
+    this.playerManager.addPlayers(players);
+    this.pushed = 0;
   }
 
   preload() {}
@@ -33,95 +24,145 @@ export default class GameScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
-    this.playerScore1 = this.add.text(
-      130,
-      10,
-      `${this.player1.score} jelly's`,
-      {
-        fontFamily: 'Ubuntu',
-        fontSize: 18,
-        color: '#ffffff'
-      }
-    );
-    this.playerScore2 = this.add.text(
-      430,
-      10,
-      `${this.player2.score} jelly's`,
-      {
-        fontFamily: 'Ubuntu',
-        fontSize: 18,
-        color: '#ffffff'
-      }
-    );
-
-    this.anims.create({
-      key: `player1Animatie`,
-      frames: this.anims.generateFrameNames(`player1`, {
-        prefix: `assets_`,
-        start: 900,
-        end: 989,
-        zeroPad: 0,
-        suffix: `.png`
-      }),
-      frameRate: 22,
-      repeat: - 1
-    });
-    this.anims.create({
-      key: `player2Animatie`,
-      frames: this.anims.generateFrameNames(`player2`, {
-        prefix: `assets_`,
-        start: 1000,
-        end: 1089,
-        zeroPad: 0,
-        suffix: `.png`
-      }),
-      frameRate: 23,
-      repeat: - 1
-    });
-    this.add
-      .sprite(160, 160, `player1`, `assets_900.png`)
-      .play('player1Animatie');
-    this.add
-      .sprite(460, 160, `player2`, `assets_1000.png`)
-      .play('player2Animatie');
-
-    this.reload = this.add.sprite(600, 20, `reload_game`).setInteractive();
-
     this.createVakjes();
     this.createReload();
+    this.createBack();
   }
 
-  update() {}
+  update() {
+    this.i = 0;
+    this.playerManager.playerScores.forEach(score => {
+      score.setText(`${this.playerManager.players[this.i].score}`);
+      this.i ++;
+    });
+  }
 
-  updatePlayer() {
-    if (this.player2.active) {
-      this.player1.play();
-      this.player2.standby();
-      console.log(this.player2.name);
-    } else if (this.player1.active) {
-      this.player2.play();
-      this.player1.standby();
-      console.log(this.player1.name);
-    }
+  destroyTripleJellys(grow) {
+    this.jellyManager.jellys.forEach(jellys => {
+      jellys.forEach(jelly => {
+        if (jelly) {
+          if (jelly.grow === 3) {
+            jelly.grow = grow;
+            jelly.sprite.destroy();
+            jelly.sprite = this.add.sprite(
+              jelly.xPosition,
+              jelly.yPosition,
+              `${jelly.color}Jelly${jelly.grow}`
+            );
+          }
+        }
+      });
+    });
   }
 
   createVakjes() {
     for (let i = 0;i < 8;i ++) {
       for (let j = 0;j < 8;j ++) {
-        this.vakje = this.add
-          .sprite(100 + i * 60, 315 + j * 60, `vakje`)
-          .setInteractive()
-          .on(`pointerup`, () => this.addJelly(100 + i * 60, 315 + j * 60));
+        this.vakjes.push(
+          this.add
+            .sprite(
+              100 + i * 60,
+              335 + j * 60,
+              `${this.playerManager.players[0].color}Vakje`
+            )
+            .setInteractive()
+            .on(`pointerup`, () => {
+              this.updateJelly(
+                i,
+                j,
+                100 + i * 60,
+                335 + j * 60,
+                this.playerManager.players
+              );
+              this.specialAbility();
+            })
+        );
       }
     }
   }
 
-  addJelly(x, y) {
-    this.jelly = this.add.sprite(x, y, `player1_jelly1`);
-    //this.updatePlayer();
+  specialAbility() {
+    this.playerManager.players.forEach(player => {
+      if (
+        player.score > 100 &&
+        this.pushed === 0 &&
+        this.specialButton === undefined
+      ) {
+        this.specialButton = this.add
+          .image(
+            this.sys.game.config.width / 2,
+            this.sys.game.config.height / 2 - 150,
+            `specialButton`
+          )
+          .setInteractive()
+          .on(`pointerup`, () => {
+            this.destroyTripleJellys(2);
+            this.specialButton.destroy();
+            this.specialButton = undefined;
+            this.pushed ++;
+          });
+      } else if (
+        player.score > 200 &&
+        this.pushed === 1 &&
+        this.specialButton === undefined
+      ) {
+        this.specialButton = this.add
+          .image(
+            this.sys.game.config.width / 2,
+            this.sys.game.config.height / 2 - 150,
+            `specialButton`
+          )
+          .setInteractive()
+          .on(`pointerup`, () => {
+            this.destroyTripleJellys(1);
+            this.specialButton.destroy();
+            this.specialButton = undefined;
+            this.pushed ++;
+          });
+      }
+    });
+  }
+
+  updateJelly(x, y, xPosition, yPosition, players) {
+    players.forEach(player => {
+      if (player.active)
+        this.verify = this.jellyManager.verifyPlayerMove(
+          x,
+          y,
+          xPosition,
+          yPosition,
+          player
+        );
+    });
+    this.playerManager.updatePlayer(this.verify);
+    this.checkWon();
+  }
+
+  checkWon() {
+    this.color1;
+    this.color2;
+    this.i = 0;
+    this.allTheSame = true;
+    this.jellyManager.jellys.forEach(jellys => {
+      jellys.forEach(jelly => {
+        if (jelly !== undefined) {
+          this.i ++;
+          if (this.i === 1) {
+            this.color1 = jelly.color;
+            this.i ++;
+          }
+          if (this.i > 2) this.color2 = jelly.color;
+          if (this.color1 !== this.color2 && this.i > 2)
+            this.allTheSame = false;
+        }
+      });
+    });
+    if (this.allTheSame === true && this.i > 2)
+      this.scene.start(`win`, {color: this.color1});
   }
 
   createReload() {
+    this.reload = this.add.sprite(590, 30, `reload_game`).setInteractive();
     this.reload.on(`pointerdown`, () => {
       this.reload.setScale(1.1);
     });
@@ -129,6 +170,18 @@ export default class GameScene extends Phaser.Scene {
     this.reload.on(`pointerup`, () => {
       this.reload.setScale(1);
       this.scene.restart();
+    });
+  }
+
+  createBack() {
+    this.back = this.add.sprite(30, 30, `back`).setInteractive();
+    this.back.on(`pointerdown`, () => {
+      this.back.setScale(1.1);
+    });
+
+    this.back.on(`pointerup`, () => {
+      this.back.setScale(1);
+      this.scene.start(`choose`);
     });
   }
 }
