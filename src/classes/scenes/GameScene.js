@@ -24,38 +24,6 @@ export default class GameScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
-
-    // this.anims.create({
-    //   key: `redAnimatie`,
-    //   frames: this.anims.generateFrameNames(`redJellys`, {
-    //     prefix: `assets_`,
-    //     start: 900,
-    //     end: 989,
-    //     zeroPad: 0,
-    //     suffix: `.png`
-    //   }),
-    //   frameRate: 22,
-    //   repeat: - 1
-    // });
-    // this.anims.create({
-    //   key: `purpleAnimatie`,
-    //   frames: this.anims.generateFrameNames(`purpleJellys`, {
-    //     prefix: `assets_`,
-    //     start: 1000,
-    //     end: 1089,
-    //     zeroPad: 0,
-    //     suffix: `.png`
-    //   }),
-    //   frameRate: 23,
-    //   repeat: - 1
-    // });
-    // this.add
-    //   .sprite(160, 100, `redJellys`, `assets_900.png`)
-    //   .play('redAnimatie');
-    // this.add
-    //   .sprite(460, 100, `purpleJellys`, `assets_1000.png`)
-    //   .play('purpleAnimatie');
-
     this.createVakjes();
     this.createReload();
     this.createBack();

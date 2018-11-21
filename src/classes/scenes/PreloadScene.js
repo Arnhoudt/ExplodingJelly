@@ -7,17 +7,17 @@ import './../../assets/bg_game.png';
 import './../../assets/bg_win.png';
 import './../../assets/goToStart.png';
 import './../../assets/purpleVakje.png';
-import "./../../assets/redJelly's.png";
-import "./../../assets/redJelly's.json";
+import './../../assets/redJelly\'s.png';
+import './../../assets/redJelly\'s.json';
 import './../../assets/svg/redJelly1.svg';
 import './../../assets/svg/redJelly2.svg';
 import './../../assets/svg/redJelly3.svg';
-import "./../../assets/purpleJelly's.png";
-import "./../../assets/purpleJelly's.json";
-import "./../../assets/blueJelly's.png";
-import "./../../assets/blueJelly's.json";
-import "./../../assets/orangeJelly's.png";
-import "./../../assets/orangeJelly's.json";
+import './../../assets/purpleJelly\'s.png';
+import './../../assets/purpleJelly\'s.json';
+import './../../assets/blueJelly\'s.png';
+import './../../assets/blueJelly\'s.json';
+import './../../assets/orangeJelly\'s.png';
+import './../../assets/orangeJelly\'s.json';
 import './../../assets/svg/purpleJelly1.svg';
 import './../../assets/svg/purpleJelly2.svg';
 import './../../assets/svg/purpleJelly3.svg';
@@ -142,16 +142,16 @@ export default class PreloadScene extends Phaser.Scene {
       height: 35.5
     });
     this.load.svg(`redJelly`, `./assets/svg/redJelly1.svg`, {
-      scale: 3
+      scale: 4
     });
     this.load.svg(`purpleJelly`, `./assets/svg/purpleJelly1.svg`, {
-      scale: 3
+      scale: 4
     });
     this.load.svg(`orangeJelly`, `./assets/svg/orangeJelly1.svg`, {
-      scale: 3
+      scale: 4
     });
     this.load.svg(`blueJelly`, `./assets/svg/blueJelly1.svg`, {
-      scale: 3
+      scale: 4
     });
   }
 

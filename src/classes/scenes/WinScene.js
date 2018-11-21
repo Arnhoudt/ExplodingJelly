@@ -22,7 +22,15 @@ export default class WinScene extends Phaser.Scene {
       quantity: 1,
       scale: {start: 0.1, end: 1}
     });
-    this.add.image(307, 418, `${this.color}Jelly`);
+    this.animation = this.anims.create({
+      key: `${this.color}Animatie`,
+      frames: this.anims.generateFrameNames(`${this.color}Jelly's`),
+      frameRate: 20,
+      repeat: - 1
+    });
+    this.add
+      .sprite(307, 418, `${this.color}Jelly's`)
+      .play(`${this.color}Animatie`);
 
     this.goToStart = this.add.sprite(190, 710, `goToStart`).setInteractive();
     this.goToStart.on('pointerdown', () => this.goToStart.setScale(1.03));
