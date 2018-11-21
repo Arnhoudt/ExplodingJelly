@@ -24,11 +24,19 @@ export default class WinScene extends Phaser.Scene {
     });
     this.add.image(307, 418, `${this.color}Jelly`);
 
-    this.goToStart = this.add.sprite(310, 710, `goToStart`).setInteractive();
+    this.goToStart = this.add.sprite(190, 710, `goToStart`).setInteractive();
     this.goToStart.on('pointerdown', () => this.goToStart.setScale(1.03));
     this.goToStart.on('pointerup', () => {
       this.scene.start(`start`);
       this.goToStart.setScale(1);
+    });
+    this.scoresButton = this.add
+      .sprite(430, 710, `scoresButton`)
+      .setInteractive();
+    this.scoresButton.on('pointerdown', () => this.scoresButton.setScale(1.03));
+    this.scoresButton.on('pointerup', () => {
+      this.scene.start(`scores`);
+      this.scoresButton.setScale(1);
     });
   }
 

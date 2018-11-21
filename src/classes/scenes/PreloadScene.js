@@ -37,6 +37,8 @@ import './../../assets/purpleTextEntry.png';
 import './../../assets/blueTextEntry.png';
 import './../../assets/star.png';
 import './../../assets/specialButton.png';
+import './../../assets/bg_scores.png';
+import './../../assets/scoresButton.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -69,6 +71,8 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`purpleTextEntry`, `./assets/purpleTextEntry.png`);
     this.load.image(`blueTextEntry`, `./assets/blueTextEntry.png`);
     this.load.image(`orangeVakje`, `./assets/orangeVakje.png`);
+    this.load.image(`bg_scores`, `./assets/bg_scores.png`);
+    this.load.image(`scoresButton`, `./assets/scoresButton.png`);
     this.load.atlas(
       `redJelly's`,
       `./assets/redJelly's.png`,

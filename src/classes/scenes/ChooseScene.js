@@ -141,6 +141,11 @@ export default class ChooseScene extends Phaser.Scene {
     if (this.textEntrys.length >= 2) {
       this.scene.start(`game`, this.entrys);
     } else {
+      this.blue.setScale(1);
+      this.orange.setScale(1);
+      this.purple.setScale(1);
+      this.red.setScale(1);
+      this.textEntrys = [];
       if (this.textEntryRed) this.textEntryRed = undefined;
       if (this.textEntryOrange) this.textEntryOrange = undefined;
       if (this.textEntryPurple) this.textEntryPurple = undefined;

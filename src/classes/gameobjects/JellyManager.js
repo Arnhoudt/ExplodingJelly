@@ -19,6 +19,7 @@ export default class JellyManager {
         if (x === 0 || y === 0 || x === 7 || y === 7) {
           //controle rand
           if (this.jellys[x][y].grow > 2) {
+            player.score ++;
             this.executeSplash(x, y, xPosition, yPosition, player);
           } else {
             this.changeJelly(x, y, xPosition, yPosition, player);
@@ -26,6 +27,7 @@ export default class JellyManager {
           return true;
         } else {
           if (this.jellys[x][y].grow > 3) {
+            player.score ++;
             this.executeSplash(x, y, xPosition, yPosition, player);
           } else {
             this.changeJelly(x, y, xPosition, yPosition, player);
@@ -77,6 +79,7 @@ export default class JellyManager {
         if (x === 0 || y === 0 || x === 7 || y === 7) {
           //controle rand
           if (this.jellys[x][y].grow >= 2) {
+            player.score ++;
             this.executeSplash(x, y, xPosition, yPosition, player);
           } else {
             this.tokenJellys = this.jellys[x][y].grow + 1;
