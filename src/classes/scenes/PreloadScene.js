@@ -7,13 +7,17 @@ import './../../assets/bg_game.png';
 import './../../assets/bg_win.png';
 import './../../assets/goToStart.png';
 import './../../assets/purpleVakje.png';
-import './../../assets/redJellys.png';
-import './../../assets/redJellys.json';
+import "./../../assets/redJelly's.png";
+import "./../../assets/redJelly's.json";
 import './../../assets/svg/redJelly1.svg';
 import './../../assets/svg/redJelly2.svg';
 import './../../assets/svg/redJelly3.svg';
-import './../../assets/purpleJellys.png';
-import './../../assets/purpleJellys.json';
+import "./../../assets/purpleJelly's.png";
+import "./../../assets/purpleJelly's.json";
+import "./../../assets/blueJelly's.png";
+import "./../../assets/blueJelly's.json";
+import "./../../assets/orangeJelly's.png";
+import "./../../assets/orangeJelly's.json";
 import './../../assets/svg/purpleJelly1.svg';
 import './../../assets/svg/purpleJelly2.svg';
 import './../../assets/svg/purpleJelly3.svg';
@@ -66,14 +70,24 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`blueTextEntry`, `./assets/blueTextEntry.png`);
     this.load.image(`orangeVakje`, `./assets/orangeVakje.png`);
     this.load.atlas(
-      'redJellys',
-      './assets/redJellys.png',
-      './src/assets/redJellys.json'
+      `redJelly's`,
+      `./assets/redJelly's.png`,
+      `./src/assets/redJelly's.json`
     );
     this.load.atlas(
-      'purpleJellys',
-      './assets/purpleJellys.png',
-      './src/assets/purpleJellys.json'
+      `purpleJelly's`,
+      `./assets/purpleJelly's.png`,
+      `./src/assets/purpleJelly's.json`
+    );
+    this.load.atlas(
+      `blueJelly's`,
+      `./assets/blueJelly's.png`,
+      `./src/assets/blueJelly's.json`
+    );
+    this.load.atlas(
+      `orangeJelly's`,
+      `./assets/orangeJelly's.png`,
+      `./src/assets/orangeJelly's.json`
     );
     this.load.svg(`redJelly1`, `./assets/svg/redJelly1.svg`, {
       width: 33,

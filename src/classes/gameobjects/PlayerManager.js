@@ -30,12 +30,28 @@ export default class PlayerManager {
       this.placex = 80;
       this.placex2 = 155;
     }
-    this.players.forEach(player => {
-      this.gameScene.add.sprite(
-        this.placex + this.i * this.placex2,
-        125,
-        `${player.color}Jelly`
-      );
+    this.players.forEach((player, index) => {
+      console.log(player.color + index);
+      this.gameScene.anims.create({
+        key: `${player.color}Animatie`,
+        frames: this.gameScene.anims.generateFrameNames(`${player.color}Jelly's`),
+        frameRate: 18 + index,
+        repeat: - 1
+      });
+      // if (index === 0) {
+      //   this.spaceBetween = this.placex;
+      // } else {
+      //   this.spaceBetween = this.placex2 += (this.placex * (index));
+      // }
+      this.gameScene.add.sprite(this.placex + this.i * this.placex2
+        , 125, `${player.color}Jelly's`).setScale(0.8)
+        .play(`${player.color}Animatie`);
+
+      // this.gameScene.add.sprite(
+      //   this.placex + this.i * this.placex2,
+      //   125,
+      //   `${player.color}Jelly`
+      // );
       this.gameScene.add
         .text(
           this.placex + this.i * this.placex2,

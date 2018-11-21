@@ -1,0 +1,1889 @@
+{
+	"textures": [
+		{
+			"image": "redJelly&#39;s.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 822,
+				"h": 1980
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "redJelly00.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1057,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly26.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1189,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly27.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1321,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly28.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1453,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly29.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1585,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly30.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1717,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly31.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1849,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly32.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly33.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly35.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly36.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly54.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly55.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly56.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly57.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1057,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly58.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1189,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly59.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1321,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly60.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1453,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly61.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1585,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly62.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1717,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly63.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1849,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly64.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly65.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly66.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly84.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly85.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly86.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly87.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly88.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly09.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly76.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly20.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly22.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly37.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly38.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly39.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly40.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 793,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly41.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 925,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly42.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly44.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly45.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly46.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly47.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly48.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly49.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly50.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly51.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly52.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly53.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly67.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly68.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 793,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly69.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 925,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly70.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly71.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly72.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly73.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly74.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly75.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly77.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly78.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly79.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly80.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly81.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly82.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "redJelly83.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:dc88a272d4dbaeea0511d3602cfeb406:8c4cecdba6a93edd2688d8b41a9c9d8d:def34eed51bfe35a412a496fb6643dbd$"
+	}
+}

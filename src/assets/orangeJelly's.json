@@ -1,0 +1,1889 @@
+{
+	"textures": [
+		{
+			"image": "orangeJelly&#39;s.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 822,
+				"h": 1980
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "orageJelly00.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1057,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly26.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1189,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly27.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1321,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly28.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1453,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly29.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1585,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly30.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1717,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly31.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1849,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly32.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly33.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly35.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly36.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly54.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly55.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly56.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly57.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1057,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly58.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1189,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly59.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1321,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly60.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1453,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly61.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1585,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly62.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1717,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly63.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1849,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly64.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly65.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly66.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly84.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly85.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly86.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly87.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly88.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly09.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly76.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly20.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly22.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly37.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly38.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly39.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly40.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 793,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly41.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 925,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly42.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly44.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly45.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly46.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly47.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly48.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly49.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly50.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly51.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly52.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly53.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly67.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly68.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 793,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly69.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 925,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly70.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly71.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly72.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly73.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly74.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly75.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly77.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly78.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly79.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly80.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly81.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly82.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "orageJelly83.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:f2ce93e99af0f0952988c4dac318d4a7:a41e2b77a5f0c27a9a2ff5753f1e9bde:abf06ecf15180c743d3c0f3e872b3c8d$"
+	}
+}

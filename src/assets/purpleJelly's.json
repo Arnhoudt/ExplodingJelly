@@ -1,0 +1,1889 @@
+{
+	"textures": [
+		{
+			"image": "purpleJelly&#39;s.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 822,
+				"h": 1980
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "purpleJelly00.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly06.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly25.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1057,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly26.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1189,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly27.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1321,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly28.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1453,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly29.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1585,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly30.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1717,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly31.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 1,
+						"y": 1849,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly32.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly33.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly35.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly36.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly54.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly55.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly56.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly57.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1057,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly58.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1189,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly59.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1321,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly60.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1453,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly61.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1585,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly62.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1717,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly63.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 139,
+						"y": 1849,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly64.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly65.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 133,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly66.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 265,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly84.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 397,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly85.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 529,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly86.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 661,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly87.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 793,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly88.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 136,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 925,
+						"w": 136,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly09.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 277,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly76.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly20.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 413,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly22.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly37.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly38.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly39.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly40.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 793,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly41.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 415,
+						"y": 925,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly42.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly44.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly45.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly46.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly47.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly48.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 549,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly49.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly50.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly51.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly52.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly53.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly67.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly68.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 793,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly69.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 551,
+						"y": 925,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly70.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1057,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly71.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1189,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly72.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1321,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly73.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1453,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly74.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1585,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly75.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1717,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly77.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 685,
+						"y": 1849,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly78.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 1,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly79.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 133,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly80.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 265,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly81.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 397,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly82.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 529,
+						"w": 134,
+						"h": 130
+					}
+				},
+				{
+					"filename": "purpleJelly83.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 150
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 11,
+						"w": 134,
+						"h": 130
+					},
+					"frame": {
+						"x": 687,
+						"y": 661,
+						"w": 134,
+						"h": 130
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b13006a0c76996e54ff5022728c2a0d0:fff109e3732e528a2d08f72372c51314:8826f525c99bba35a01d4d819cf13d9b$"
+	}
+}
