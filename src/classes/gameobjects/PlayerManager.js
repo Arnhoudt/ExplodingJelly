@@ -40,14 +40,6 @@ export default class PlayerManager {
         frameRate: 18 + index,
         repeat: - 1
       });
-
-      this.gameScene.add
-        .sprite(
-          this.placex + this.i * this.placex2,
-          125,
-          `${player.color}Jelly's`
-        )
-        .setScale(0.8);
       this.gameScene.add
         .sprite(
           this.placex + this.i * this.placex2,

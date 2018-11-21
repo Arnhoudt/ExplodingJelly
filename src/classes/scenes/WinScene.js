@@ -30,6 +30,7 @@ export default class WinScene extends Phaser.Scene {
     });
     this.add
       .sprite(307, 418, `${this.color}Jelly's`)
+      .setScale(0.55)
       .play(`${this.color}Animatie`);
 
     this.goToStart = this.add.sprite(190, 710, `goToStart`).setInteractive();
