@@ -51,7 +51,6 @@ export default class JellyManager {
       yPosition,
       `${player.color}Jelly${this.jellys[x][y].grow}`
     );
-    player.score ++;
   }
 
   changeJelly(x, y, xPosition, yPosition, player) {
