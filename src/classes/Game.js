@@ -5,6 +5,7 @@ import GameScene from './scenes/GameScene.js';
 import ChooseScene from './scenes/ChooseScene.js';
 import WinScene from './scenes/WinScene.js';
 import ScoresScene from './scenes/ScoresScene.js';
+import TutorialScene from './scenes/TutorialScene.js';
 
 class Game extends Phaser.Game {
   constructor() {
@@ -20,7 +21,8 @@ class Game extends Phaser.Game {
         ChooseScene,
         GameScene,
         WinScene,
-        ScoresScene
+        ScoresScene,
+        TutorialScene
       ],
       backgroundColor: 0xffffff,
       version: `1.0`,
