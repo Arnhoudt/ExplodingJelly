@@ -257,24 +257,31 @@ export default class JellyManager {
   splash(x, y, xPosition, yPosition, player, vakjeId) {
     if (x >= 0 && y >= 0 && x <= 7 && y <= 7) {
       //voor te controleren of dat er gaan jelly buiten het scherm gaan
+      console.log('test ' + x + ' ' + y);
       if (this.jellys[x][y] !== undefined) {
+        console.log('test ' + x + ' ' + y);
         if (x === 0 || y === 0 || x === 7 || y === 7) {
-          //controle rand
-          if (this.jellys[x][y].grow >= 2) {
-            player.score ++;
-            this.executeSplashes2.push({
-              x: x,
-              y: y,
-              xPosition: xPosition,
-              yPosition: yPosition,
-              player: player,
-              vakjeId: vakjeId
-            });
+          console.log('test ' + x + ' ' + y);
+          if (x === 0 && y === 0) {
+            console.log('corner');
           } else {
-            this.tokenJellys = this.jellys[x][y].grow + 1;
-            this.jellys[x][y].color = player.color;
-            this.jellys[x][y].grow = this.tokenJellys;
-            this.changeJelly(x, y, xPosition, yPosition, player);
+            //controle rand
+            if (this.jellys[x][y].grow >= 2) {
+              player.score++;
+              this.executeSplashes2.push({
+                x: x,
+                y: y,
+                xPosition: xPosition,
+                yPosition: yPosition,
+                player: player,
+                vakjeId: vakjeId
+              });
+            } else {
+              this.tokenJellys = this.jellys[x][y].grow + 1;
+              this.jellys[x][y].color = player.color;
+              this.jellys[x][y].grow = this.tokenJellys;
+              this.changeJelly(x, y, xPosition, yPosition, player);
+            }
           }
         } else {
           if (this.jellys[x][y].grow < 3) {

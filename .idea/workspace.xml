@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="95d1012e-354d-41ed-8ef9-47e39e21753e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/assets/shadow.png" afterPath="$PROJECT_DIR$/src/assets/shadow.png" />
+      <change beforePath="$PROJECT_DIR$/src/assets/mask1.png" afterPath="$PROJECT_DIR$/src/assets/mask1.png" />
+      <change beforePath="$PROJECT_DIR$/src/classes/gameobjects/JellyManager.js" afterPath="$PROJECT_DIR$/src/classes/gameobjects/JellyManager.js" />
       <change beforePath="$PROJECT_DIR$/src/classes/scenes/TutorialScene.js" afterPath="$PROJECT_DIR$/src/classes/scenes/TutorialScene.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,11 +22,9 @@
       <file leaf-file-name="PlayerManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/gameobjects/PlayerManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-              <folding>
-                <marker date="1542807826269" expanded="true" signature="1232:1234" ph="//..." />
-              </folding>
+            <state relative-caret-position="615">
+              <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -33,20 +32,18 @@
       <file leaf-file-name="GameScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/scenes/GameScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#55#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="174" column="71" lean-forward="false" selection-start-line="174" selection-start-column="70" selection-end-line="174" selection-end-column="71" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TutorialScene.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TutorialScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/classes/scenes/TutorialScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="240" column="21" lean-forward="true" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+            <state relative-caret-position="1570">
+              <caret line="260" column="21" lean-forward="false" selection-start-line="260" selection-start-column="21" selection-end-line="260" selection-end-column="21" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -118,14 +115,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JellyManager.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JellyManager.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/classes/gameobjects/JellyManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1260">
+              <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
               <folding>
-                <marker date="1542817789904" expanded="true" signature="86:225" ph="{...}" />
-                <marker date="1542817789904" expanded="true" signature="3652:3658" ph="{...}" />
+                <marker date="1543061251107" expanded="true" signature="86:225" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -149,6 +145,10 @@
       <find>shadow</find>
       <find>add.image</find>
       <find>pointerup</find>
+      <find>vak</find>
+      <find>vakjes</find>
+      <find>velo</find>
+      <find>updatejelly</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/classes/scenes/PreloadScene.js" />
         <option value="$PROJECT_DIR$/src/classes/scenes/ChooseScene.js" />
         <option value="$PROJECT_DIR$/src/classes/scenes/StartScene.js" />
+        <option value="$PROJECT_DIR$/src/classes/gameobjects/JellyManager.js" />
         <option value="$PROJECT_DIR$/src/classes/scenes/TutorialScene.js" />
       </list>
     </option>
@@ -284,12 +285,12 @@
       <workItem from="1542791242169" duration="787000" />
       <workItem from="1542799325019" duration="13534000" />
       <workItem from="1542866713835" duration="448000" />
-      <workItem from="1543045719008" duration="6110000" />
+      <workItem from="1543045719008" duration="14088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20879000" />
+    <option name="totallyTimeSpent" value="28857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -322,7 +323,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -330,9 +333,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <marker date="1542807826269" expanded="true" signature="1232:1234" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -340,9 +341,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -403,8 +402,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1542817789904" expanded="true" signature="86:225" ph="{...}" />
-            <marker date="1542817789904" expanded="true" signature="3652:3658" ph="{...}" />
+            <marker date="1543061251107" expanded="true" signature="86:225" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -423,9 +421,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <marker date="1542807826269" expanded="true" signature="1232:1234" ph="//..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -433,9 +429,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -496,8 +490,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1542817789904" expanded="true" signature="86:225" ph="{...}" />
-            <marker date="1542817789904" expanded="true" signature="3652:3658" ph="{...}" />
+            <marker date="1543061251107" expanded="true" signature="86:225" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -546,24 +539,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/gameobjects/JellyManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1542817789904" expanded="true" signature="86:225" ph="{...}" />
-            <marker date="1542817789904" expanded="true" signature="3652:3658" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/gameobjects/PlayerManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <marker date="1542807826269" expanded="true" signature="1232:1234" ph="//..." />
-          </folding>
+        <state relative-caret-position="615">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -604,16 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/classes/scenes/GameScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/scenes/ChooseScene.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -630,12 +600,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/scenes/GameScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="174" column="71" lean-forward="false" selection-start-line="174" selection-start-column="70" selection-end-line="174" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/classes/scenes/TutorialScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="240" column="21" lean-forward="true" selection-start-line="240" selection-start-column="21" selection-end-line="240" selection-end-column="21" />
+        <state relative-caret-position="1570">
+          <caret line="260" column="21" lean-forward="false" selection-start-line="260" selection-start-column="21" selection-end-line="260" selection-end-column="21" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/classes/gameobjects/JellyManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+          <folding>
+            <marker date="1543061251107" expanded="true" signature="86:225" ph="{...}" />
           </folding>
         </state>
       </provider>
