@@ -1,5 +1,6 @@
 import JellyManager from '../gameobjects/JellyManager';
 import PlayerManager from '../gameobjects/PlayerManager';
+import Vakje from '../gameobjects/Vakje';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -58,27 +59,33 @@ export default class GameScene extends Phaser.Scene {
   }
 
   createVakjes() {
+    let vakjeId = - 1;
     for (let i = 0;i < 8;i ++) {
-      for (let j = 0;j < 8;j ++) {
+      for (let j = 0, id = vakjeId + 1;j < 8;j ++, id ++) {
         this.vakjes.push(
-          this.add
-            .sprite(
-              100 + i * 60,
-              335 + j * 60,
-              `${this.playerManager.players[0].color}Vakje`
-            )
-            .setInteractive()
-            .on(`pointerup`, () => {
-              this.updateJelly(
-                i,
-                j,
+          new Vakje(
+            this.add
+              .sprite(
                 100 + i * 60,
                 335 + j * 60,
-                this.playerManager.players
-              );
-              this.specialAbility();
-            })
+                `${this.playerManager.players[0].color}Vakje`
+              )
+              .setInteractive()
+              .on(`pointerup`, () => {
+                this.updateJelly(
+                  i,
+                  j,
+                  100 + i * 60,
+                  335 + j * 60,
+                  this.playerManager.players,
+                  id
+                );
+                this.specialAbility();
+              }),
+            id
+          )
         );
+        vakjeId = id;
       }
     }
   }
@@ -125,19 +132,20 @@ export default class GameScene extends Phaser.Scene {
     });
   }
 
-  updateJelly(x, y, xPosition, yPosition, players) {
+  updateJelly(x, y, xPosition, yPosition, players, vakjeId) {
     players.forEach(player => {
-      if (player.active)
+      if (player.active) {
         this.verify = this.jellyManager.verifyPlayerMove(
           x,
           y,
           xPosition,
           yPosition,
-          player
+          player,
+          vakjeId
         );
+      }
     });
     this.playerManager.updatePlayer(this.verify);
-    this.checkWon();
   }
 
   checkWon() {
@@ -159,7 +167,7 @@ export default class GameScene extends Phaser.Scene {
         }
       });
     });
-    if (this.allTheSame === true && this.i > 2)
+    if (this.allTheSame && this.i > 2)
       this.scene.start(`win`, {color: this.color1});
   }
 

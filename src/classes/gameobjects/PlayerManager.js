@@ -31,7 +31,6 @@ export default class PlayerManager {
       this.placex2 = 155;
     }
     this.players.forEach((player, index) => {
-      console.log(player.color + index);
       this.gameScene.anims.create({
         key: `${player.color}Animatie`,
         frames: this.gameScene.anims.generateFrameNames(
@@ -131,7 +130,7 @@ export default class PlayerManager {
       this.players.forEach(player => {
         if (player.active) {
           this.gameScene.vakjes.forEach(vakje => {
-            vakje.setTexture(`${player.color}Vakje`);
+            vakje.get(`sprite`).setTexture(`${player.color}Vakje`);
           });
         }
       });
