@@ -31,10 +31,17 @@ export default class PlayerManager {
       this.placex2 = 155;
     }
     this.players.forEach((player, index) => {
+      this.gameScene.anims.remove(`${player.color}Animatie`);
       this.gameScene.anims.create({
         key: `${player.color}Animatie`,
         frames: this.gameScene.anims.generateFrameNames(
-          `${player.color}Jelly's`
+          `${player.color}Jelly's`,
+          {
+            prefix: `${player.color}Jelly`,
+            start: 0,
+            end: 88,
+            suffix: `.png`
+          }
         ),
         frameRate: 18 + index,
         repeat: - 1

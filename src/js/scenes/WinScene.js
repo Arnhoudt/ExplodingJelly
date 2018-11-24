@@ -22,9 +22,15 @@ export default class WinScene extends Phaser.Scene {
       quantity: 1,
       scale: {start: 0.1, end: 1}
     });
+    this.anims.remove(`${this.color}Animatie`);
     this.animation = this.anims.create({
       key: `${this.color}Animatie`,
-      frames: this.anims.generateFrameNames(`${this.color}Jelly's`),
+      frames: this.anims.generateFrameNames(`${this.color}Jelly's`, {
+        prefix: `${this.color}Jelly`,
+        start: 0,
+        end: 88,
+        suffix: `.png`
+      }),
       frameRate: 20,
       repeat: - 1
     });
