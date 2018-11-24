@@ -52,7 +52,7 @@ export default class PlayerManager {
           125,
           `${player.color}Jelly's`
         )
-        .setScale(0.45)
+        .setScale(0.42)
         .play(`${player.color}Animatie`);
       this.gameScene.add
         .text(
@@ -72,6 +72,14 @@ export default class PlayerManager {
         .setOrigin(0.5, 0);
       this.i ++;
     });
+    this.playerTurn = this.gameScene.add
+      .text(310, 15, `${players[0][0]}`, {
+        fontFamily: 'Ubuntu',
+        fontStyle: 'Bold',
+        fontSize: 24,
+        color: `${players[0][1]}`
+      })
+      .setOrigin(0.5, 0);
   }
 
   textConfig(player) {
@@ -136,6 +144,10 @@ export default class PlayerManager {
 
       this.players.forEach(player => {
         if (player.active) {
+          if (this.playerTurn) this.playerTurn.destroy();
+          this.playerTurn = this.gameScene.add
+            .text(310, 15, `${player.name}`, this.textConfig(player))
+            .setOrigin(0.5, 0);
           this.gameScene.vakjes.forEach(vakje => {
             vakje.get(`sprite`).setTexture(`${player.color}Vakje`);
           });
