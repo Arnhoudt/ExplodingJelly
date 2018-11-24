@@ -59,7 +59,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   createVakjes() {
-    let vakjeId = - 1;
+    let vakjeId = 0;
     for (let i = 0;i < 8;i ++) {
       for (let j = 0, id = vakjeId + 1;j < 8;j ++, id ++) {
         this.vakjes.push(

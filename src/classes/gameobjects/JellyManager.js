@@ -223,8 +223,8 @@ export default class JellyManager {
         executeSplash.vakjeId - 1
       );
     });
-    this.splash1;
-    this.splash2;
+    this.splash1 = undefined;
+    this.splash2 = undefined;
     this.quantity = 0;
     this.executeSplashes2.forEach((splash, index) => {
       if (!this.splash1) {
