@@ -9,6 +9,17 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   init(players) {
+
+    this.fontSizeTitle = 76;
+    this.fontSizeText = 22;
+    this.fontSizenote = 14;
+    this.textColorOrange = '#ff5000';
+    this.defaultFontFamily = 'Georgia';
+    this.fontWeightTitle = 'bold';
+    this.fontWeightText = 'bold';
+    this.fontWeightnote = 'bold';
+
+
     players = [['player', 'red'], ['computer', 'blue']];
     this.vakjes = [];
     this.jellyManager = new JellyManager(this);
@@ -20,10 +31,11 @@ export default class TutorialScene extends Phaser.Scene {
   preload() {
     this.load.image('mask', 'src/assets/mask1.png');
     this.load.image('shadow', 'src/assets/shadow.png');
+    this.load.image('hiJelly', 'src/assets/hiJelly.png');
   }
 
   create() {
-
+    this.tutorialSceneNr = 1;
     this.add.image(
       this.sys.game.config.width / 2 + 9,
       this.sys.game.config.height - 181,
@@ -33,29 +45,29 @@ export default class TutorialScene extends Phaser.Scene {
     this.createVakjes();
     this.shadow = this.add.graphics();
 
-    const spotlight = this.make.sprite({
-      x: 400,
-      y: 300,
-      key: 'mask',
-      add: false
-    });
 
+    // this.input.on('pointermove', function (pointer) {
+    //
+    //   spotlight.x = pointer.x;
+    //   spotlight.y = pointer.y;
+    //
+    // });
 
-
-    this.input.on('pointermove', function (pointer) {
-
-      spotlight.x = pointer.x;
-      spotlight.y = pointer.y;
-
-    });
-
-    const shadow = this.add.image(0, 0, 'shadow');
-    shadow.setScale(20);
-    shadow.mask = new Phaser.Display.Masks.BitmapMask(this, spotlight);
-    shadow.mask.invertAlpha = true;
   }
 
   update() {
+
+    switch (this.tutorialSceneNr) {
+    case 1 : this.tutorialSceneHi();
+      break;
+    case 2: this.tutorialSceneHiWaitForClick();
+      break;
+    case 3: this.tutorialFirstJelly();
+      break;
+    case 4: this.tutorialFirstJellyWaitForClick();
+      break;
+    }
+
     this.i = 0;
     this.playerManager.playerScores.forEach(score => {
       score.setText(`${this.playerManager.players[this.i].score}`);
@@ -97,7 +109,7 @@ export default class TutorialScene extends Phaser.Scene {
               `${this.playerManager.players[0].color}Vakje`
             )
             .setInteractive()
-            .on(`pointerup`, () => {
+            .on(`DISABLEDpointerupDISABLED`, () => {
               this.updateJelly(
                 i,
                 j,
@@ -170,9 +182,78 @@ export default class TutorialScene extends Phaser.Scene {
 
 
   makeScene() {
-    const circle = new Phaser.Geom.Circle(180, 130, 175);
-    const graphics = this.add.graphics();
-    graphics.lineStyle(100, 0x000000, 0.1);
-    graphics.strokeCircleShape(circle);
+
+  }
+
+
+
+  waitForClick() {
+
+  }
+  setSpotlight(x, y, radius) {
+    const spotlight = this.make.sprite({
+      x: x,
+      y: y,
+      key: 'mask',
+      add: false
+    });
+    spotlight.setScale(radius / 100);
+    const shadow = this.add.image(0, 0, 'shadow');
+    shadow.setScale(20);
+    shadow.mask = new Phaser.Display.Masks.BitmapMask(this, spotlight);
+    shadow.mask.invertAlpha = true;
+    return ([spotlight, shadow]);
+  }
+  destroyAssets(assets) {
+    for (let i = 0;i < assets.length;i ++) {
+      assets[i].destroy();
+    }
+  }
+
+  //--------------SCENES--------------//
+
+  //scene1
+  tutorialSceneHi() {
+    this.assets = [];
+    const spotlight = this.setSpotlight(0, 0, 0);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(this.add.text(90, 20, 'Hey,', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(90, 120, 'So... what is the point of the game?', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(90, 150, 'You need to explode jelly\'s', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.add.text(80, 400, 'click on the jelly to', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.add.text(93, 430, 'make it explode', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.hiJelly = this.add.image(350, 600, 'hiJelly');
+    this.assets.push(this.hiJelly);
+    this.hiJelly.setInteractive();
+    this.tutorialSceneNr = 2;
+  }
+
+  tutorialSceneHiWaitForClick(){
+    this.hiJelly.on('pointerdown', () => {
+      this.destroyAssets(this.assets);
+      this.tutorialSceneNr = 3;
+    });
+  }
+
+  //scene2
+  tutorialFirstJelly() {
+    this.assets = [];
+    const spotlight = this.setSpotlight(0, 0, 0);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(this.add.text(90, 20, 'Great!', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(90, 120, 'now it is type to place your first jelly on the board', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(90, 150, 'You need to explode jelly\'s', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.add.text(80, 400, 'click on the jelly to', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.add.text(93, 430, 'make it explode', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.hiJelly = this.add.image(350, 600, 'hiJelly');
+    this.assets.push(this.hiJelly);
+    this.hiJelly.setInteractive();
+    this.tutorialSceneNr = 4;
+  }
+  tutorialFirstJellyWaitForClick() {
+
   }
 }
+
