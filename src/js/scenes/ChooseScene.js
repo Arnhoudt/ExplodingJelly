@@ -23,6 +23,16 @@ export default class ChooseScene extends Phaser.Scene {
     this.blue = this.add.sprite(450, 590, `blueTextEntry`).setInteractive();
     this.start = this.add.sprite(311, 750, `start`).setInteractive();
 
+    this.back = this.add.sprite(30, 30, `back`).setInteractive();
+    this.back.on(`pointerdown`, () => {
+      this.back.setScale(1.1);
+    });
+
+    this.back.on(`pointerup`, () => {
+      this.back.setScale(1);
+      this.scene.start(`start`);
+    });
+
     this.start.on('pointerdown', () => this.start.setScale(1.03));
     this.start.on('pointerup', () => {
       this.start.setScale(1);

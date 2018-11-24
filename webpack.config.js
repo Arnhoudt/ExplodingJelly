@@ -24,6 +24,7 @@ module.exports = (env, {mode}) => {
         },
         {
           test: /\.(jpe?g|png|svg|webp|mp3|json)$/,
+          type: 'javascript/auto',
           use: {
             loader: 'file-loader',
             options: {
