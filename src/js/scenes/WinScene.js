@@ -5,6 +5,7 @@ export default class WinScene extends Phaser.Scene {
     super({
       key: `win`
     });
+    this.enabled = true;
   }
 
   init(data) {
@@ -17,13 +18,46 @@ export default class WinScene extends Phaser.Scene {
         this.index = index;
       }
     });
-    this.winner = this.players.splice(this.index, 1);
-    this.winner = this.winner[0];
   }
 
   preload() {}
 
   create() {
+    if (this.enabled) {
+      this.winner = this.players.splice(this.index, 1);
+      this.winner = this.winner[0];
+
+      if (this.players[0]) {
+        this.player1Name = this.players[0].name;
+        this.player1Color = this.players[0].color;
+      }
+      if (this.players[1]) {
+        this.player2Name = this.players[1].name;
+        this.player2Color = this.players[1].color;
+      }
+      if (this.players[2]) {
+        this.player3Name = this.players[2].name;
+        this.player3Color = this.players[2].color;
+      }
+      saveScore(
+        this.player1Name,
+        this.player1Color,
+        this.player2Name,
+        this.player2Color,
+        this.player3Name,
+        this.player3Color,
+        this.winner.name,
+        this.winner.color
+      ).then(data => {
+        if (data.result === `ok`) {
+          console.log('Score is goed doorgestuurd');
+        } else {
+          console.log('Score is NIET goed doorgestuurd');
+        }
+      });
+      this.enabled = false;
+    }
+
     this.add.image(307, 418, `bg_win`);
     this.particles = this.add.particles(`star`);
     this.particles.createEmitter({
@@ -73,35 +107,6 @@ export default class WinScene extends Phaser.Scene {
       this.placex = 180;
       this.placex2 = 130;
     }
-
-    if (this.players[0]) {
-      this.player1Name = this.players[0].name;
-      this.player1Color = this.players[0].color;
-    }
-    if (this.players[1]) {
-      this.player2Name = this.players[1].name;
-      this.player2Color = this.players[1].color;
-    }
-    if (this.players[2]) {
-      this.player3Name = this.players[2].name;
-      this.player3Color = this.players[2].color;
-    }
-    saveScore(
-      this.player1Name,
-      this.player1Color,
-      this.player2Name,
-      this.player2Color,
-      this.player3Name,
-      this.player3Color,
-      this.winner.name,
-      this.winner.color
-    ).then(data => {
-      if (data.result === `ok`) {
-        console.log('Score is goed doorgestuurd');
-      } else {
-        console.log('Score is NIET goed doorgestuurd');
-      }
-    });
     this.players.forEach((player, index) => {
       this.anims.remove(`${player.color}Animatie`);
       this.anims.create({

@@ -15,6 +15,7 @@ export default class GameScene extends Phaser.Scene {
     this.playerManager = new PlayerManager(this);
     this.playerManager.addPlayers(players);
     this.pushed = 0;
+    this.enabled = true;
   }
 
   preload() {}
@@ -165,8 +166,9 @@ export default class GameScene extends Phaser.Scene {
         }
       });
     });
-    if (this.allTheSame && this.i > 2) {
+    if (this.allTheSame && this.i > 2 && this.enabled) {
       this.scene.start(`win`, {players: this.playerManager.players});
+      this.enabled = false;
     }
   }
 

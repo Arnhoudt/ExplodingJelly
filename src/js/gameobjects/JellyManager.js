@@ -220,7 +220,6 @@ export default class JellyManager {
     this.movingJellys4 = [];
     this.gameScene.checkWon();
     this.executeSplash();
-    this.gameScene.checkWon();
   }
 
   splashAllDirections(executeSplash) {

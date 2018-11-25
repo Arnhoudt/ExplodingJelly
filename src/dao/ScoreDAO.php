@@ -5,7 +5,7 @@ require_once(__DIR__ . '/DAO.php');
 class ScoreDAO extends DAO{
 
   public function selectAll(){
-    $sql = "SELECT * FROM `scores` ORDER BY `date` DESC LIMIT 10";
+    $sql = "SELECT * FROM `scores` ORDER BY `date` DESC LIMIT 6";
     $stmt = $this->pdo->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
