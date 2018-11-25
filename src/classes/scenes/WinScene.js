@@ -6,6 +6,7 @@ export default class WinScene extends Phaser.Scene {
   }
 
   init(data) {
+    console.log("win");
     this.color = data.color;
   }
 

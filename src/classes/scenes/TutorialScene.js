@@ -10,14 +10,15 @@ export default class TutorialScene extends Phaser.Scene {
 
   init(players) {
 
-    this.fontSizeTitle = 76;
-    this.fontSizeText = 22;
+    this.fontSizeTitle = 62;
+    this.fontSizeText = 20;
     this.fontSizenote = 14;
     this.textColorOrange = '#ff5000';
     this.defaultFontFamily = 'Georgia';
     this.fontWeightTitle = 'bold';
     this.fontWeightText = 'bold';
     this.fontWeightnote = 'bold';
+    this.marginLeft = 60;
 
     this.boardActive = false;
     this.forceSquare = [- 1, - 1];
@@ -68,7 +69,43 @@ export default class TutorialScene extends Phaser.Scene {
       break;
     case 3: this.tutorialFirstJelly();
       break;
-    case 4: this.tutorialFirstJellyWaitForClick();
+    case 4: this.tutorialFirstJellyWaitForJelly();
+      break;
+    case 5: this.tutorialGrowJellySize2();
+      break;
+    case 6: this.tutorialWaitForGrowJellySize2();
+      break;
+    case 7: this.tutorialGrowJellySize3();
+      break;
+    case 8: this.tutorialWaitForGrowJellySize3();
+      break;
+    case 9: this.tutorialExplodeJelly();
+      break;
+    case 10: this.tutorialWaitForExplodeJelly();
+      break;
+    case 11: this.tutorialExplainExplosion();
+      break;
+    case 12: this.tutorialWaitForExplainExplosion();
+      break;
+    case 13: this.tutorialGrowMechanics1();
+      break;
+    case 14: this.waitForClick(15);
+      break;
+    case 15: this.tutorialGrowMechanics2();
+      break;
+    case 16: this.waitForClick(17);
+      break;
+    case 17: this.tutorialExplodeSide();
+      break;
+    case 18: this.tutorialWaitForExplodeSide();
+      break;
+    case 19: this.tutorialChaining();
+      break;
+    case 20: this.tutorialWaitForChaining();
+      break;
+    case 21: this.tutorialTimeToWin();
+      break;
+    case 22: this.tutorialWaitForTimeToWin();
       break;
     }
 
@@ -218,15 +255,15 @@ export default class TutorialScene extends Phaser.Scene {
 
   //--------------SCENES--------------//
 
-  //scene1
+  //scene 1
   tutorialSceneHi() {
     this.assets = [];
     const spotlight = this.setSpotlight(0, 0, 0);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(this.add.text(90, 20, 'Hey,', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
-    this.assets.push(this.add.text(90, 120, 'So... what is the point of the game?', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
-    this.assets.push(this.add.text(90, 150, 'You need to explode jelly\'s', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.add.text(this.marginLeft, 20, 'Hey,', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(this.marginLeft, 120, 'So... what is the point of the game?', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(this.marginLeft, 150, 'You need to explode jelly\'s', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
     this.assets.push(this.add.text(80, 400, 'click on the jelly to', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
     this.assets.push(this.add.text(93, 430, 'make it explode', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
     this.hiJelly = this.add.image(350, 600, 'hiJelly');
@@ -242,14 +279,14 @@ export default class TutorialScene extends Phaser.Scene {
     });
   }
 
-  //scene2
+  //scene 2
   tutorialFirstJelly() {
     this.assets = [];
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(this.add.text(90, 20, 'Great!', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
-    this.assets.push(this.add.text(90, 120, 'Now it is time to place your first jelly on the board', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(this.marginLeft, 20, 'Great!', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(this.marginLeft, 120, 'Now it is time to place your first jelly on the board', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
     this.assets.push(this.add.text(180, 220, 'Click on the blue square to place the jelly', {fontSize: this.fontSizenote, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
     this.highlight = this.add.image(158, 395, 'highlight');
     this.highlight.setScale(0.65);
@@ -257,10 +294,150 @@ export default class TutorialScene extends Phaser.Scene {
     this.boardActive = true;
     this.tutorialSceneNr = 4;
   }
-  tutorialFirstJellyWaitForClick() {
-    if(this.vakjes[9]){
-
+  tutorialFirstJellyWaitForJelly() {
+    if (this.jellyManager.isThereAJellyAt(1, 1)) {
+      this.destroyAssets(this.assets);
+      this.tutorialSceneNr = 5;
     }
+  }
+
+  //scene 3
+  tutorialGrowJellySize2() {
+    console.log('not in loop');
+    this.computer = this.playerManager.getPlayerByName('computer');
+    this.jellyManager.addJelly(7,
+      7,
+      100 + 7 * 60,
+      335 + 7 * 60,
+      this.computer);
+    this.playerManager.forcePlayerToBeActive(
+      this.playerManager.getPlayerByName('player')
+    );
+    this.assets = [];
+    const spotlight = this.setSpotlight(300, 600, 700);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(this.add.text(this.marginLeft, 20, 'You got it!', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(this.marginLeft, 120, 'Your opponent has placed his jelly in the corner. Don\' worry', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(this.marginLeft, 150, 'about him, grow your jelly by clicking on the jelly again.', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(180, 220, 'Click on the blue square to grow the jelly', {fontSize: this.fontSizenote, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.highlight = this.add.image(158, 395, 'highlight'));
+    this.highlight.setScale(0.65);
+    this.forceSquare = [1, 1];
+    this.boardActive = true;
+    this.tutorialSceneNr = 6;
+  }
+  tutorialWaitForGrowJellySize2() {
+    if (this.jellyManager.isThereAJellyAt(1, 1) && this.jellyManager.sizeOfJellyAt(1, 1) === 2) {
+      this.destroyAssets(this.assets);
+      this.tutorialSceneNr = 7;
+    }
+  }
+
+  //scene 4
+  tutorialGrowJellySize3() {
+    console.log('not in loop');
+    this.computer = this.playerManager.getPlayerByName('computer');
+    this.jellyManager.addJelly(2,
+      1,
+      100 + 2 * 60,
+      335 + 1 * 60,
+      this.computer);
+    this.playerManager.forcePlayerToBeActive(
+      this.playerManager.getPlayerByName('player')
+    );
+    this.assets = [];
+    const spotlight = this.setSpotlight(300, 600, 700);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(this.add.text(this.marginLeft, 20, 'What???', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(this.marginLeft, 120, 'Your opponent placed a jelly next to yours!', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(this.marginLeft, 150, 'We need to grow our jelly once more to be able to explode', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(180, 220, 'Click on the blue square to grow the jelly', {fontSize: this.fontSizenote, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.highlight = this.add.image(158, 395, 'highlight'));
+    this.highlight.setScale(0.65);
+    this.forceSquare = [1, 1];
+    this.boardActive = true;
+    this.tutorialSceneNr = 8;
+  }
+  tutorialWaitForGrowJellySize3() {
+    if (this.jellyManager.isThereAJellyAt(1, 1) && this.jellyManager.sizeOfJellyAt(1, 1) === 3) {
+      this.destroyAssets(this.assets);
+      this.tutorialSceneNr = 9;
+    }
+  }
+
+  //scene 5
+  tutorialExplodeJelly() {
+    console.log('not in loop');
+    this.computer = this.playerManager.getPlayerByName('computer');
+    this.jellyManager.addJelly(6,
+      5,
+      100 + 6 * 60,
+      335 + 5 * 60,
+      this.computer);
+    this.playerManager.forcePlayerToBeActive(
+      this.playerManager.getPlayerByName('player')
+    );
+    this.assets = [];
+    const spotlight = this.setSpotlight(300, 600, 700);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(this.add.text(this.marginLeft, 20, 'Make it explode!', {fontSize: this.fontSizeTitle, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightTitle}));
+    this.assets.push(this.add.text(this.marginLeft, 120, 'Your jelly is big enough to explode, tap on the jelly and', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(this.marginLeft, 150, 'watch what happens', {fontSize: this.fontSizeText, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: this.fontWeightText}));
+    this.assets.push(this.add.text(180, 220, 'Click on the blue square to explode the jelly', {fontSize: this.fontSizenote, fill: this.textColorOrange, fontFamily: this.defaultFontFamily, fontWeight: 'bold'}));
+    this.assets.push(this.highlight = this.add.image(158, 395, 'highlight'));
+    this.highlight.setScale(0.65);
+    this.forceSquare = [1, 1];
+    this.boardActive = true;
+    this.tutorialSceneNr = 10;
+  }
+
+  tutorialWaitForExplodeJelly() {
+
+  }
+
+  //scene 6
+  tutorialExplainExplosion() {
+
+  }
+  tutorialWaitForExplainExplosion() {
+
+  }
+
+  //scene 7
+  tutorialGrowMechanics1() {
+
+  }
+
+  //scene 8
+  tutorialGrowMechanics2() {
+
+  }
+
+  //scene 9
+  tutorialExplodeSide() {
+
+  }
+  tutorialWaitForExplodeSide() {
+
+  }
+
+  //scene 10
+  tutorialChaining() {
+
+  }
+  tutorialWaitForChaining() {
+
+  }
+
+  //scene 11
+  tutorialTimeToWin() {
+
+  }
+  tutorialWaitForTimeToWin(){
+
   }
 }
 
