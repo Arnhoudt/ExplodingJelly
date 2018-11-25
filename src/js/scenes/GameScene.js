@@ -145,7 +145,7 @@ export default class GameScene extends Phaser.Scene {
         );
       }
     });
-    this.playerManager.updatePlayer(this.verify);
+    this.playerManager.updatePlayer(this.verify, this);
   }
 
   checkWon() {

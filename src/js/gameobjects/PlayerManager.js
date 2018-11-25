@@ -6,7 +6,28 @@ export default class PlayerManager {
     this.players = [];
     this.playerScores = [];
   }
+  getPlayerByName(name) {
+    this.players.forEach(player => {
+      if (player['name'] === name) {
+        this.player = player;
+      }
+    });
+    if (this.player !== undefined) {
+      return this.player;
+    } else {
+      return false;
 
+    }
+  }
+  forcePlayerToBeActive(target) {
+    this.players.forEach(player => {
+      if (target === player) {
+        player.active = true;
+      } else {
+        player.active = false;
+      }
+    });
+  }
   addPlayers(players) {
     this.i = 0;
     players.forEach(player => {

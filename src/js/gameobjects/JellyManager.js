@@ -21,6 +21,14 @@ export default class JellyManager {
     this.executeSplashes2 = [];
   }
 
+  isThereAJellyAt(x, y) {
+    return this.jellys[x][y] !== undefined;
+  }
+
+  sizeOfJellyAt(x, y) {
+    return this.jellys[x][y]['grow'];
+  }
+
   verifyPlayerMove(x, y, xPosition, yPosition, player, vakjeId) {
     if (this.jellys[x][y] !== undefined) {
       if (this.jellys[x][y].color !== player.color) {
@@ -191,7 +199,6 @@ export default class JellyManager {
     this.executeSplashes.forEach(executeSplash => {
       this.splashAllDirections(executeSplash);
     });
-
     for (let i = 0;i <= this.executeSplashes2.length;i ++) {
       for (let j = 0;j < i;j ++) {
         if (this.executeSplashes2[j] && this.executeSplashes2[i]) {
@@ -213,6 +220,7 @@ export default class JellyManager {
     this.movingJellys4 = [];
     this.gameScene.checkWon();
     this.executeSplash();
+    this.gameScene.checkWon();
   }
 
   splashAllDirections(executeSplash) {
