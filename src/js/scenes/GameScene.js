@@ -16,6 +16,7 @@ export default class GameScene extends Phaser.Scene {
     this.playerManager.addPlayers(players);
     this.pushed = 0;
     this.enabled = true;
+    this.muteVolume = false;
   }
 
   preload() {}
@@ -137,7 +138,9 @@ export default class GameScene extends Phaser.Scene {
   }
 
   updateJelly(x, y, xPosition, yPosition, players, vakjeId) {
-    this.sound.add(`splash` + ((Math.floor(Math.random() * 5) + 1).toString()));//.play();
+    if (this.muteVolume === false) {
+      this.sound.add(`splash` + ((Math.floor(Math.random() * 5) + 1).toString())).play();
+    }
     players.forEach(player => {
       if (player.active) {
         this.verify = this.jellyManager.verifyPlayerMove(
@@ -219,11 +222,13 @@ export default class GameScene extends Phaser.Scene {
     this.mute.destroy();
     this.createUnmute();
     this.themeSong.setVolume(0);
+    this.muteVolume = true;
   }
   volumeUp() {
     this.unmute.destroy();
     this.createMute();
     this.themeSong.setVolume(1);
+    this.muteVolume = false;
   }
 
   createBack() {
