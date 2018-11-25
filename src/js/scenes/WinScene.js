@@ -10,11 +10,10 @@ export default class WinScene extends Phaser.Scene {
 
   init(data) {
     this.players = data.players;
-    this.highestScore = 0;
+    this.color = data.winner;
     this.index = 0;
     this.players.forEach((player, index) => {
-      if (player.score > this.highestScore) {
-        this.highestScore = player.score;
+      if (player.color > this.color) {
         this.index = index;
       }
     });

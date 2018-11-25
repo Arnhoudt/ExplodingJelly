@@ -390,7 +390,7 @@ export default class TutorialScene extends Phaser.Scene {
       })
     );
 
-    this.assets.push(this.highlight = this.add.image(158, 395, 'highlight'));
+    this.assets.push((this.highlight = this.add.image(158, 395, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 1];
     this.boardActive = true;
@@ -639,20 +639,30 @@ export default class TutorialScene extends Phaser.Scene {
       )
     );
     this.assets.push(
-      this.add.text(this.marginLeft, 150, 'explodes it explodes to the adjacent squares.', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
+      this.add.text(
+        this.marginLeft,
+        150,
+        'explodes it explodes to the adjacent squares.',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
     );
     this.assets.push(
-      this.add.text(this.marginLeft, 180, 'Click on the jelly at the top to enlarge it', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
+      this.add.text(
+        this.marginLeft,
+        180,
+        'Click on the jelly at the top to enlarge it',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
     );
 
     this.assets.push(
@@ -713,12 +723,17 @@ export default class TutorialScene extends Phaser.Scene {
       )
     );
     this.assets.push(
-      this.add.text(this.marginLeft, 150, 'the jelly can grow to a size of 3 before exploding', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
+      this.add.text(
+        this.marginLeft,
+        150,
+        'the jelly can grow to a size of 3 before exploding',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
     );
     this.assets.push(
       this.add.image(
