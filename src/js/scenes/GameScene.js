@@ -167,7 +167,10 @@ export default class GameScene extends Phaser.Scene {
       });
     });
     if (this.allTheSame && this.i > 2 && this.enabled) {
-      this.scene.start(`win`, {players: this.playerManager.players});
+      this.scene.start(`win`, {
+        players: this.playerManager.players,
+        winner: this.color1
+      });
       this.enabled = false;
     }
   }
