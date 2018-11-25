@@ -149,8 +149,6 @@ export default class GameScene extends Phaser.Scene {
   }
 
   checkWon() {
-    this.color1;
-    this.color2;
     this.i = 0;
     this.allTheSame = true;
     this.jellyManager.jellys.forEach(jellys => {
@@ -167,8 +165,9 @@ export default class GameScene extends Phaser.Scene {
         }
       });
     });
-    if (this.allTheSame && this.i > 2)
-      this.scene.start(`win`, {color: this.color1});
+    if (this.allTheSame && this.i > 2) {
+      this.scene.start(`win`, {players: this.playerManager.players});
+    }
   }
 
   createReload() {

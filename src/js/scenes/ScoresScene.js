@@ -1,3 +1,5 @@
+import {getScoresAsync} from './../functions/scores.js';
+
 export default class ScoresScene extends Phaser.Scene {
   constructor() {
     super({
@@ -10,6 +12,10 @@ export default class ScoresScene extends Phaser.Scene {
   preload() {}
 
   create() {
+    getScoresAsync().then(scores => {
+      console.log(scores);
+    });
+
     this.add.image(292, 434, `bg_scores`);
 
     this.goToStart = this.add.sprite(310, 750, `goToStart`).setInteractive();

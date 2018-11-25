@@ -211,6 +211,7 @@ export default class JellyManager {
     this.movingJellys2 = [];
     this.movingJellys3 = [];
     this.movingJellys4 = [];
+    this.gameScene.checkWon();
     this.executeSplash();
   }
 
@@ -293,6 +294,5 @@ export default class JellyManager {
         this.addJelly(x, y, xPosition, yPosition, player);
       }
     }
-    this.gameScene.checkWon();
   }
 }

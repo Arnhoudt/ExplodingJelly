@@ -6,6 +6,7 @@ export default class ChooseScene extends Phaser.Scene {
   }
 
   init() {
+    this.entrys = [];
     this.textEntrys = [];
     if (this.textEntryRed) this.textEntryRed = undefined;
     if (this.textEntryOrange) this.textEntryOrange = undefined;
@@ -186,6 +187,7 @@ export default class ChooseScene extends Phaser.Scene {
       this.purple.setScale(1);
       this.red.setScale(1);
       this.textEntrys = [];
+      this.entrys = [];
     }
   }
 

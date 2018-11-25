@@ -28,8 +28,14 @@ class ScoreController extends Controller{
   private function handleInsertScore(){
     $data = array(
       'date' => date('Y-m-d H:i:s'),
-      'name' => $_POST['name'],
-      'score' => $_POST['score']
+      'name1' => $_POST['name1'],
+      'color1' => $_POST['color1'],
+      'name2' => $_POST['name2'],
+      'color2' => $_POST['color2'],
+      'name3' => $_POST['name3'],
+      'color3' => $_POST['color3'],
+      'winner_name' => $_POST['winner_name'],
+      'winner_color' => $_POST['winner_color']
     );
     $insertScoreResult = $this->scoreDAO->insert($data);
     if(!$insertScoreResult){
