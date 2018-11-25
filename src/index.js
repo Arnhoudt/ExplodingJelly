@@ -1,6 +1,6 @@
 import './style.css';
 import 'phaser';
-import Game from './classes/Game.js';
+import Game from './js/Game.js';
 
 {
   const init = () => {

@@ -13,7 +13,7 @@ class Game extends Phaser.Game {
       type: Phaser.AUTO,
       width: 620,
       height: 820,
-      title: `Exploding jelly's`,
+      title: `Exploding jelly`,
       scene: [
         BootScene,
         PreloadScene,

@@ -19,7 +19,6 @@ export default class JellyManager {
     this.ready = false;
     this.executeSplashes = [];
     this.executeSplashes2 = [];
-    this.oneSplash = false;
   }
 
   isThereAJellyAt(x, y) {
@@ -112,7 +111,7 @@ export default class JellyManager {
             executeSplash.yPosition,
             `${executeSplash.player.color}Jelly1`
           )
-          .setVelocityX(200);
+          .setVelocityX(250);
         this.jellyMoves1[index] = executeSplash.xPosition;
       }
       if (executeSplash.x - 1 >= 0) {
@@ -122,7 +121,7 @@ export default class JellyManager {
             executeSplash.yPosition,
             `${executeSplash.player.color}Jelly1`
           )
-          .setVelocityX(- 200);
+          .setVelocityX(- 250);
         this.jellyMoves2[index] = executeSplash.xPosition;
       }
       if (executeSplash.y + 1 <= 7) {
@@ -132,7 +131,7 @@ export default class JellyManager {
             executeSplash.yPosition,
             `${executeSplash.player.color}Jelly1`
           )
-          .setVelocityY(200);
+          .setVelocityY(250);
         this.jellyMoves3[index] = executeSplash.yPosition;
       }
       if (executeSplash.y - 1 >= 0) {
@@ -142,7 +141,7 @@ export default class JellyManager {
             executeSplash.yPosition,
             `${executeSplash.player.color}Jelly1`
           )
-          .setVelocityY(- 200);
+          .setVelocityY(- 250);
         this.jellyMoves4[index] = executeSplash.yPosition;
       }
     });
@@ -192,6 +191,7 @@ export default class JellyManager {
   }
 
 
+
   continueSplash() {
     this.movingJellys1.forEach(movingJelly => movingJelly.destroy());
     this.movingJellys2.forEach(movingJelly => movingJelly.destroy());
@@ -199,59 +199,20 @@ export default class JellyManager {
     this.movingJellys4.forEach(movingJelly => movingJelly.destroy());
 
     this.executeSplashes.forEach(executeSplash => {
-      this.splash(
-        executeSplash.x + 1,
-        executeSplash.y,
-        executeSplash.xPosition + 60,
-        executeSplash.yPosition,
-        executeSplash.player,
-        executeSplash.vakjeId + 8
-      );
-      this.splash(
-        executeSplash.x - 1,
-        executeSplash.y,
-        executeSplash.xPosition - 60,
-        executeSplash.yPosition,
-        executeSplash.player,
-        executeSplash.vakjeId - 8
-      );
-      this.splash(
-        executeSplash.x,
-        executeSplash.y + 1,
-        executeSplash.xPosition,
-        executeSplash.yPosition + 60,
-        executeSplash.player,
-        executeSplash.vakjeId + 1
-      );
-      this.splash(
-        executeSplash.x,
-        executeSplash.y - 1,
-        executeSplash.xPosition,
-        executeSplash.yPosition - 60,
-        executeSplash.player,
-        executeSplash.vakjeId - 1
-      );
+      this.splashAllDirections(executeSplash);
     });
-    this.splash1 = undefined;
-    this.splash2 = undefined;
-    this.quantity = 0;
-    this.executeSplashes2.forEach((splash, index) => {
-      if (!this.splash1) {
-        this.splash1 = splash.vakjeId;
-      } else {
-        this.splash2 = splash.vakjeId;
+    for (let i = 0;i <= this.executeSplashes2.length;i ++) {
+      for (let j = 0;j < i;j ++) {
+        if (this.executeSplashes2[j] && this.executeSplashes2[i]) {
+          if (
+            this.executeSplashes2[j].vakjeId ===
+            this.executeSplashes2[i].vakjeId
+          ) {
+            this.executeSplashes2.splice(j, 1);
+          }
+        }
       }
-      if (this.splash1 === this.splash2 && index >= 1) {
-        this.quantity ++;
-      }
-    });
-    for (let i = 0;i < this.quantity;i ++) {
-      this.executeSplashes2.pop();
     }
-    // if (this.executeSplashes2.length > 6) {
-    //   this.executeSplashes2 = this.executeSplashes2.splice(0, 6);
-    //   console.log(this.executeSplashes2.length);
-    // }
     this.executeSplashes = [];
     this.executeSplashes = this.executeSplashes2;
     this.executeSplashes2 = [];
@@ -260,6 +221,41 @@ export default class JellyManager {
     this.movingJellys3 = [];
     this.movingJellys4 = [];
     this.executeSplash();
+  }
+
+  splashAllDirections(executeSplash) {
+    this.splash(
+      executeSplash.x + 1,
+      executeSplash.y,
+      executeSplash.xPosition + 60,
+      executeSplash.yPosition,
+      executeSplash.player,
+      executeSplash.vakjeId + 8
+    );
+    this.splash(
+      executeSplash.x - 1,
+      executeSplash.y,
+      executeSplash.xPosition - 60,
+      executeSplash.yPosition,
+      executeSplash.player,
+      executeSplash.vakjeId - 8
+    );
+    this.splash(
+      executeSplash.x,
+      executeSplash.y + 1,
+      executeSplash.xPosition,
+      executeSplash.yPosition + 60,
+      executeSplash.player,
+      executeSplash.vakjeId + 1
+    );
+    this.splash(
+      executeSplash.x,
+      executeSplash.y - 1,
+      executeSplash.xPosition,
+      executeSplash.yPosition - 60,
+      executeSplash.player,
+      executeSplash.vakjeId - 1
+    );
   }
 
   splash(x, y, xPosition, yPosition, player, vakjeId) {

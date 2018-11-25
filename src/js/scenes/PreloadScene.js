@@ -40,6 +40,10 @@ import './../../assets/specialButton.png';
 import './../../assets/bg_scores.png';
 import './../../assets/scoresButton.png';
 import './../../assets/tutorialButton.png';
+import './../../assets/mask1.png';
+import './../../assets/shadow.png';
+import './../../assets/hiJelly.png';
+import './../../assets/highlight.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -75,25 +79,29 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`bg_scores`, `./assets/bg_scores.png`);
     this.load.image(`scoresButton`, `./assets/scoresButton.png`);
     this.load.image(`tutorialButton`, `./assets/tutorialButton.png`);
+    this.load.image('mask', './assets/mask1.png');
+    this.load.image('shadow', './assets/shadow.png');
+    this.load.image('hiJelly', './assets/hiJelly.png');
+    this.load.image('highlight', './assets/highlight.png');
     this.load.atlas(
       `redJelly's`,
       `./assets/redJelly's.png`,
-      `./src/assets/redJelly's.json`
+      `./assets/redJelly's.json`
     );
     this.load.atlas(
       `purpleJelly's`,
       `./assets/purpleJelly's.png`,
-      `./src/assets/purpleJelly's.json`
+      `./assets/purpleJelly's.json`
     );
     this.load.atlas(
       `blueJelly's`,
       `./assets/blueJelly's.png`,
-      `./src/assets/blueJelly's.json`
+      `./assets/blueJelly's.json`
     );
     this.load.atlas(
       `orangeJelly's`,
       `./assets/orangeJelly's.png`,
-      `./src/assets/orangeJelly's.json`
+      `./assets/orangeJelly's.json`
     );
     this.load.svg(`redJelly1`, `./assets/svg/redJelly1.svg`, {
       width: 33,
