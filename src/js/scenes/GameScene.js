@@ -145,12 +145,10 @@ export default class GameScene extends Phaser.Scene {
         );
       }
     });
-    this.playerManager.updatePlayer(this.verify);
+    this.playerManager.updatePlayer(this.verify, this);
   }
 
   checkWon() {
-    this.color1;
-    this.color2;
     this.i = 0;
     this.allTheSame = true;
     this.jellyManager.jellys.forEach(jellys => {

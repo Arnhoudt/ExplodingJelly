@@ -1,5 +1,6 @@
 import JellyManager from '../gameobjects/JellyManager';
 import PlayerManager from '../gameobjects/PlayerManager';
+import Vakje from "../gameobjects/Vakje";
 
 export default class TutorialScene extends Phaser.Scene {
   constructor() {
@@ -109,9 +110,7 @@ export default class TutorialScene extends Phaser.Scene {
       score.setText(`${this.playerManager.players[this.i].score}`);
       this.i ++;
     });
-    if (this.input.activePointer.isDown) {
-      this.makeScene();
-    }
+    this.jellyManager.update();
   }
 
   destroyTripleJellys(grow) {
@@ -133,27 +132,33 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   createVakjes() {
+    let vakjeId = 0;
     for (let i = 0;i < 8;i ++) {
-      for (let j = 0;j < 8;j ++) {
+      for (let j = 0, id = vakjeId + 1;j < 8;j ++, id ++) {
         this.vakjes.push(
-          this.add
-            .sprite(
-              100 + i * 60,
-              335 + j * 60,
-              `${this.playerManager.players[0].color}Vakje`
-            )
-            .setInteractive()
-            .on(`pointerup`, () => {
-              this.updateJelly(
-                i,
-                j,
+          new Vakje(
+            this.add
+              .sprite(
                 100 + i * 60,
                 335 + j * 60,
-                this.playerManager.players
-              );
-              this.specialAbility();
-            })
+                `${this.playerManager.players[0].color}Vakje`
+              )
+              .setInteractive()
+              .on(`pointerup`, () => {
+                this.updateJelly(
+                  i,
+                  j,
+                  100 + i * 60,
+                  335 + j * 60,
+                  this.playerManager.players,
+                  id
+                );
+                this.specialAbility();
+              }),
+            id
+          )
         );
+        vakjeId = id;
       }
     }
   }
@@ -200,7 +205,7 @@ export default class TutorialScene extends Phaser.Scene {
     });
   }
 
-  updateJelly(x, y, xPosition, yPosition, players) {
+  updateJelly(x, y, xPosition, yPosition, players, vakjeId) {
     if (
       this.boardActive === true &&
       x === this.forceSquare[0] &&
@@ -213,11 +218,33 @@ export default class TutorialScene extends Phaser.Scene {
             y,
             xPosition,
             yPosition,
-            player
+            player,
+            vakjeId
           );
       });
       this.playerManager.updatePlayer(this.verify);
     }
+  }
+
+  checkWon() {
+    this.i = 0;
+    this.allTheSame = true;
+    this.jellyManager.jellys.forEach(jellys => {
+      jellys.forEach(jelly => {
+        if (jelly !== undefined) {
+          this.i ++;
+          if (this.i === 1) {
+            this.color1 = jelly.color;
+            this.i ++;
+          }
+          if (this.i > 2) this.color2 = jelly.color;
+          if (this.color1 !== this.color2 && this.i > 2)
+            this.allTheSame = false;
+        }
+      });
+    });
+    if (this.allTheSame && this.i > 2)
+      this.scene.start(`win`, {color: this.color1});
   }
 
   makeScene() {}

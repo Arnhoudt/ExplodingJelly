@@ -221,6 +221,7 @@ export default class JellyManager {
     this.movingJellys3 = [];
     this.movingJellys4 = [];
     this.executeSplash();
+    this.gameScene.checkWon();
   }
 
   splashAllDirections(executeSplash) {
@@ -302,6 +303,5 @@ export default class JellyManager {
         this.addJelly(x, y, xPosition, yPosition, player);
       }
     }
-    this.gameScene.checkWon();
   }
 }
