@@ -57,6 +57,13 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.on(`progress`, this.onProgress, this);
     this.load.on(`complete`, this.onComplete, this);
     this.load.audio('themeSong', `./assets/themeSong.mp3`);
+    this.load.audio('splash1', `./assets/splash1.mp3`);
+    this.load.audio('splash2', `./assets/splash2.mp3`);
+    this.load.audio('splash3', `./assets/splash3.mp3`);
+    this.load.audio('splash4', `./assets/splash4.mp3`);
+    this.load.audio('splash5', `./assets/splash5.mp3`);
+    this.load.image(`mute_game`, `./assets/soundOn.png`);
+    this.load.image(`unmute_game`, `./assets/soundOff.png`);
     this.load.image(`bg`, `./assets/bg_start.png`);
     this.load.image(`bg_choose`, `./assets/bg_choose.png`);
     this.load.image(`play`, `./assets/play.png`);
