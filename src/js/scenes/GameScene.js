@@ -21,6 +21,7 @@ export default class GameScene extends Phaser.Scene {
   preload() {}
 
   create() {
+    this.sound.add(`themeSong`).play();
     this.add.image(
       this.sys.game.config.width / 2 + 9,
       this.sys.game.config.height - 181,

@@ -56,7 +56,7 @@ export default class PreloadScene extends Phaser.Scene {
     this.preloader = this.add.graphics();
     this.load.on(`progress`, this.onProgress, this);
     this.load.on(`complete`, this.onComplete, this);
-
+    this.load.audio('themeSong', `./assets/themeSong.mp3`);
     this.load.image(`bg`, `./assets/bg_start.png`);
     this.load.image(`bg_choose`, `./assets/bg_choose.png`);
     this.load.image(`play`, `./assets/play.png`);
