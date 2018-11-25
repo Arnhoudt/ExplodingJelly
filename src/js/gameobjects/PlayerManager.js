@@ -16,7 +16,6 @@ export default class PlayerManager {
       return this.player;
     } else {
       return false;
-
     }
   }
   forcePlayerToBeActive(target) {
