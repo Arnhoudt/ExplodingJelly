@@ -10,6 +10,7 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   init(players) {
+    this.waitForClickAble = false;
     this.fontSizeTitle = 62;
     this.fontSizeText = 20;
 
@@ -36,6 +37,13 @@ export default class TutorialScene extends Phaser.Scene {
 
   create() {
     this.tutorialSceneNr = 1;
+    this.input.on('pointerdown', function () {
+      if (this.waitForClickAble === true) {
+        this.tutorialSceneNr ++;
+        this.waitForClickAble = false;
+        this.destroyAssets(this.assets);
+      }
+    }, this);
     this.add.image(
       this.sys.game.config.width / 2 + 9,
       this.sys.game.config.height - 181,
@@ -95,13 +103,13 @@ export default class TutorialScene extends Phaser.Scene {
       this.tutorialGrowMechanics1();
       break;
     case 14:
-      this.waitForClick(15);
+      this.waitForClick();
       break;
     case 15:
       this.tutorialGrowMechanics2();
       break;
     case 16:
-      this.waitForClick(17);
+      this.waitForClick();
       break;
     case 17:
       this.tutorialExplodeSide();
@@ -267,7 +275,9 @@ export default class TutorialScene extends Phaser.Scene {
 
   makeScene() {}
 
-  waitForClick() {}
+  waitForClick() {
+    this.waitForClickAble = true;
+  }
   setSpotlight(x, y, radius) {
     const spotlight = this.make.sprite({
       x: x,
@@ -738,8 +748,21 @@ export default class TutorialScene extends Phaser.Scene {
     this.assets.push(
       this.add.image(
         this.sys.game.config.width / 2 + 9,
-        this.sys.game.config.height - 181,
+        this.sys.game.config.height - 281,
         `growMechanic1`
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        400,
+        770,
+        'click to continue >',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
       )
     );
     this.boardActive = false;
@@ -747,15 +770,274 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   //scene 8
-  tutorialGrowMechanics2() {}
+  tutorialGrowMechanics2() {
+    console.log('not in loop');
+    this.assets = [];
+    const spotlight = this.setSpotlight(0, 0, 0);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(
+      this.add.text(this.marginLeft, 20, 'euh this is boring...', {
+        fontSize: this.fontSizeTitle,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightTitle
+      })
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        120,
+        'If the square has only 3 adjacent squares it can grow',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        150,
+        'to a size of 2 before exploding.',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.image(
+        this.sys.game.config.width / 2 + 9,
+        300,
+        `growMechanic2`
+      ).setScale(0.7)
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        440,
+        'If it is in a corner where there are',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        470,
+        'only 2 adjacent squares it can\'t grow.',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.image(
+        this.sys.game.config.width / 2 + 9,
+        this.sys.game.config.height - 210,
+        `growMechanic3`
+      ).setScale(0.7)
+    );
+
+    this.assets.push(
+      this.add.text(
+        400,
+        770,
+        'click to continue >',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.boardActive = false;
+    this.tutorialSceneNr = 16;
+  }
 
   //scene 9
-  tutorialExplodeSide() {}
-  tutorialWaitForExplodeSide() {}
+  tutorialExplodeSide() {
+    console.log('not in loop');
+    this.computer = this.playerManager.getPlayerByName('computer');
+    this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
+    this.playerManager.forcePlayerToBeActive(
+      this.playerManager.getPlayerByName('player')
+    );
+    this.assets = [];
+    const spotlight = this.setSpotlight(300, 600, 700);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(
+      this.add.text(this.marginLeft, 20, 'More explosions!', {
+        fontSize: this.fontSizeTitle,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightTitle
+      })
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        120,
+        'The jelly in the blue square has only 3 adjacent squares,',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        150,
+        'this means you can already explode it!',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        180,
+        'Click on the jelly to make it explode',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+
+    this.assets.push(
+      this.add.text(180, 220, 'Click on the blue square to enlarge the jelly', {
+        fontSize: this.fontSizenote,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: 'bold'
+      })
+    );
+    this.assets.push((this.highlight = this.add.image(158, 335, 'highlight')));
+    this.highlight.setScale(0.65);
+    this.forceSquare = [1, 0];
+    this.boardActive = true;
+    this.tutorialSceneNr = 18;
+  }
+  tutorialWaitForExplodeSide() {
+    if (
+      this.jellyManager.isThereAJellyAt(1, 0) !== true
+    ) {
+      this.destroyAssets(this.assets);
+      this.tutorialSceneNr = 19;
+    }
+  }
 
   //scene 10
-  tutorialChaining() {}
-  tutorialWaitForChaining() {}
+  tutorialChaining() {
+    console.log('not in loop');
+    this.computer = this.playerManager.getPlayerByName('computer');
+    this.player = this.playerManager.getPlayerByName('player');
+    this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
+    this.jellyManager.growJellyToSize(2, 1, this.player, 1);
+    this.jellyManager.growJellyToSize(1, 1, this.player, 1);
+    //this.jellyManager.growJellyToSize(1, 2, this.player, 2);
+    //this.jellyManager.growJellyToSize(0, 1, this.player, 2);
+
+
+    this.playerManager.forcePlayerToBeActive(
+      this.playerManager.getPlayerByName('player')
+    );
+    this.assets = [];
+    const spotlight = this.setSpotlight(300, 600, 700);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(
+      this.add.text(this.marginLeft, 20, 'Chaining', {
+        fontSize: this.fontSizeTitle,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightTitle
+      })
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        120,
+        'So... What happens if you explode a jelly onto an other',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        150,
+        'jelly? It also explodes making a very big explosion!',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        180,
+        'I gave you some extra jelly\'s to make the explosion bigger.',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        210,
+        'Click on the highlighted jelly and enjoy the explosion',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push((this.highlight = this.add.image(158, 335, 'highlight')));
+    this.highlight.setScale(0.65);
+    this.forceSquare = [1, 0];
+    this.boardActive = true;
+    this.tutorialSceneNr = 20;
+  }
+  tutorialWaitForChaining() {
+  }
 
   //scene 11
   tutorialTimeToWin() {}

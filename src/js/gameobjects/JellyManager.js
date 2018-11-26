@@ -29,6 +29,26 @@ export default class JellyManager {
   sizeOfJellyAt(x, y) {
     return this.jellys[x][y]['grow'];
   }
+  growJellyToSize(x, y, player, size) {
+    for (let i = size;i > 0 && this.sizeOfJellyAt(x, y) <= 3;i --) {
+      console.log(x + " " + y);
+
+      this.growJelly(x, y, player);
+    }
+  }
+  growJelly(x, y, player) {
+    console.log(this.jellys);
+    const posx = 100 + x * 60;
+    const posy = 335 + y * 60;
+    console.log("voor if" + x + " " + y);
+    if (this.isThereAJellyAt(x, y)) {
+      console.log("there is a jelly");
+      this.jellys[x][y].grow ++;
+      this.changeJelly(x, y, posx, posy, player);
+    } else {
+      this.addJelly(x, y, posx, posy, player);
+    }
+  }
 
   verifyPlayerMove(x, y, xPosition, yPosition, player, vakjeId) {
     if (this.jellys[x][y] !== undefined) {

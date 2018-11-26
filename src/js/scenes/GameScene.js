@@ -146,6 +146,7 @@ export default class GameScene extends Phaser.Scene {
       });
     });
     if (this.allTheSame && this.i > 2 && this.enabled) {
+      this.themeSong.destroy();
       this.scene.start(`win`, {
         players: this.playerManager.players,
         winner: this.color1
@@ -161,6 +162,7 @@ export default class GameScene extends Phaser.Scene {
     });
 
     this.reload.on(`pointerup`, () => {
+      this.themeSong.destroy();
       this.reload.setScale(1);
       this.scene.restart();
     });
@@ -212,6 +214,7 @@ export default class GameScene extends Phaser.Scene {
     this.back.on(`pointerup`, () => {
       this.back.setScale(1);
       this.scene.start(`choose`);
+      this.themeSong.destroy();
     });
   }
 }
