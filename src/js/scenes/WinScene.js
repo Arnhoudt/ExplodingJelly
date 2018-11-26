@@ -74,7 +74,7 @@ export default class WinScene extends Phaser.Scene {
       frames: this.anims.generateFrameNames(`${this.winner.color}Jelly's`, {
         prefix: `${this.winner.color}Jelly`,
         start: 0,
-        end: 88,
+        end: 89,
         suffix: `.png`
       }),
       frameRate: 20,
@@ -113,10 +113,10 @@ export default class WinScene extends Phaser.Scene {
         frames: this.anims.generateFrameNames(`${player.color}Jelly's`, {
           prefix: `${player.color}Jelly`,
           start: 0,
-          end: 88,
+          end: 89,
           suffix: `.png`
         }),
-        frameRate: 18 + index,
+        frameRate: 20 + index,
         repeat: - 1
       });
       this.add
