@@ -16,7 +16,7 @@ export default class TutorialScene extends Phaser.Scene {
 
     this.fontSizenote = 14;
     this.textColorOrange = '#ff5000';
-    this.defaultFontFamily = 'Georgia';
+    this.defaultFontFamily = 'Ubuntu';
     this.fontWeightTitle = 'bold';
     this.fontWeightText = 'bold';
     this.fontWeightnote = 'bold';
