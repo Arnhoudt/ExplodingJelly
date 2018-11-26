@@ -19,6 +19,7 @@ export default class JellyManager {
     this.ready = false;
     this.executeSplashes = [];
     this.executeSplashes2 = [];
+    this.animationBuzy = false;
   }
 
   isThereAJellyAt(x, y) {
@@ -38,24 +39,44 @@ export default class JellyManager {
         this.jellys[x][y].grow ++;
         if (x === 0 || y === 0 || x === 7 || y === 7) {
           //controle rand
-          if (this.jellys[x][y].grow > 2) {
-            player.score ++;
-            this.executeSplashes.push({
-              x: x,
-              y: y,
-              xPosition: xPosition,
-              yPosition: yPosition,
-              player: player,
-              vakjeId: vakjeId
-            });
-            this.executeSplash();
+          if (
+            (x === 0 && y === 0) ||
+            (x === 7 && y === 0) ||
+            (x === 7 && y === 7) ||
+            (x === 0 && y === 7)
+          ) {
+            if (this.jellys[x][y].grow > 1) {
+              this.executeSplashes.push({
+                x: x,
+                y: y,
+                xPosition: xPosition,
+                yPosition: yPosition,
+                player: player,
+                vakjeId: vakjeId
+              });
+              this.executeSplash();
+            } else {
+              this.changeJelly(x, y, xPosition, yPosition, player);
+            }
+            return true;
           } else {
-            this.changeJelly(x, y, xPosition, yPosition, player);
+            if (this.jellys[x][y].grow > 2) {
+              this.executeSplashes.push({
+                x: x,
+                y: y,
+                xPosition: xPosition,
+                yPosition: yPosition,
+                player: player,
+                vakjeId: vakjeId
+              });
+              this.executeSplash();
+            } else {
+              this.changeJelly(x, y, xPosition, yPosition, player);
+            }
+            return true;
           }
-          return true;
         } else {
           if (this.jellys[x][y].grow > 3) {
-            player.score ++;
             this.executeSplashes.push({
               x: x,
               y: y,
@@ -99,6 +120,9 @@ export default class JellyManager {
   }
 
   executeSplash() {
+    if (this.executeSplashes.length > 0) {
+      this.animationBuzy = true;
+    }
     this.executeSplashes.forEach((executeSplash, index) => {
       if (this.jellys[executeSplash.x][executeSplash.y]) {
         this.jellys[executeSplash.x][executeSplash.y].sprite.destroy();
@@ -186,8 +210,13 @@ export default class JellyManager {
     if (this.ready) {
       this.moveForward = false;
       this.ready = false;
+      this.animationBuzy = false;
       this.continueSplash();
     }
+  }
+
+  isAnimationBuzy() {
+    return this.animationBuzy;
   }
 
   continueSplash() {
@@ -258,27 +287,48 @@ export default class JellyManager {
   }
 
   splash(x, y, xPosition, yPosition, player, vakjeId) {
-    console.log("in here");
     if (x >= 0 && y >= 0 && x <= 7 && y <= 7) {
       //voor te controleren of dat er gaan jelly buiten het scherm gaan
       if (this.jellys[x][y] !== undefined) {
         if (x === 0 || y === 0 || x === 7 || y === 7) {
           //controle rand
-          if (this.jellys[x][y].grow >= 2) {
-            player.score ++;
-            this.executeSplashes2.push({
-              x: x,
-              y: y,
-              xPosition: xPosition,
-              yPosition: yPosition,
-              player: player,
-              vakjeId: vakjeId
-            });
+          if (
+            (x === 0 && y === 0) ||
+            (x === 7 && y === 0) ||
+            (x === 7 && y === 7) ||
+            (x === 0 && y === 7)
+          ) {
+            if (this.jellys[x][y].grow >= 1) {
+              this.executeSplashes2.push({
+                x: x,
+                y: y,
+                xPosition: xPosition,
+                yPosition: yPosition,
+                player: player,
+                vakjeId: vakjeId
+              });
+            } else {
+              this.tokenJellys = this.jellys[x][y].grow + 1;
+              this.jellys[x][y].color = player.color;
+              this.jellys[x][y].grow = this.tokenJellys;
+              this.changeJelly(x, y, xPosition, yPosition, player);
+            }
           } else {
-            this.tokenJellys = this.jellys[x][y].grow + 1;
-            this.jellys[x][y].color = player.color;
-            this.jellys[x][y].grow = this.tokenJellys;
-            this.changeJelly(x, y, xPosition, yPosition, player);
+            if (this.jellys[x][y].grow >= 2) {
+              this.executeSplashes2.push({
+                x: x,
+                y: y,
+                xPosition: xPosition,
+                yPosition: yPosition,
+                player: player,
+                vakjeId: vakjeId
+              });
+            } else {
+              this.tokenJellys = this.jellys[x][y].grow + 1;
+              this.jellys[x][y].color = player.color;
+              this.jellys[x][y].grow = this.tokenJellys;
+              this.changeJelly(x, y, xPosition, yPosition, player);
+            }
           }
         } else {
           if (this.jellys[x][y].grow < 3) {
@@ -287,7 +337,6 @@ export default class JellyManager {
             this.jellys[x][y].grow = this.tokenJellys;
             this.changeJelly(x, y, xPosition, yPosition, player);
           } else {
-            player.score ++;
             this.executeSplashes2.push({
               x: x,
               y: y,

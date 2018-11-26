@@ -38,6 +38,17 @@ export default class GameScene extends Phaser.Scene {
   update() {
     this.i = 0;
     this.playerManager.playerScores.forEach(score => {
+      this.playerManager.players[this.i].score = 0;
+      this.jellyManager.jellys.forEach(jellys => {
+        jellys.forEach(jelly => {
+          if (
+            jelly &&
+            jelly.color === this.playerManager.players[this.i].color
+          ) {
+            this.playerManager.players[this.i].score += jelly.grow;
+          }
+        });
+      });
       score.setText(`${this.playerManager.players[this.i].score}`);
       this.i ++;
     });
@@ -85,7 +96,6 @@ export default class GameScene extends Phaser.Scene {
                   this.playerManager.players,
                   id
                 );
-                this.specialAbility();
               }),
             id
           )
@@ -95,65 +105,27 @@ export default class GameScene extends Phaser.Scene {
     }
   }
 
-  specialAbility() {
-    this.playerManager.players.forEach(player => {
-      if (
-        player.score > 100 &&
-        this.pushed === 0 &&
-        this.specialButton === undefined
-      ) {
-        this.specialButton = this.add
-          .image(
-            this.sys.game.config.width / 2,
-            this.sys.game.config.height / 2 - 150,
-            `specialButton`
-          )
-          .setInteractive()
-          .on(`pointerup`, () => {
-            this.destroyTripleJellys(2);
-            this.specialButton.destroy();
-            this.specialButton = undefined;
-            this.pushed ++;
-          });
-      } else if (
-        player.score > 200 &&
-        this.pushed === 1 &&
-        this.specialButton === undefined
-      ) {
-        this.specialButton = this.add
-          .image(
-            this.sys.game.config.width / 2,
-            this.sys.game.config.height / 2 - 150,
-            `specialButton`
-          )
-          .setInteractive()
-          .on(`pointerup`, () => {
-            this.destroyTripleJellys(1);
-            this.specialButton.destroy();
-            this.specialButton = undefined;
-            this.pushed ++;
-          });
-      }
-    });
-  }
-
   updateJelly(x, y, xPosition, yPosition, players, vakjeId) {
     if (this.muteVolume === false) {
-      this.sound.add(`splash` + ((Math.floor(Math.random() * 5) + 1).toString())).play();
+      this.sound
+        .add(`splash${(Math.floor(Math.random() * 5) + 1).toString()}`)
+        .play();
     }
-    players.forEach(player => {
-      if (player.active) {
-        this.verify = this.jellyManager.verifyPlayerMove(
-          x,
-          y,
-          xPosition,
-          yPosition,
-          player,
-          vakjeId
-        );
-      }
-    });
-    this.playerManager.updatePlayer(this.verify, this);
+    if (this.jellyManager.isAnimationBuzy() === false) {
+      players.forEach(player => {
+        if (player.active) {
+          this.verify = this.jellyManager.verifyPlayerMove(
+            x,
+            y,
+            xPosition,
+            yPosition,
+            player,
+            vakjeId
+          );
+        }
+      });
+      this.playerManager.updatePlayer(this.verify, this);
+    }
   }
 
   checkWon() {
