@@ -16,12 +16,14 @@ export default class GameScene extends Phaser.Scene {
     this.playerManager.addPlayers(players);
     this.pushed = 0;
     this.enabled = true;
+    this.muteVolume = false;
   }
 
   preload() {}
 
   create() {
-    this.sound.add(`themeSong`).play();
+    this.themeSong = this.sound.add(`themeSong`, {loop: true});
+    this.themeSong.play();
     this.add.image(
       this.sys.game.config.width / 2 + 9,
       this.sys.game.config.height - 181,
@@ -29,6 +31,7 @@ export default class GameScene extends Phaser.Scene {
     );
     this.createVakjes();
     this.createReload();
+    this.createMute();
     this.createBack();
   }
 
@@ -135,6 +138,9 @@ export default class GameScene extends Phaser.Scene {
   }
 
   updateJelly(x, y, xPosition, yPosition, players, vakjeId) {
+    if (this.muteVolume === false) {
+      this.sound.add(`splash` + ((Math.floor(Math.random() * 5) + 1).toString())).play();
+    }
     players.forEach(player => {
       if (player.active) {
         this.verify = this.jellyManager.verifyPlayerMove(
@@ -186,6 +192,43 @@ export default class GameScene extends Phaser.Scene {
       this.reload.setScale(1);
       this.scene.restart();
     });
+  }
+
+  createMute() {
+    this.mute = this.add.sprite(540, 30, `mute_game`).setInteractive();
+    this.mute.on(`pointerdown`, () => {
+      this.mute.setScale(1.1);
+    });
+
+    this.mute.on(`pointerup`, () => {
+      this.mute.setScale(1);
+      this.volumeDown();
+    });
+  }
+
+  createUnmute() {
+    this.unmute = this.add.sprite(540, 30, `unmute_game`).setInteractive();
+    this.unmute.on(`pointerdown`, () => {
+      this.unmute.setScale(1.1);
+    });
+
+    this.unmute.on(`pointerup`, () => {
+      this.unmute.setScale(1);
+      this.volumeUp();
+    });
+  }
+
+  volumeDown() {
+    this.mute.destroy();
+    this.createUnmute();
+    this.themeSong.setVolume(0);
+    this.muteVolume = true;
+  }
+  volumeUp() {
+    this.unmute.destroy();
+    this.createMute();
+    this.themeSong.setVolume(1);
+    this.muteVolume = false;
   }
 
   createBack() {

@@ -258,6 +258,7 @@ export default class JellyManager {
   }
 
   splash(x, y, xPosition, yPosition, player, vakjeId) {
+    console.log("in here");
     if (x >= 0 && y >= 0 && x <= 7 && y <= 7) {
       //voor te controleren of dat er gaan jelly buiten het scherm gaan
       if (this.jellys[x][y] !== undefined) {
