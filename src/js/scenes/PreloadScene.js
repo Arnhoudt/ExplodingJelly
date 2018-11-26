@@ -67,6 +67,9 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`bg`, `./assets/bg_start.png`);
     this.load.image(`bg_choose`, `./assets/bg_choose.png`);
     this.load.image(`play`, `./assets/play.png`);
+    this.load.image(`growMechanic1`, `./assets/growMechanic1.png`);
+    this.load.image(`growMechanic2`, `./assets/growMechanic2.png`);
+    this.load.image(`growMechanic3`, `./assets/growMechanic3.png`);
     this.load.image(`start`, `./assets/start.png`);
     this.load.image(`back`, `./assets/back.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);

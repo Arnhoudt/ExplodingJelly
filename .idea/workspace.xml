@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d1012e-354d-41ed-8ef9-47e39e21753e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/assets/growMechanic1.png" afterPath="$PROJECT_DIR$/src/assets/growMechanic1.png" />
+      <change beforePath="$PROJECT_DIR$/src/js/gameobjects/JellyManager.js" afterPath="$PROJECT_DIR$/src/js/gameobjects/JellyManager.js" />
       <change beforePath="$PROJECT_DIR$/src/js/scenes/GameScene.js" afterPath="$PROJECT_DIR$/src/js/scenes/GameScene.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/scenes/PreloadScene.js" afterPath="$PROJECT_DIR$/src/js/scenes/PreloadScene.js" />
+      <change beforePath="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" afterPath="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,8 +24,8 @@
       <file leaf-file-name="JellyManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/gameobjects/JellyManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="79" column="48" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+            <state relative-caret-position="364">
+              <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -29,11 +34,10 @@
       <file leaf-file-name="TutorialScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1094">
-              <caret line="344" column="16" lean-forward="false" selection-start-line="344" selection-start-column="9" selection-end-line="344" selection-end-column="16" />
+            <state relative-caret-position="3748">
+              <caret line="1035" column="28" lean-forward="true" selection-start-line="1035" selection-start-column="28" selection-end-line="1035" selection-end-column="28" />
               <folding>
-                <element signature="e#8743#8870#0" expanded="false" />
-                <element signature="e#8907#10125#0" expanded="false" />
+                <element signature="e#9037#9164#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -42,8 +46,8 @@
       <file leaf-file-name="PreloadScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/PreloadScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+            <state relative-caret-position="158">
+              <caret line="71" column="67" lean-forward="true" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -84,8 +88,8 @@
       <file leaf-file-name="GameScene.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/GameScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+            <state relative-caret-position="265">
+              <caret line="176" column="26" lean-forward="false" selection-start-line="176" selection-start-column="26" selection-end-line="176" selection-end-column="26" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -97,13 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addjell</find>
-      <find>splash</find>
-      <find>verify</find>
-      <find>updateJell</find>
-      <find>console</find>
-      <find>isthe</find>
-      <find>active</find>
       <find>8080</find>
       <find>888</find>
       <find>vakje.g</find>
@@ -117,7 +114,6 @@
       <find>bg_game</find>
       <find>data</find>
       <find>select</find>
-      <find>hijelly</find>
       <find>getScore</find>
       <find>thee</find>
       <find>im</find>
@@ -127,6 +123,14 @@
       <find>mp3</find>
       <find>play</find>
       <find>mute</find>
+      <find>hijelly</find>
+      <find>waitforClick</find>
+      <find>waitForClick</find>
+      <find>restart</find>
+      <find>jellu</find>
+      <find>waitForclick</find>
+      <find>grow</find>
+      <find>destroy</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -151,15 +155,15 @@
         <option value="$PROJECT_DIR$/src/classes/scenes/TutorialScene.js" />
         <option value="$PROJECT_DIR$/src/controller/Controller.php" />
         <option value="$PROJECT_DIR$/src/js/gameobjects/PlayerManager.js" />
-        <option value="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
         <option value="$PROJECT_DIR$/src/view/layout.php" />
         <option value="$PROJECT_DIR$/src/dao/ScoreDAO.php" />
         <option value="$PROJECT_DIR$/src/index.php" />
         <option value="$PROJECT_DIR$/src/controller/ScoreController.php" />
         <option value="$PROJECT_DIR$/src/js/scenes/ScoresScene.js" />
-        <option value="$PROJECT_DIR$/src/js/gameobjects/JellyManager.js" />
         <option value="$PROJECT_DIR$/src/js/scenes/PreloadScene.js" />
         <option value="$PROJECT_DIR$/src/js/scenes/GameScene.js" />
+        <option value="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
+        <option value="$PROJECT_DIR$/src/js/gameobjects/JellyManager.js" />
       </list>
     </option>
   </component>
@@ -273,6 +277,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -312,12 +317,12 @@
       <workItem from="1542866713835" duration="448000" />
       <workItem from="1543045719008" duration="17104000" />
       <workItem from="1543143604052" duration="5477000" />
-      <workItem from="1543154323813" duration="11336000" />
+      <workItem from="1543154323813" duration="19617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48686000" />
+    <option name="totallyTimeSpent" value="56967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -351,7 +356,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -361,8 +366,7 @@
         <state relative-caret-position="6420">
           <caret line="429" column="3" lean-forward="false" selection-start-line="429" selection-start-column="3" selection-end-line="429" selection-end-column="3" />
           <folding>
-            <element signature="e#8743#8870#0" expanded="false" />
-            <element signature="e#8907#10125#0" expanded="false" />
+            <element signature="e#9037#9164#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -500,17 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1094">
-          <caret line="344" column="16" lean-forward="false" selection-start-line="344" selection-start-column="9" selection-end-line="344" selection-end-column="16" />
-          <folding>
-            <element signature="e#8743#8870#0" expanded="false" />
-            <element signature="e#8907#10125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/scenes/ScoresScene.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -519,28 +512,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/gameobjects/JellyManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="79" column="48" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/scenes/PreloadScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        <state relative-caret-position="158">
+          <caret line="71" column="67" lean-forward="true" selection-start-line="71" selection-start-column="67" selection-end-line="71" selection-end-column="67" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3748">
+          <caret line="1035" column="28" lean-forward="true" selection-start-line="1035" selection-start-column="28" selection-end-line="1035" selection-end-column="28" />
+          <folding>
+            <element signature="e#9037#9164#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/gameobjects/JellyManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="39" column="30" lean-forward="true" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/scenes/GameScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="142" column="5" lean-forward="true" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
+        <state relative-caret-position="265">
+          <caret line="176" column="26" lean-forward="false" selection-start-line="176" selection-start-column="26" selection-end-line="176" selection-end-column="26" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
