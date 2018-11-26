@@ -17,7 +17,7 @@ export default class ChooseScene extends Phaser.Scene {
   preload() {}
 
   create() {
-    this.add.image(318, 382, `bg_choose`);
+    this.add.image(317, 382, `bg_choose`).setScale(1.005);
     this.red = this.add.sprite(170, 385, `redTextEntry`).setInteractive();
     this.orange = this.add.sprite(450, 385, `orangeTextEntry`).setInteractive();
     this.purple = this.add.sprite(170, 590, `purpleTextEntry`).setInteractive();
@@ -48,7 +48,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.textEntryRed = undefined;
       } else {
         this.textEntryRed = this.add
-          .text(170, 432, '', {
+          .text(170, 429, '', {
             font: '30px Ubuntu',
             fill: `red`
           })
@@ -65,7 +65,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.textEntryOrange = undefined;
       } else {
         this.textEntryOrange = this.add
-          .text(450, 432, '', {
+          .text(450, 429, '', {
             font: '30px Ubuntu',
             fill: `orange`
           })
@@ -82,7 +82,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.textEntryPurple = undefined;
       } else {
         this.textEntryPurple = this.add
-          .text(170, 637, '', {
+          .text(170, 634, '', {
             font: '30px Ubuntu',
             fill: `purple`
           })
@@ -99,7 +99,7 @@ export default class ChooseScene extends Phaser.Scene {
         this.textEntryBlue = undefined;
       } else {
         this.textEntryBlue = this.add
-          .text(450, 637, '', {
+          .text(450, 634, '', {
             font: '30px Ubuntu',
             fill: `blue`
           })
@@ -125,7 +125,7 @@ export default class ChooseScene extends Phaser.Scene {
         event.keyCode === 32 ||
         (event.keyCode >= 48 && event.keyCode < 90)
       ) {
-        if (textEntry.text.length < 11) textEntry.text += event.key;
+        if (textEntry.text.length < 10) textEntry.text += event.key;
       }
     });
   }

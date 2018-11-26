@@ -25,5 +25,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: linear-gradient(-160deg, #f4d566, #eb8766 80%);
 }

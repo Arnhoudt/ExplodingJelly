@@ -13,7 +13,7 @@ export default class WinScene extends Phaser.Scene {
     this.color = data.winner;
     this.index = 0;
     this.players.forEach((player, index) => {
-      if (player.color > this.color) {
+      if (player.color === this.color) {
         this.index = index;
       }
     });
@@ -57,11 +57,12 @@ export default class WinScene extends Phaser.Scene {
       this.enabled = false;
     }
 
-    this.add.image(307, 418, `bg_win`);
+    this.add.image(354, 410, `bg_win`);
     this.particles = this.add.particles(`star`);
     this.particles.createEmitter({
       x: 310,
       y: 340,
+      angle: {min: - 210, max: 30},
       speed: 140,
       lifespan: 1000,
       quantity: 1,
@@ -85,10 +86,10 @@ export default class WinScene extends Phaser.Scene {
       .setScale(0.5)
       .play(`${this.winner.color}Animatie`);
     this.add
-      .text(310, 390, `${this.winner.name}`, this.textConfig(this.winner))
+      .text(310, 400, `${this.winner.name}`, this.textConfig(this.winner))
       .setOrigin(0.5, 0);
     this.add
-      .text(310, 425, `${this.winner.score}`, this.textConfig(this.winner))
+      .text(310, 435, `${this.winner.score}`, this.textConfig(this.winner))
       .setOrigin(0.5, 0);
 
     this.i = 0;
@@ -99,12 +100,12 @@ export default class WinScene extends Phaser.Scene {
       this.placex2 = 260;
     }
     if (this.players.length === 2) {
-      this.placex = 230;
-      this.placex2 = 160;
+      this.placex = 210;
+      this.placex2 = 200;
     }
     if (this.players.length === 3) {
-      this.placex = 180;
-      this.placex2 = 130;
+      this.placex = 130;
+      this.placex2 = 180;
     }
     this.players.forEach((player, index) => {
       this.anims.remove(`${player.color}Animatie`);
@@ -130,16 +131,8 @@ export default class WinScene extends Phaser.Scene {
       this.add
         .text(
           this.placex + this.i * this.placex2,
-          625,
+          635,
           `${player.name}`,
-          this.textConfig(player)
-        )
-        .setOrigin(0.5, 0);
-      this.add
-        .text(
-          this.placex + this.i * this.placex2,
-          660,
-          `${player.score}`,
           this.textConfig(player)
         )
         .setOrigin(0.5, 0);
@@ -166,7 +159,7 @@ export default class WinScene extends Phaser.Scene {
     return {
       fontFamily: 'Ubuntu',
       fontStyle: 'Bold',
-      fontSize: 24,
+      fontSize: 26,
       color: `${player.color}`
     };
   }

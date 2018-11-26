@@ -36,7 +36,6 @@ import './../../assets/orangeTextEntry.png';
 import './../../assets/purpleTextEntry.png';
 import './../../assets/blueTextEntry.png';
 import './../../assets/star.png';
-import './../../assets/specialButton.png';
 import './../../assets/bg_scores.png';
 import './../../assets/scoresButton.png';
 import './../../assets/tutorialButton.png';
@@ -44,6 +43,10 @@ import './../../assets/mask1.png';
 import './../../assets/shadow.png';
 import './../../assets/hiJelly.png';
 import './../../assets/highlight.png';
+import './../../assets/orangeScore.png';
+import './../../assets/redScore.png';
+import './../../assets/purpleScore.png';
+import './../../assets/blueScore.png';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -77,7 +80,6 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`goToStart`, `./assets/goToStart.png`);
     this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
     this.load.image(`star`, `./assets/star.png`);
-    this.load.image(`specialButton`, `./assets/specialButton.png`);
     this.load.image(`reload_game`, `./assets/reload_game.png`);
     this.load.image(`redVakje`, `./assets/redVakje.png`);
     this.load.image(`blueVakje`, `./assets/blueVakje.png`);
@@ -93,6 +95,10 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image('shadow', './assets/shadow.png');
     this.load.image('hiJelly', './assets/hiJelly.png');
     this.load.image('highlight', './assets/highlight.png');
+    this.load.image('redScore', './assets/redScore.png');
+    this.load.image('orangeScore', './assets/orangeScore.png');
+    this.load.image('purpleScore', './assets/purpleScore.png');
+    this.load.image('blueScore', './assets/blueScore.png');
     this.load.atlas(
       `redJelly's`,
       `./assets/redJelly's.png`,
@@ -179,12 +185,12 @@ export default class PreloadScene extends Phaser.Scene {
     console.log(`Loading: ${Math.round(value * 100)}%`);
 
     this.preloader.clear();
-    this.preloader.fillStyle(0xff0000, 1);
+    this.preloader.fillStyle(0xeb8766, 1);
     this.preloader.fillRect(
       this.game.config.width / 2 - 150,
-      this.game.config.height / 2,
+      this.game.config.height / 2 - 20,
       (this.game.config.width / 2) * value,
-      8
+      20
     );
   }
 

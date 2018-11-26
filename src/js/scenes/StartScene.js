@@ -10,7 +10,7 @@ export default class StartScene extends Phaser.Scene {
   preload() {}
 
   create() {
-    this.add.image(318, 382, `bg`);
+    this.add.image(317.6, 382, `bg`).setScale(1.005);
     this.play = this.add.sprite(311, 664, `play`).setInteractive();
     this.play.on('pointerdown', () => this.play.setScale(1.03));
     this.play.on('pointerup', () => {

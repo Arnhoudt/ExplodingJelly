@@ -36,6 +36,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update() {
+    this.jellyManager.update();
     this.i = 0;
     this.playerManager.playerScores.forEach(score => {
       this.playerManager.players[this.i].score = 0;
@@ -52,8 +53,6 @@ export default class GameScene extends Phaser.Scene {
       score.setText(`${this.playerManager.players[this.i].score}`);
       this.i ++;
     });
-
-    this.jellyManager.update();
   }
 
   destroyTripleJellys(grow) {
