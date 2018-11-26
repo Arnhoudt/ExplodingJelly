@@ -5,10 +5,10 @@ export default class WinScene extends Phaser.Scene {
     super({
       key: `win`
     });
-    this.enabled = true;
   }
 
   init(data) {
+    this.enabled = true;
     this.players = data.players;
     this.color = data.winner;
     this.index = 0;
