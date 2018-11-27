@@ -59,11 +59,11 @@ export default class PlayerManager {
           {
             prefix: `${player.color}Jelly`,
             start: 0,
-            end: 88,
+            end: 89,
             suffix: `.png`
           }
         ),
-        frameRate: 18 + index,
+        frameRate: 20 + index,
         repeat: - 1
       });
       this.gameScene.add

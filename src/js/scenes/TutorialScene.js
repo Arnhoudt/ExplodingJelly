@@ -15,8 +15,8 @@ export default class TutorialScene extends Phaser.Scene {
     this.fontSizeText = 20;
 
     this.fontSizenote = 14;
-    this.textColorOrange = '#ff5000';
-    this.defaultFontFamily = 'Georgia';
+    this.textColorOrange = 'white';
+    this.defaultFontFamily = 'Ubuntu';
     this.fontWeightTitle = 'bold';
     this.fontWeightText = 'bold';
     this.fontWeightnote = 'bold';
@@ -37,13 +37,17 @@ export default class TutorialScene extends Phaser.Scene {
 
   create() {
     this.tutorialSceneNr = 1;
-    this.input.on('pointerdown', function () {
-      if (this.waitForClickAble === true) {
-        this.tutorialSceneNr ++;
-        this.waitForClickAble = false;
-        this.destroyAssets(this.assets);
-      }
-    }, this);
+    this.input.on(
+      'pointerdown',
+      function() {
+        if (this.waitForClickAble === true) {
+          this.tutorialSceneNr ++;
+          this.waitForClickAble = false;
+          this.destroyAssets(this.assets);
+        }
+      },
+      this
+    );
     this.add.image(
       this.sys.game.config.width / 2 + 9,
       this.sys.game.config.height - 181,
@@ -287,7 +291,7 @@ export default class TutorialScene extends Phaser.Scene {
     });
     spotlight.setScale(radius / 1000);
     const shadow = this.add.image(0, 0, 'shadow');
-    shadow.setScale(20);
+    shadow.setScale(2);
     shadow.mask = new Phaser.Display.Masks.BitmapMask(this, spotlight);
     shadow.mask.invertAlpha = true;
     return [spotlight, shadow];
@@ -753,17 +757,12 @@ export default class TutorialScene extends Phaser.Scene {
       )
     );
     this.assets.push(
-      this.add.text(
-        400,
-        770,
-        'click to continue >',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
+      this.add.text(400, 770, 'click to continue >', {
+        fontSize: this.fontSizeText,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightText
+      })
     );
     this.boardActive = false;
     this.tutorialSceneNr = 14;
@@ -798,24 +797,17 @@ export default class TutorialScene extends Phaser.Scene {
       )
     );
     this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'to a size of 2 before exploding.',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
+      this.add.text(this.marginLeft, 150, 'to a size of 2 before exploding.', {
+        fontSize: this.fontSizeText,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightText
+      })
     );
     this.assets.push(
-      this.add.image(
-        this.sys.game.config.width / 2 + 9,
-        300,
-        `growMechanic2`
-      ).setScale(0.7)
+      this.add
+        .image(this.sys.game.config.width / 2 + 9, 300, `growMechanic2`)
+        .setScale(0.7)
     );
     this.assets.push(
       this.add.text(
@@ -844,25 +836,22 @@ export default class TutorialScene extends Phaser.Scene {
       )
     );
     this.assets.push(
-      this.add.image(
-        this.sys.game.config.width / 2 + 9,
-        this.sys.game.config.height - 210,
-        `growMechanic3`
-      ).setScale(0.7)
+      this.add
+        .image(
+          this.sys.game.config.width / 2 + 9,
+          this.sys.game.config.height - 210,
+          `growMechanic3`
+        )
+        .setScale(0.7)
     );
 
     this.assets.push(
-      this.add.text(
-        400,
-        770,
-        'click to continue >',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
+      this.add.text(400, 770, 'click to continue >', {
+        fontSize: this.fontSizeText,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightText
+      })
     );
     this.boardActive = false;
     this.tutorialSceneNr = 16;
@@ -943,9 +932,7 @@ export default class TutorialScene extends Phaser.Scene {
     this.tutorialSceneNr = 18;
   }
   tutorialWaitForExplodeSide() {
-    if (
-      this.jellyManager.isThereAJellyAt(1, 0) !== true
-    ) {
+    if (this.jellyManager.isThereAJellyAt(1, 0) !== true) {
       this.destroyAssets(this.assets);
       this.tutorialSceneNr = 19;
     }
@@ -991,7 +978,6 @@ export default class TutorialScene extends Phaser.Scene {
     this.jellyManager.addJelly(6, 2, 100 + 6 * 60, 335 + 2 * 60, this.player);
     this.jellyManager.growJellyToSize(6, 2, this.player, 2);
     this.jellyManager.addJelly(7, 2, 100 + 7 * 60, 335 + 2 * 60, this.player);
-
 
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')

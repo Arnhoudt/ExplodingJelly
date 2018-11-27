@@ -17,6 +17,7 @@ export default class GameScene extends Phaser.Scene {
     this.pushed = 0;
     this.enabled = true;
     this.muteVolume = false;
+    this.enablePlayer = false;
   }
 
   preload() {}
@@ -36,24 +37,26 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update() {
+    this.jellyManager.update();
     this.i = 0;
     this.playerManager.playerScores.forEach(score => {
-      this.playerManager.players[this.i].score = 0;
-      this.jellyManager.jellys.forEach(jellys => {
-        jellys.forEach(jelly => {
-          if (
-            jelly &&
-            jelly.color === this.playerManager.players[this.i].color
-          ) {
-            this.playerManager.players[this.i].score += jelly.grow;
-          }
+      if (this.playerManager.players[this.i]) {
+        this.playerManager.players[this.i].score = 0;
+        this.jellyManager.jellys.forEach(jellys => {
+          jellys.forEach(jelly => {
+            if (
+              jelly &&
+              jelly.color === this.playerManager.players[this.i].color
+            ) {
+              this.playerManager.players[this.i].score += jelly.grow;
+              this.playerManager.players[this.i].enablePlayer = true;
+            }
+          });
         });
-      });
-      score.setText(`${this.playerManager.players[this.i].score}`);
+        score.setText(`${this.playerManager.players[this.i].score}`);
+      }
       this.i ++;
     });
-
-    this.jellyManager.update();
   }
 
   destroyTripleJellys(grow) {

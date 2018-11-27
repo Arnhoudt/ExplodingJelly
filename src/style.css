@@ -21,9 +21,9 @@ html {
 
 body {
   height: 100%;
-  width: 100%;
+  width: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: linear-gradient(160deg, #eb8766, #f4d566);
 }

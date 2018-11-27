@@ -4,7 +4,7 @@
 			"image": "orangeJelly&#39;s.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1864,
+				"w": 3969,
 				"h": 1536
 			},
 			"scale": 1,
@@ -94,7 +94,7 @@
 					}
 				},
 				{
-					"filename": "orangeJelly59.png",
+					"filename": "orangeJelly31.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -115,7 +115,7 @@
 					}
 				},
 				{
-					"filename": "orangeJelly61.png",
+					"filename": "orangeJelly59.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -131,6 +131,69 @@
 					"frame": {
 						"x": 1,
 						"y": 1281,
+						"w": 267,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly60.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 267,
+						"h": 254
+					},
+					"frame": {
+						"x": 270,
+						"y": 1,
+						"w": 267,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly61.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 267,
+						"h": 254
+					},
+					"frame": {
+						"x": 270,
+						"y": 257,
+						"w": 267,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly89.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 267,
+						"h": 254
+					},
+					"frame": {
+						"x": 270,
+						"y": 513,
 						"w": 267,
 						"h": 254
 					}
@@ -151,7 +214,70 @@
 					},
 					"frame": {
 						"x": 270,
-						"y": 1,
+						"y": 769,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 270,
+						"y": 1025,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 270,
+						"y": 1281,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 537,
+						"y": 769,
 						"w": 265,
 						"h": 254
 					}
@@ -171,7 +297,70 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 270,
+						"x": 537,
+						"y": 1025,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly26.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 537,
+						"y": 1281,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly27.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 539,
+						"y": 1,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly28.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 539,
 						"y": 257,
 						"w": 265,
 						"h": 254
@@ -192,8 +381,92 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 270,
+						"x": 539,
 						"y": 513,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly33.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 804,
+						"y": 769,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly34.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 804,
+						"y": 1025,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly35.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 804,
+						"y": 1281,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly55.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 806,
+						"y": 1,
 						"w": 265,
 						"h": 254
 					}
@@ -213,8 +486,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 270,
-						"y": 769,
+						"x": 806,
+						"y": 257,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly57.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 806,
+						"y": 513,
 						"w": 265,
 						"h": 254
 					}
@@ -234,8 +528,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 270,
-						"y": 1025,
+						"x": 1071,
+						"y": 769,
 						"w": 265,
 						"h": 254
 					}
@@ -255,8 +549,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 270,
-						"y": 1281,
+						"x": 1071,
+						"y": 1025,
 						"w": 265,
 						"h": 254
 					}
@@ -276,8 +570,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 537,
-						"y": 1,
+						"x": 1071,
+						"y": 1281,
 						"w": 265,
 						"h": 254
 					}
@@ -297,8 +591,92 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 804,
+						"x": 1073,
 						"y": 1,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly65.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 1073,
+						"y": 257,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly85.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 1073,
+						"y": 513,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly86.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 1338,
+						"y": 769,
+						"w": 265,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly87.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 26,
+						"w": 265,
+						"h": 254
+					},
+					"frame": {
+						"x": 1338,
+						"y": 1025,
 						"w": 265,
 						"h": 254
 					}
@@ -318,8 +696,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1071,
-						"y": 1,
+						"x": 1338,
+						"y": 1281,
 						"w": 265,
 						"h": 254
 					}
@@ -339,30 +717,9 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1338,
+						"x": 1340,
 						"y": 1,
 						"w": 264,
-						"h": 254
-					}
-				},
-				{
-					"filename": "orangeJelly12.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 300,
-						"h": 300
-					},
-					"spriteSourceSize": {
-						"x": 20,
-						"y": 26,
-						"w": 259,
-						"h": 254
-					},
-					"frame": {
-						"x": 1604,
-						"y": 1,
-						"w": 259,
 						"h": 254
 					}
 				},
@@ -381,7 +738,7 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 537,
+						"x": 1340,
 						"y": 257,
 						"w": 264,
 						"h": 254
@@ -402,7 +759,7 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 537,
+						"x": 1340,
 						"y": 513,
 						"w": 264,
 						"h": 254
@@ -423,7 +780,7 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 537,
+						"x": 1605,
 						"y": 769,
 						"w": 264,
 						"h": 254
@@ -444,7 +801,7 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 537,
+						"x": 1605,
 						"y": 1025,
 						"w": 264,
 						"h": 254
@@ -465,7 +822,7 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 537,
+						"x": 1605,
 						"y": 1281,
 						"w": 264,
 						"h": 254
@@ -486,7 +843,28 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 803,
+						"x": 1606,
+						"y": 1,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly08.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 1606,
 						"y": 257,
 						"w": 262,
 						"h": 254
@@ -507,8 +885,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1067,
-						"y": 257,
+						"x": 1606,
+						"y": 513,
 						"w": 262,
 						"h": 254
 					}
@@ -528,8 +906,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1331,
-						"y": 257,
+						"x": 1870,
+						"y": 1,
 						"w": 262,
 						"h": 254
 					}
@@ -549,8 +927,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1595,
+						"x": 1870,
 						"y": 257,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 1870,
+						"y": 513,
 						"w": 262,
 						"h": 254
 					}
@@ -570,8 +969,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 803,
-						"y": 513,
+						"x": 1871,
+						"y": 769,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 1871,
+						"y": 1025,
 						"w": 262,
 						"h": 254
 					}
@@ -591,8 +1011,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 803,
-						"y": 769,
+						"x": 1871,
+						"y": 1281,
 						"w": 262,
 						"h": 254
 					}
@@ -612,8 +1032,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 803,
-						"y": 1025,
+						"x": 2134,
+						"y": 1,
 						"w": 262,
 						"h": 254
 					}
@@ -633,8 +1053,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 803,
-						"y": 1281,
+						"x": 2134,
+						"y": 257,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly40.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2134,
+						"y": 513,
 						"w": 262,
 						"h": 254
 					}
@@ -654,8 +1095,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1067,
-						"y": 513,
+						"x": 2135,
+						"y": 769,
 						"w": 262,
 						"h": 254
 					}
@@ -675,8 +1116,71 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1331,
-						"y": 513,
+						"x": 2135,
+						"y": 1025,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly52.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2135,
+						"y": 1281,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly53.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2398,
+						"y": 1,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly67.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2398,
+						"y": 257,
 						"w": 262,
 						"h": 254
 					}
@@ -696,8 +1200,113 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1595,
+						"x": 2398,
 						"y": 513,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly69.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2399,
+						"y": 769,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly70.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2399,
+						"y": 1025,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly80.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2399,
+						"y": 1281,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly81.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2662,
+						"y": 1,
+						"w": 262,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly82.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 19,
+						"y": 26,
+						"w": 262,
+						"h": 254
+					},
+					"frame": {
+						"x": 2662,
+						"y": 257,
 						"w": 262,
 						"h": 254
 					}
@@ -717,8 +1326,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1067,
-						"y": 769,
+						"x": 2662,
+						"y": 513,
 						"w": 262,
 						"h": 254
 					}
@@ -738,8 +1347,8 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1067,
-						"y": 1025,
+						"x": 2663,
+						"y": 769,
 						"w": 261,
 						"h": 254
 					}
@@ -759,8 +1368,71 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1067,
+						"x": 2663,
+						"y": 1025,
+						"w": 261,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly41.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 261,
+						"h": 254
+					},
+					"frame": {
+						"x": 2663,
 						"y": 1281,
+						"w": 261,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly49.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 261,
+						"h": 254
+					},
+					"frame": {
+						"x": 2926,
+						"y": 1,
+						"w": 261,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly71.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 261,
+						"h": 254
+					},
+					"frame": {
+						"x": 3189,
+						"y": 1,
 						"w": 261,
 						"h": 254
 					}
@@ -780,9 +1452,30 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1330,
-						"y": 1025,
+						"x": 3452,
+						"y": 1,
 						"w": 261,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 2926,
+						"y": 257,
+						"w": 259,
 						"h": 254
 					}
 				},
@@ -801,8 +1494,218 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1331,
+						"x": 3187,
+						"y": 257,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3448,
+						"y": 257,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly76.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3448,
+						"y": 257,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3709,
+						"y": 257,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 2926,
+						"y": 513,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 2926,
 						"y": 769,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 2926,
+						"y": 1025,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly42.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 2926,
+						"y": 1281,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly43.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3187,
+						"y": 513,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly44.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3448,
+						"y": 513,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly45.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3709,
+						"y": 513,
 						"w": 259,
 						"h": 254
 					}
@@ -822,8 +1725,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1592,
+						"x": 3187,
 						"y": 769,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly47.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3187,
+						"y": 1025,
 						"w": 259,
 						"h": 254
 					}
@@ -843,8 +1767,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1330,
+						"x": 3187,
 						"y": 1281,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly72.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3448,
+						"y": 769,
 						"w": 259,
 						"h": 254
 					}
@@ -864,8 +1809,29 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1591,
-						"y": 1281,
+						"x": 3709,
+						"y": 769,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly74.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3448,
+						"y": 1025,
 						"w": 259,
 						"h": 254
 					}
@@ -885,8 +1851,50 @@
 						"h": 254
 					},
 					"frame": {
-						"x": 1593,
+						"x": 3448,
+						"y": 1281,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly77.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3709,
 						"y": 1025,
+						"w": 259,
+						"h": 254
+					}
+				},
+				{
+					"filename": "orangeJelly78.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 300,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 26,
+						"w": 259,
+						"h": 254
+					},
+					"frame": {
+						"x": 3709,
+						"y": 1281,
 						"w": 259,
 						"h": 254
 					}
@@ -897,6 +1905,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:735769640368dfded803a7cef1af173e:dbf3b75560921e6407477c8ffef40590:abf06ecf15180c743d3c0f3e872b3c8d$"
+		"smartupdate": "$TexturePacker:SmartUpdate:c4d4e60a47d82a9879c652a31fe0f12f:529ee9d64c1a3e1ba35fdd03128174ce:abf06ecf15180c743d3c0f3e872b3c8d$"
 	}
 }
