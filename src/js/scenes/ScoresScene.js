@@ -21,51 +21,21 @@ export default class ScoresScene extends Phaser.Scene {
         const height = 90 * index;
         this.add.image(310, 637 - height, `${score.winner_color}Score`);
         if (score.name1 !== 'undefined') {
-          this.addPlayerScore(
-            score.name1,
-            score.color1,
-            placex,
-            placex2,
-            i,
-            height
-          );
+          this.addPlayerScore(score.name1, `white`, placex, placex2, i, height);
           i ++;
         }
         if (score.name2 !== 'undefined') {
-          this.addPlayerScore(
-            score.name2,
-            score.color2,
-            placex,
-            placex2,
-            i,
-            height
-          );
+          this.addPlayerScore(score.name2, `white`, placex, placex2, i, height);
           i ++;
         }
         if (score.name3 !== 'undefined') {
-          this.addPlayerScore(
-            score.name3,
-            score.color3,
-            placex,
-            placex2,
-            i,
-            height
-          );
+          this.addPlayerScore(score.name3, `white`, placex, placex2, i, height);
           i ++;
         }
-        this.particles = this.add.particles(`star`);
-        this.particles.createEmitter({
-          x: placex + i * placex2,
-          y: 620 - height,
-          angle: {min: - 190, max: 10},
-          speed: 50,
-          lifespan: 800,
-          quantity: 1,
-          scale: {start: 0.1, end: 0.3}
-        });
+        this.add.image(placex + i * placex2, 605 - height, `kroontje`);
         this.addPlayerScore(
           score.winner_name,
-          score.winner_color,
+          `gold`,
           placex,
           placex2,
           i,

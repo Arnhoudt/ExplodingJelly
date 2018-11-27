@@ -123,7 +123,7 @@ export default class ChooseScene extends Phaser.Scene {
           textEntry.text = textEntry.text.substr(0, textEntry.text.length - 1);
       } else if (
         event.keyCode === 32 ||
-        (event.keyCode >= 48 && event.keyCode < 90)
+        (event.keyCode >= 48 && event.keyCode <= 90)
       ) {
         if (textEntry.text.length < 10) textEntry.text += event.key;
       }
