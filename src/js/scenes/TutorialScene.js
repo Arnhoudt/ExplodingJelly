@@ -703,7 +703,7 @@ export default class TutorialScene extends Phaser.Scene {
   tutorialGrowMechanics1() {
     console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
-    this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
+    //this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')
     );
@@ -872,7 +872,7 @@ export default class TutorialScene extends Phaser.Scene {
   tutorialExplodeSide() {
     console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
-    this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
+    //this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')
     );
@@ -956,11 +956,41 @@ export default class TutorialScene extends Phaser.Scene {
     console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     this.player = this.playerManager.getPlayerByName('player');
-    this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
+    // this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
+    this.jellyManager.growJellyToSize(6, 6, this.computer, 2);
+    // this.jellyManager.addJelly(6, 5, 100 + 6 * 60, 335 + 5 * 60, this.computer);
+    this.jellyManager.growJellyToSize(6, 5, this.computer, 2);
+
+    this.jellyManager.addJelly(6, 7, 100 + 6 * 60, 335 + 7 * 60, this.computer);
+    this.jellyManager.growJellyToSize(6, 7, this.computer, 2);
+
+    this.jellyManager.addJelly(5, 6, 100 + 5 * 60, 335 + 6 * 60, this.computer);
+    this.jellyManager.growJellyToSize(5, 6, this.computer, 2);
+
     this.jellyManager.growJellyToSize(2, 1, this.player, 1);
-    this.jellyManager.growJellyToSize(1, 1, this.player, 1);
-    //this.jellyManager.growJellyToSize(1, 2, this.player, 2);
-    //this.jellyManager.growJellyToSize(0, 1, this.player, 2);
+    this.jellyManager.addJelly(2, 2, 100 + 2 * 60, 335 + 2 * 60, this.player);
+    this.jellyManager.growJellyToSize(2, 2, this.player, 2);
+    this.jellyManager.addJelly(2, 3, 100 + 2 * 60, 335 + 3 * 60, this.player);
+    this.jellyManager.growJellyToSize(2, 3, this.player, 2);
+    this.jellyManager.addJelly(2, 4, 100 + 2 * 60, 335 + 4 * 60, this.player);
+    this.jellyManager.growJellyToSize(2, 4, this.player, 2);
+    this.jellyManager.addJelly(2, 5, 100 + 2 * 60, 335 + 5 * 60, this.player);
+    this.jellyManager.growJellyToSize(2, 5, this.player, 2);
+    this.jellyManager.addJelly(3, 2, 100 + 3 * 60, 335 + 2 * 60, this.player);
+    this.jellyManager.growJellyToSize(3, 2, this.player, 2);
+    this.jellyManager.addJelly(3, 3, 100 + 3 * 60, 335 + 3 * 60, this.player);
+    this.jellyManager.growJellyToSize(3, 3, this.player, 2);
+    this.jellyManager.addJelly(3, 4, 100 + 3 * 60, 335 + 4 * 60, this.player);
+    this.jellyManager.growJellyToSize(3, 4, this.player, 2);
+    this.jellyManager.addJelly(3, 5, 100 + 3 * 60, 335 + 5 * 60, this.player);
+    this.jellyManager.growJellyToSize(3, 5, this.player, 2);
+    this.jellyManager.addJelly(4, 2, 100 + 4 * 60, 335 + 2 * 60, this.player);
+    this.jellyManager.growJellyToSize(4, 2, this.player, 2);
+    this.jellyManager.addJelly(5, 2, 100 + 5 * 60, 335 + 2 * 60, this.player);
+    this.jellyManager.growJellyToSize(5, 2, this.player, 2);
+    this.jellyManager.addJelly(6, 2, 100 + 6 * 60, 335 + 2 * 60, this.player);
+    this.jellyManager.growJellyToSize(6, 2, this.player, 2);
+    this.jellyManager.addJelly(7, 2, 100 + 7 * 60, 335 + 2 * 60, this.player);
 
 
     this.playerManager.forcePlayerToBeActive(
@@ -1030,16 +1060,22 @@ export default class TutorialScene extends Phaser.Scene {
         }
       )
     );
-    this.assets.push((this.highlight = this.add.image(158, 335, 'highlight')));
+    this.assets.push((this.highlight = this.add.image(218, 395, 'highlight')));
     this.highlight.setScale(0.65);
-    this.forceSquare = [1, 0];
+    this.forceSquare = [2, 1];
     this.boardActive = true;
     this.tutorialSceneNr = 20;
   }
   tutorialWaitForChaining() {
+    if (this.jellyManager.isThereAJellyAt(2, 1) === false) {
+      this.destroyAssets(this.assets);
+      this.tutorialSceneNr = 21;
+    }
   }
 
   //scene 11
-  tutorialTimeToWin() {}
+  tutorialTimeToWin() {
+    console.log('in here');
+  }
   tutorialWaitForTimeToWin() {}
 }
