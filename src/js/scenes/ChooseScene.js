@@ -131,31 +131,22 @@ export default class ChooseScene extends Phaser.Scene {
   }
 
   startGame() {
-    if (this.textEntryRed !== undefined && this.textEntryRed.text.length >= 1) {
+    if (this.textEntryRed !== undefined) {
       this.textEntrys.push(this.textEntryRed);
       this.textEntryRed.destroy();
       this.textEntryRed = undefined;
     }
-    if (
-      this.textEntryOrange !== undefined &&
-      this.textEntryOrange.text.length >= 1
-    ) {
+    if (this.textEntryOrange !== undefined) {
       this.textEntrys.push(this.textEntryOrange);
       this.textEntryOrange.destroy();
       this.textEntryOrange = undefined;
     }
-    if (
-      this.textEntryPurple !== undefined &&
-      this.textEntryPurple.text.length >= 1
-    ) {
+    if (this.textEntryPurple !== undefined) {
       this.textEntrys.push(this.textEntryPurple);
       this.textEntryPurple.destroy();
       this.textEntryPurple = undefined;
     }
-    if (
-      this.textEntryBlue !== undefined &&
-      this.textEntryBlue.text.length >= 1
-    ) {
+    if (this.textEntryBlue !== undefined) {
       this.textEntrys.push(this.textEntryBlue);
       this.textEntryBlue.destroy();
       this.textEntryBlue = undefined;
@@ -173,15 +164,6 @@ export default class ChooseScene extends Phaser.Scene {
     if (this.textEntrys.length >= 2) {
       this.scene.start(`game`, this.entrys);
     } else {
-      this.warning = this.add
-        .text(310, 675, `Alle spelers hebben een naam nodig`, {
-          fontFamily: 'Ubuntu',
-          fontStyle: 'Bold',
-          fontSize: 20,
-          color: `black`
-        })
-        .setOrigin(0.5, 0);
-      this.time.delayedCall(3000, this.eraseWarning, [], this);
       this.blue.setScale(1);
       this.orange.setScale(1);
       this.purple.setScale(1);
@@ -189,10 +171,6 @@ export default class ChooseScene extends Phaser.Scene {
       this.textEntrys = [];
       this.entrys = [];
     }
-  }
-
-  eraseWarning() {
-    this.warning.destroy();
   }
 
   update() {}
