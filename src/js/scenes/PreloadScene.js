@@ -74,12 +74,12 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.image(`growMechanic2`, `./assets/growMechanic2.png`);
     this.load.image(`growMechanic3`, `./assets/growMechanic3.png`);
     this.load.image(`start`, `./assets/start.png`);
+    this.load.image(`star`, `./assets/star.png`);
     this.load.image(`back`, `./assets/back.png`);
     this.load.image(`bg_game`, `./assets/bg_game.png`);
     this.load.image(`bg_win`, `./assets/bg_win.png`);
     this.load.image(`goToStart`, `./assets/goToStart.png`);
     this.load.image(`purpleVakje`, `./assets/purpleVakje.png`);
-    this.load.image(`star`, `./assets/star.png`);
     this.load.image(`reload_game`, `./assets/reload_game.png`);
     this.load.image(`redVakje`, `./assets/redVakje.png`);
     this.load.image(`blueVakje`, `./assets/blueVakje.png`);
@@ -183,7 +183,6 @@ export default class PreloadScene extends Phaser.Scene {
 
   onProgress(value) {
     console.log(`Loading: ${Math.round(value * 100)}%`);
-
     this.preloader.clear();
     this.preloader.fillStyle(0xeb8766, 1);
     this.preloader.fillRect(
