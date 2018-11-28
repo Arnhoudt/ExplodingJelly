@@ -13,6 +13,8 @@ export default class TutorialScene extends Phaser.Scene {
     this.waitForClickAble = false;
     this.fontSizeTitle = 62;
     this.fontSizeText = 20;
+    this.enabled = true;
+
 
     this.fontSizenote = 14;
     this.textColorOrange = 'white';
@@ -53,7 +55,6 @@ export default class TutorialScene extends Phaser.Scene {
       this.sys.game.config.height - 181,
       `bg_game`
     );
-    this.scene = 0;
     this.createVakjes();
     this.shadow = this.add.graphics();
 
@@ -66,6 +67,26 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   update() {
+    this.jellyManager.update();
+    this.i = 0;
+    this.playerManager.playerScores.forEach(score => {
+      if (this.playerManager.players[this.i]) {
+        this.playerManager.players[this.i].score = 0;
+        this.jellyManager.jellys.forEach(jellys => {
+          jellys.forEach(jelly => {
+            if (
+              jelly &&
+              jelly.color === this.playerManager.players[this.i].color
+            ) {
+              this.playerManager.players[this.i].score += jelly.grow;
+              this.playerManager.players[this.i].enablePlayer = true;
+            }
+          });
+        });
+        score.setText(`${this.playerManager.players[this.i].score}`);
+      }
+      this.i ++;
+    });
     switch (this.tutorialSceneNr) {
     case 1:
       this.tutorialSceneHi();
@@ -134,13 +155,6 @@ export default class TutorialScene extends Phaser.Scene {
       this.tutorialWaitForTimeToWin();
       break;
     }
-
-    this.i = 0;
-    this.playerManager.playerScores.forEach(score => {
-      score.setText(`${this.playerManager.players[this.i].score}`);
-      this.i ++;
-    });
-    this.jellyManager.update();
   }
 
   destroyTripleJellys(grow) {
@@ -183,7 +197,6 @@ export default class TutorialScene extends Phaser.Scene {
                   this.playerManager.players,
                   id
                 );
-                this.specialAbility();
               }),
             id
           )
@@ -191,48 +204,6 @@ export default class TutorialScene extends Phaser.Scene {
         vakjeId = id;
       }
     }
-  }
-
-  specialAbility() {
-    this.playerManager.players.forEach(player => {
-      if (
-        player.score > 100 &&
-        this.pushed === 0 &&
-        this.specialButton === undefined
-      ) {
-        this.specialButton = this.add
-          .image(
-            this.sys.game.config.width / 2,
-            this.sys.game.config.height / 2 - 150,
-            `specialButton`
-          )
-          .setInteractive()
-          .on(`pointerup`, () => {
-            this.destroyTripleJellys(2);
-            this.specialButton.destroy();
-            this.specialButton = undefined;
-            this.pushed ++;
-          });
-      } else if (
-        player.score > 200 &&
-        this.pushed === 1 &&
-        this.specialButton === undefined
-      ) {
-        this.specialButton = this.add
-          .image(
-            this.sys.game.config.width / 2,
-            this.sys.game.config.height / 2 - 150,
-            `specialButton`
-          )
-          .setInteractive()
-          .on(`pointerup`, () => {
-            this.destroyTripleJellys(1);
-            this.specialButton.destroy();
-            this.specialButton = undefined;
-            this.pushed ++;
-          });
-      }
-    });
   }
 
   updateJelly(x, y, xPosition, yPosition, players, vakjeId) {
@@ -252,11 +223,12 @@ export default class TutorialScene extends Phaser.Scene {
             vakjeId
           );
       });
-      this.playerManager.updatePlayer(this.verify);
+      //this.playerManager.updatePlayer(this.verify);
     }
   }
 
   checkWon() {
+    console.log(this.jellyManager.jellys);
     this.i = 0;
     this.allTheSame = true;
     this.jellyManager.jellys.forEach(jellys => {
@@ -268,13 +240,20 @@ export default class TutorialScene extends Phaser.Scene {
             this.i ++;
           }
           if (this.i > 2) this.color2 = jelly.color;
-          if (this.color1 !== this.color2 && this.i > 2)
+          if (this.color1 !== this.color2 && this.i > 2) {
+            console.log(this.color2);
             this.allTheSame = false;
+          }
         }
       });
     });
-    if (this.allTheSame && this.i > 2)
-      this.scene.start(`win`, {color: this.color1});
+    if (this.allTheSame && this.i > 2 && this.enabled) {
+      this.scene.start(`win`, {
+        players: this.playerManager.players,
+        winner: this.color1
+      });
+      this.enabled = false;
+    }
   }
 
   makeScene() {}
@@ -419,13 +398,12 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 3
   tutorialGrowJellySize2() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     this.jellyManager.addJelly(7, 7, 100 + 7 * 60, 335 + 7 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')
     );
-    this.assets = [];
+    this.assets3 = [];
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
@@ -482,14 +460,13 @@ export default class TutorialScene extends Phaser.Scene {
       this.jellyManager.isThereAJellyAt(1, 1) &&
       this.jellyManager.sizeOfJellyAt(1, 1) === 2
     ) {
-      this.destroyAssets(this.assets);
+      this.destroyAssets(this.assets3);
       this.tutorialSceneNr = 7;
     }
   }
 
   //scene 4
   tutorialGrowJellySize3() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     this.jellyManager.addJelly(2, 1, 100 + 2 * 60, 335 + 1 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
@@ -559,7 +536,6 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 5
   tutorialExplodeJelly() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     this.jellyManager.addJelly(6, 5, 100 + 6 * 60, 335 + 5 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
@@ -621,7 +597,6 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 6
   tutorialExplainExplosion() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
@@ -705,7 +680,6 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 7
   tutorialGrowMechanics1() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     //this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
@@ -770,7 +744,6 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 8
   tutorialGrowMechanics2() {
-    console.log('not in loop');
     this.assets = [];
     const spotlight = this.setSpotlight(0, 0, 0);
     this.assets.push(spotlight[0]);
@@ -859,7 +832,6 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 9
   tutorialExplodeSide() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     //this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
@@ -940,7 +912,6 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 10
   tutorialChaining() {
-    console.log('not in loop');
     this.computer = this.playerManager.getPlayerByName('computer');
     this.player = this.playerManager.getPlayerByName('player');
     // this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
@@ -949,7 +920,7 @@ export default class TutorialScene extends Phaser.Scene {
     this.jellyManager.growJellyToSize(6, 5, this.computer, 2);
 
     this.jellyManager.addJelly(6, 7, 100 + 6 * 60, 335 + 7 * 60, this.computer);
-    this.jellyManager.growJellyToSize(6, 7, this.computer, 2);
+    this.jellyManager.growJellyToSize(6, 7, this.computer, 1);
 
     this.jellyManager.addJelly(5, 6, 100 + 5 * 60, 335 + 6 * 60, this.computer);
     this.jellyManager.growJellyToSize(5, 6, this.computer, 2);
@@ -1061,7 +1032,81 @@ export default class TutorialScene extends Phaser.Scene {
 
   //scene 11
   tutorialTimeToWin() {
-    console.log('in here');
+    this.computer = this.playerManager.getPlayerByName('computer');
+    this.jellyManager.addJelly(7, 6, 100 + 7 * 60, 335 + 6 * 60, this.player);
+    this.jellyManager.growJellyToSize(7, 6, this.player, 1);
+
+    this.assets = [];
+    const spotlight = this.setSpotlight(300, 600, 700);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.assets.push(
+      this.add.text(this.marginLeft, 20, 'It is time to win!', {
+        fontSize: this.fontSizeTitle,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: this.fontWeightTitle
+      })
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        120,
+        'You\'ve learned everything you need to know, now it is time',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        150,
+        'to win. Click on the highlighted jelly to make it explode and',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+    this.assets.push(
+      this.add.text(
+        this.marginLeft,
+        180,
+        'Take over all the blue jelly\'s',
+        {
+          fontSize: this.fontSizeText,
+          fill: this.textColorOrange,
+          fontFamily: this.defaultFontFamily,
+          fontWeight: this.fontWeightText
+        }
+      )
+    );
+
+    this.assets.push(
+      this.add.text(180, 220, 'Click on the blue square to make the jelly explode', {
+        fontSize: this.fontSizenote,
+        fill: this.textColorOrange,
+        fontFamily: this.defaultFontFamily,
+        fontWeight: 'bold'
+      })
+    );
+    this.assets.push((this.highlight = this.add.image(518, 695, 'highlight')));
+    this.highlight.setScale(0.65);
+    this.forceSquare = [7, 6];
+    this.boardActive = true;
+    this.playerManager.forcePlayerToBeActive(
+      this.playerManager.getPlayerByName('player')
+    );
+    this.tutorialSceneNr = 22;
+
   }
-  tutorialWaitForTimeToWin() {}
+  tutorialWaitForTimeToWin() {
+
+  }
 }
