@@ -145,9 +145,6 @@ export default class TutorialScene extends Phaser.Scene {
     case 21:
       this.tutorialTimeToWin();
       break;
-    case 22:
-      this.tutorialWaitForTimeToWin();
-      break;
     }
   }
 
@@ -273,27 +270,22 @@ export default class TutorialScene extends Phaser.Scene {
     }
   }
 
-  //--------------SCENES--------------//
-
-  //scene 1
-  tutorialSceneHi() {
-    this.assets = [];
-    const spotlight = this.setSpotlight(0, 0, 0);
-    this.assets.push(spotlight[0]);
-    this.assets.push(spotlight[1]);
+  tutorialTitle(title) {
     this.assets.push(
-      this.add.text(this.marginLeft, 50, 'Hey,', {
+      this.add.text(this.marginLeft, 50, title, {
         fontSize: this.fontSizeTitle,
         fill: this.textColorOrange,
         fontFamily: this.defaultFontFamily,
         fontWeight: this.fontWeightTitle
       })
     );
+  }
+  tutorialText(text, x, y) {
     this.assets.push(
       this.add.text(
-        this.marginLeft,
-        170,
-        'So... what is the point of the game?',
+        x,
+        y,
+        text,
         {
           fontSize: this.fontSizeText,
           fill: this.textColorOrange,
@@ -302,31 +294,31 @@ export default class TutorialScene extends Phaser.Scene {
         }
       )
     );
+  }
+  tutorialNote(text, x, y) {
     this.assets.push(
-      this.add.text(this.marginLeft, 200, 'You need to explode jelly\'s', {
-        fontSize: this.fontSizeText,
+      this.add.text(x, y, text, {
+        fontSize: this.fontSizenote,
         fill: this.textColorOrange,
         fontFamily: this.defaultFontFamily,
         fontWeight: 'bold'
       })
     );
-    this.assets.push(
-      this.add.text(80, 400, 'click on the jelly to', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
-    this.assets.push(
-      this.add.text(93, 430, 'make it explode', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+  }
 
+  //--------------SCENES--------------//
+
+  //scene 1
+  tutorialSceneHi() {
+    this.assets = [];
+    const spotlight = this.setSpotlight(0, 0, 0);
+    this.assets.push(spotlight[0]);
+    this.assets.push(spotlight[1]);
+    this.tutorialTitle('Hey,');
+    this.tutorialText('So... what is the point of the game?', this.marginLeft, 170);
+    this.tutorialText('You need to explode jelly\'s', this.marginLeft, 200);
+    this.tutorialText('click on the jelly to', 80, 400);
+    this.tutorialText('make it explode', 93, 430);
     this.hiJelly = this.add.image(350, 600, 'hiJelly');
     this.assets.push(this.hiJelly);
     this.hiJelly.setInteractive();
@@ -354,36 +346,9 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'Great!', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'Now it is time to place your first jelly on the board',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to place the jelly', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
-
+    this.tutorialTitle('Great!');
+    this.tutorialText('Now it is time to place your first jelly on the board', this.marginLeft, 120);
+    this.tutorialNote('Click on the blue square to place the jelly', 180, 220);
     this.assets.push((this.highlight = this.add.image(158, 395, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 1];
@@ -409,48 +374,10 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'You got it!', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'Your opponent has placed his jelly in the corner. Don\' worry',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'about him, grow your jelly by clicking on the jelly again.',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to grow the jelly', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+    this.tutorialTitle('You got it!');
+    this.tutorialText('Your opponent has placed his jelly in the corner. Don\' worry', this.marginLeft, 120);
+    this.tutorialText('about him, grow your jelly by clicking on the jelly again.', this.marginLeft, 150);
+    this.tutorialNote('Click on the blue square to grow the jelly', 180, 220);
     this.assets.push((this.highlight = this.add.image(158, 395, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 1];
@@ -479,48 +406,10 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'What???', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'Your opponent placed a jelly next to yours!',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'We need to grow our jelly once more to be able to explode',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to grow the jelly', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+    this.tutorialTitle('What???');
+    this.tutorialText('Your opponent placed a jelly next to yours!', this.marginLeft, 120);
+    this.tutorialText('We need to grow our jelly once more to be able to explode', this.marginLeft, 150);
+    this.tutorialNote('Click on the blue square to grow the jelly', 180, 220);
     this.assets.push((this.highlight = this.add.image(158, 395, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 1];
@@ -549,43 +438,10 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'Make it explode!', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'Your jelly is big enough to explode, tap on the jelly and',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(this.marginLeft, 150, 'watch what happens', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
-    );
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to explode the jelly', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+    this.tutorialTitle('Make it explode!');
+    this.tutorialText('Your jelly is big enough to explode, tap on the jelly and', this.marginLeft, 120);
+    this.tutorialText('watch what happens', this.marginLeft, 150);
+    this.tutorialNote('Click on the blue square to explode the jelly', 180, 220);
     this.assets.push((this.highlight = this.add.image(158, 395, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 1];
@@ -611,62 +467,10 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'You\'re amazing!', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'You took one of your opponents jelly\'s. When a jelly',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'explodes it explodes to the adjacent squares.',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        180,
-        'Click on the jelly at the top to enlarge it',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to enlarge the jelly', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+    this.tutorialTitle('You\'re amazing!');
+    this.tutorialText('You took one of your opponents jelly\'s. When a jelly', this.marginLeft, 120);
+    this.tutorialText('explodes it explodes to the adjacent squares.', this.marginLeft, 150);
+    this.tutorialNote('Click on the blue square to enlarge the jelly', 180, 220);
     this.assets.push((this.highlight = this.add.image(158, 335, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 0];
@@ -694,40 +498,9 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(0, 0, 0);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'Grow mechanics', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'If your jelly is on a square with 4 adjacent squares,',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'the jelly can grow to a size of 3 before exploding',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
+    this.tutorialTitle('Grow mechanics');
+    this.tutorialText('If your jelly is on a square with 4 adjacent squares,', this.marginLeft, 120);
+    this.tutorialText('the jelly can grow to a size of 3 before exploding', this.marginLeft, 150);
     this.assets.push(
       this.add.image(
         this.sys.game.config.width / 2 + 9,
@@ -735,14 +508,7 @@ export default class TutorialScene extends Phaser.Scene {
         `growMechanic1`
       )
     );
-    this.assets.push(
-      this.add.text(400, 770, 'click to continue >', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
-    );
+    this.tutorialText('click to continue >', 400, 770);
     this.boardActive = false;
     this.tutorialSceneNr = 14;
   }
@@ -753,66 +519,16 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(0, 0, 0);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'euh this is boring...', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'If the square has only 3 adjacent squares it can grow',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(this.marginLeft, 150, 'to a size of 2 before exploding.', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
-    );
+    this.tutorialTitle('euh this is boring...');
+    this.tutorialText('If the square has only 3 adjacent squares it can grow', this.marginLeft, 120);
+    this.tutorialText('to a size of 2 before exploding.', this.marginLeft, 150);
     this.assets.push(
       this.add
         .image(this.sys.game.config.width / 2 + 9, 300, `growMechanic2`)
         .setScale(0.7)
     );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        440,
-        'If it is in a corner where there are',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        470,
-        'only 2 adjacent squares it can\'t grow.',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
+    this.tutorialText('If it is in a corner where there are', this.marginLeft, 440);
+    this.tutorialText('only 2 adjacent squares it can\'t grow.', this.marginLeft, 470);
     this.assets.push(
       this.add
         .image(
@@ -822,15 +538,7 @@ export default class TutorialScene extends Phaser.Scene {
         )
         .setScale(0.7)
     );
-
-    this.assets.push(
-      this.add.text(400, 770, 'click to continue >', {
-        fontSize: this.fontSizeText,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightText
-      })
-    );
+    this.tutorialText('click to continue >', 400, 770);
     this.boardActive = false;
     this.tutorialSceneNr = 16;
   }
@@ -845,62 +553,11 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'More explosions!', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'The jelly in the blue square has only 3 adjacent squares,',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'this means you can already explode it!',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        180,
-        'Click on the jelly to make it explode',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to enlarge the jelly', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+    this.tutorialTitle('More explosions!');
+    this.tutorialText('The jelly in the blue square has only 3 adjacent squares,', this.marginLeft, 120);
+    this.tutorialText('this means you can already explode it!', this.marginLeft, 150);
+    this.tutorialText('Click on the jelly to make it explode', this.marginLeft, 180);
+    this.tutorialNote('Click on the blue square to enlarge the jelly', 180, 220);
     this.assets.push((this.highlight = this.add.image(158, 335, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [1, 0];
@@ -960,66 +617,11 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'Chaining', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'So... What happens if you explode a jelly onto an other',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'jelly? It also explodes making a very big explosion!',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        180,
-        'I gave you some extra jelly\'s to make the explosion bigger.',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        210,
-        'Click on the highlighted jelly and enjoy the explosion',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
+    this.tutorialTitle('Chaining');
+    this.tutorialText('So... What happens if you explode a jelly onto an other', this.marginLeft, 120);
+    this.tutorialText('jelly? It also explodes making a very big explosion!', this.marginLeft, 150);
+    this.tutorialText('I gave you some extra jelly\'s to make the explosion bigger.', this.marginLeft, 180);
+    this.tutorialNote('Click on the highlighted jelly and enjoy the explosion', 130, 220);
     this.assets.push((this.highlight = this.add.image(218, 395, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [2, 1];
@@ -1044,62 +646,11 @@ export default class TutorialScene extends Phaser.Scene {
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
-    this.assets.push(
-      this.add.text(this.marginLeft, 20, 'It is time to win!', {
-        fontSize: this.fontSizeTitle,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: this.fontWeightTitle
-      })
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        120,
-        'You\'ve learned everything you need to know, now it is time',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        150,
-        'to win. Click on the highlighted jelly to make it explode and',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-    this.assets.push(
-      this.add.text(
-        this.marginLeft,
-        180,
-        'Take over all the blue jelly\'s',
-        {
-          fontSize: this.fontSizeText,
-          fill: this.textColorOrange,
-          fontFamily: this.defaultFontFamily,
-          fontWeight: this.fontWeightText
-        }
-      )
-    );
-
-    this.assets.push(
-      this.add.text(180, 220, 'Click on the blue square to make the jelly explode', {
-        fontSize: this.fontSizenote,
-        fill: this.textColorOrange,
-        fontFamily: this.defaultFontFamily,
-        fontWeight: 'bold'
-      })
-    );
+    this.tutorialTitle('It is time to win!');
+    this.tutorialText('You\'ve learned everything you need to know, now it is time', this.marginLeft, 120);
+    this.tutorialText('to win. Click on the highlighted jelly to make it explode and', this.marginLeft, 150);
+    this.tutorialText('Take over all the blue jelly\'s', this.marginLeft, 180);
+    this.tutorialNote('Click on the blue square to make the jelly explode', 150, 220);
     this.assets.push((this.highlight = this.add.image(518, 695, 'highlight')));
     this.highlight.setScale(0.65);
     this.forceSquare = [7, 6];
@@ -1108,9 +659,6 @@ export default class TutorialScene extends Phaser.Scene {
       this.playerManager.getPlayerByName('player')
     );
     this.tutorialSceneNr = 22;
-
-  }
-  tutorialWaitForTimeToWin() {
 
   }
 }

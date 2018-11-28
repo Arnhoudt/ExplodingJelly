@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d1012e-354d-41ed-8ef9-47e39e21753e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" afterPath="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="TutorialScene.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="1101" column="6" lean-forward="true" selection-start-line="1101" selection-start-column="6" selection-end-line="1101" selection-end-column="6" />
+            <state relative-caret-position="404">
+              <caret line="660" column="30" lean-forward="true" selection-start-line="660" selection-start-column="30" selection-end-line="660" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -113,7 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>waitForclick</find>
       <find>grow</find>
       <find>6, 2</find>
       <find>HEAD</find>
@@ -143,6 +141,7 @@
       <find>//</find>
       <find>update</find>
       <find>log</find>
+      <find>tutorialWaitfortime</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -331,12 +330,12 @@
       <workItem from="1543045719008" duration="17104000" />
       <workItem from="1543143604052" duration="5477000" />
       <workItem from="1543154323813" duration="28944000" />
-      <workItem from="1543403772062" duration="1074000" />
+      <workItem from="1543403772062" duration="3061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67368000" />
+    <option name="totallyTimeSpent" value="69355000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -545,8 +544,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="1101" column="6" lean-forward="true" selection-start-line="1101" selection-start-column="6" selection-end-line="1101" selection-end-column="6" />
+        <state relative-caret-position="404">
+          <caret line="660" column="30" lean-forward="true" selection-start-line="660" selection-start-column="30" selection-end-line="660" selection-end-column="30" />
           <folding />
         </state>
       </provider>
