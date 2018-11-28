@@ -228,7 +228,6 @@ export default class TutorialScene extends Phaser.Scene {
   }
 
   checkWon() {
-    console.log(this.jellyManager.jellys);
     this.i = 0;
     this.allTheSame = true;
     this.jellyManager.jellys.forEach(jellys => {
@@ -241,7 +240,6 @@ export default class TutorialScene extends Phaser.Scene {
           }
           if (this.i > 2) this.color2 = jelly.color;
           if (this.color1 !== this.color2 && this.i > 2) {
-            console.log(this.color2);
             this.allTheSame = false;
           }
         }
@@ -347,7 +345,7 @@ export default class TutorialScene extends Phaser.Scene {
       this.assets.push(this.add.image(410, 470, 'redJelly'));
       this.assets.push(this.add.image(280, 600, 'redJelly'));
       this.assets.push(this.add.image(540, 620, 'redJelly'));
-      this.time.delayedCall(500, this.nextScene, [], this);
+      this.time.delayedCall(100, this.nextScene, [], this);
     });
   }
 
@@ -400,7 +398,8 @@ export default class TutorialScene extends Phaser.Scene {
   }
   tutorialFirstJellyWaitForJelly() {
     if (this.jellyManager.isThereAJellyAt(1, 1)) {
-      this.destroyAssets(this.assets);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 5;
     }
   }
@@ -412,7 +411,7 @@ export default class TutorialScene extends Phaser.Scene {
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')
     );
-    this.assets3 = [];
+    this.assets = [];
     const spotlight = this.setSpotlight(300, 600, 700);
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
@@ -469,7 +468,8 @@ export default class TutorialScene extends Phaser.Scene {
       this.jellyManager.isThereAJellyAt(1, 1) &&
       this.jellyManager.sizeOfJellyAt(1, 1) === 2
     ) {
-      this.destroyAssets(this.assets3);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 7;
     }
   }
@@ -538,7 +538,8 @@ export default class TutorialScene extends Phaser.Scene {
       this.jellyManager.isThereAJellyAt(1, 1) &&
       this.jellyManager.sizeOfJellyAt(1, 1) === 3
     ) {
-      this.destroyAssets(this.assets);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 9;
     }
   }
@@ -599,7 +600,8 @@ export default class TutorialScene extends Phaser.Scene {
   }
   tutorialWaitForExplodeJelly() {
     if (this.jellyManager.isThereAJellyAt(1, 1) !== true) {
-      this.destroyAssets(this.assets);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 11;
     }
   }
@@ -682,7 +684,8 @@ export default class TutorialScene extends Phaser.Scene {
       this.jellyManager.isThereAJellyAt(1, 0) &&
       this.jellyManager.sizeOfJellyAt(1, 0) === 2
     ) {
-      this.destroyAssets(this.assets);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 13;
     }
   }
@@ -914,7 +917,8 @@ export default class TutorialScene extends Phaser.Scene {
   }
   tutorialWaitForExplodeSide() {
     if (this.jellyManager.isThereAJellyAt(1, 0) !== true) {
-      this.destroyAssets(this.assets);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 19;
     }
   }
@@ -1034,7 +1038,8 @@ export default class TutorialScene extends Phaser.Scene {
   }
   tutorialWaitForChaining() {
     if (this.jellyManager.isThereAJellyAt(2, 1) === false) {
-      this.destroyAssets(this.assets);
+      const assetsToDestroy = this.assets;
+      this.time.delayedCall(100, this.destroyAssets, [assetsToDestroy], this);
       this.tutorialSceneNr = 21;
     }
   }

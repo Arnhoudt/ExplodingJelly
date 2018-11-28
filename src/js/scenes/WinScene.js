@@ -47,13 +47,7 @@ export default class WinScene extends Phaser.Scene {
         this.player3Color,
         this.winner.name,
         this.winner.color
-      ).then(data => {
-        if (data.result === `ok`) {
-          console.log('Score is goed doorgestuurd');
-        } else {
-          console.log('Score is NIET goed doorgestuurd');
-        }
-      });
+      );
       this.enabled = false;
     }
 
