@@ -1,7 +1,7 @@
 <h1>Exploding jelly's</h1>
 <h2>Intro</h2>
 <p>
-<a>https://frederikcypers.be/game/</a>
+<a src= 'https://frederikcypers.be/game'>click here to plqy the game</a>
 </p>
 <p>Exploding jelly's is een local multiplayer spel waarbij spelers jelly's van andere spelers proberen over te nemen door hun eigen jelly's toe te voegen en te growen op een strategische manier om zo al de jelly's van de tegenstander over te nemen.</p>
 <h2>Uitleg</h2>
