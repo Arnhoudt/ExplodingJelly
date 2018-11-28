@@ -4,7 +4,6 @@
     <list default="true" id="95d1012e-354d-41ed-8ef9-47e39e21753e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" afterPath="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
-      <change beforePath="$PROJECT_DIR$/src/js/scenes/WinScene.js" afterPath="$PROJECT_DIR$/src/js/scenes/WinScene.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,21 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TutorialScene.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TutorialScene.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="293" column="24" lean-forward="true" selection-start-line="293" selection-start-column="24" selection-end-line="293" selection-end-column="24" />
+            <state relative-caret-position="239">
+              <caret line="1101" column="6" lean-forward="true" selection-start-line="1101" selection-start-column="6" selection-end-line="1101" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WinScene.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WinScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/WinScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -51,7 +50,7 @@
       <file leaf-file-name="PlayerManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/gameobjects/PlayerManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="2595">
               <caret line="173" column="57" lean-forward="false" selection-start-line="173" selection-start-column="57" selection-end-line="173" selection-end-column="57" />
               <folding />
             </state>
@@ -61,11 +60,9 @@
       <file leaf-file-name="PreloadScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/PreloadScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="390">
               <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
-              <folding>
-                <marker date="1543387247984" expanded="true" signature="7023:7434" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,7 +90,7 @@
       <file leaf-file-name="ScoresScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/ScoresScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="315">
               <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
               <folding />
             </state>
@@ -103,8 +100,8 @@
       <file leaf-file-name="GameScene.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/scenes/GameScene.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state relative-caret-position="240">
+              <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -123,14 +120,12 @@
       <find>destroy</find>
       <find>win</find>
       <find>* 60, this.computer</find>
-      <find>//</find>
       <find>checkwon</find>
       <find>check</find>
       <find>6, 6</find>
       <find>wonn</find>
       <find>this.enabled</find>
       <find>this.scene.start</find>
-      <find>update</find>
       <find>won</find>
       <find>scene.start</find>
       <find>getScore</find>
@@ -145,6 +140,8 @@
       <find>500</find>
       <find>200</find>
       <find>console</find>
+      <find>//</find>
+      <find>update</find>
       <find>log</find>
     </findStrings>
     <dirStrings>
@@ -178,8 +175,8 @@
         <option value="$PROJECT_DIR$/src/js/scenes/GameScene.js" />
         <option value="$PROJECT_DIR$/src/js/gameobjects/PlayerManager.js" />
         <option value="$PROJECT_DIR$/src/js/gameobjects/JellyManager.js" />
-        <option value="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
         <option value="$PROJECT_DIR$/src/js/scenes/WinScene.js" />
+        <option value="$PROJECT_DIR$/src/js/scenes/TutorialScene.js" />
       </list>
     </option>
   </component>
@@ -213,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,7 +280,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,12 +330,13 @@
       <workItem from="1542866713835" duration="448000" />
       <workItem from="1543045719008" duration="17104000" />
       <workItem from="1543143604052" duration="5477000" />
-      <workItem from="1543154323813" duration="28440000" />
+      <workItem from="1543154323813" duration="28944000" />
+      <workItem from="1543403772062" duration="1074000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65790000" />
+    <option name="totallyTimeSpent" value="67368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -348,7 +346,6 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24954791" sideWeight="0.5035824" order="2" side_tool="true" content_ui="tabs" />
@@ -361,6 +358,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -434,7 +432,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -442,7 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,7 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -458,7 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -466,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -474,7 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -482,7 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,10 +495,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/scenes/PreloadScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="390">
           <caret line="75" column="67" lean-forward="false" selection-start-line="75" selection-start-column="67" selection-end-line="75" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/gameobjects/PlayerManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2595">
+          <caret line="173" column="57" lean-forward="false" selection-start-line="173" selection-start-column="57" selection-end-line="173" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/scenes/ScoresScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/scenes/WinScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/scenes/GameScene.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding>
-            <marker date="1543387247984" expanded="true" signature="7023:7434" ph="{...}" />
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -520,44 +543,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/gameobjects/PlayerManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="173" column="57" lean-forward="false" selection-start-line="173" selection-start-column="57" selection-end-line="173" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/scenes/ScoresScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/scenes/GameScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/scenes/TutorialScene.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="293" column="24" lean-forward="true" selection-start-line="293" selection-start-column="24" selection-end-line="293" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/scenes/WinScene.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="47" column="25" lean-forward="true" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="239">
+          <caret line="1101" column="6" lean-forward="true" selection-start-line="1101" selection-start-column="6" selection-end-line="1101" selection-end-column="6" />
           <folding />
         </state>
       </provider>

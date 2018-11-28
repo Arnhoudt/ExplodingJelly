@@ -58,12 +58,6 @@ export default class TutorialScene extends Phaser.Scene {
     this.createVakjes();
     this.shadow = this.add.graphics();
 
-    // this.input.on('pointermove', function (pointer) {
-    //
-    //   spotlight.x = pointer.x;
-    //   spotlight.y = pointer.y;
-    //
-    // });
   }
 
   update() {
@@ -345,7 +339,7 @@ export default class TutorialScene extends Phaser.Scene {
       this.assets.push(this.add.image(410, 470, 'redJelly'));
       this.assets.push(this.add.image(280, 600, 'redJelly'));
       this.assets.push(this.add.image(540, 620, 'redJelly'));
-      this.time.delayedCall(100, this.nextScene, [], this);
+      this.time.delayedCall(500, this.nextScene, [], this);
     });
   }
 
@@ -693,7 +687,6 @@ export default class TutorialScene extends Phaser.Scene {
   //scene 7
   tutorialGrowMechanics1() {
     this.computer = this.playerManager.getPlayerByName('computer');
-    //this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')
     );
@@ -845,7 +838,6 @@ export default class TutorialScene extends Phaser.Scene {
   //scene 9
   tutorialExplodeSide() {
     this.computer = this.playerManager.getPlayerByName('computer');
-    //this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.playerManager.forcePlayerToBeActive(
       this.playerManager.getPlayerByName('player')
     );
@@ -927,9 +919,7 @@ export default class TutorialScene extends Phaser.Scene {
   tutorialChaining() {
     this.computer = this.playerManager.getPlayerByName('computer');
     this.player = this.playerManager.getPlayerByName('player');
-    // this.jellyManager.addJelly(6, 6, 100 + 6 * 60, 335 + 6 * 60, this.computer);
     this.jellyManager.growJellyToSize(6, 6, this.computer, 2);
-    // this.jellyManager.addJelly(6, 5, 100 + 6 * 60, 335 + 5 * 60, this.computer);
     this.jellyManager.growJellyToSize(6, 5, this.computer, 2);
 
     this.jellyManager.addJelly(6, 7, 100 + 6 * 60, 335 + 7 * 60, this.computer);
