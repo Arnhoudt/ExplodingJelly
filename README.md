@@ -1,8 +1,6 @@
 <h1>Exploding jelly's</h1>
 <h2>Intro</h2>
-<p>
-<a href="https://frederikcypers.be/game">click here to play the game</a>
-</p>
+<p><a href="https://frederikcypers.be/game">click here to play the game</a> (https://frederikcypers.be/game)</p>
 <p>Exploding jelly's is een local multiplayer spel waarbij spelers jelly's van andere spelers proberen over te nemen door hun eigen jelly's toe te voegen en te growen op een strategische manier om zo al de jelly's van de tegenstander over te nemen.</p>
 <h2>Uitleg</h2>
 <p>Het doel van het spel is om alle jelly's van de tegenstander over te nemen. Dit kun je doen door al de andere jelly's van de tegenstanders over te nemen. Een jelly kun je overnemen door jouw jelly te laten exploderen op de jelly van de tegenstander. Om een jelly te laten exploderen moet deze de maximale groote overschrijden. De maximale grote van een jelly alvorens deze explodeerd hangt af van de plaats op het spelbord. Om te weten wat deze maximale groote per vakje is tel je het aantal aanliggende vakjes op en doe je dit getal -1, er zijn 3 verschillende plaatsen:
