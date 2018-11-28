@@ -5,6 +5,8 @@ export default class PlayerManager {
     this.gameScene = that;
     this.players = [];
     this.playerScores = [];
+    this.playerJellys = [];
+    this.playerNames = [];
   }
   getPlayerByName(name) {
     this.players.forEach(player => {
@@ -66,7 +68,7 @@ export default class PlayerManager {
         frameRate: 20 + index,
         repeat: - 1
       });
-      this.gameScene.add
+      this.playerJellys[this.i] = this.gameScene.add
         .sprite(
           this.placex + this.i * this.placex2,
           125,
@@ -74,7 +76,7 @@ export default class PlayerManager {
         )
         .setScale(0.42)
         .play(`${player.color}Animatie`);
-      this.gameScene.add
+      this.playerNames[this.i] = this.gameScene.add
         .text(
           this.placex + this.i * this.placex2,
           185,

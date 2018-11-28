@@ -47,6 +47,7 @@ import './../../assets/orangeScore.png';
 import './../../assets/redScore.png';
 import './../../assets/purpleScore.png';
 import './../../assets/blueScore.png';
+import './../../assets/svg/kroontje.svg';
 
 export default class PreloadScene extends Phaser.Scene {
   constructor() {
@@ -179,10 +180,13 @@ export default class PreloadScene extends Phaser.Scene {
     this.load.svg(`blueJelly`, `./assets/svg/blueJelly1.svg`, {
       scale: 4
     });
+    this.load.svg(`kroontje`, `./assets/svg/kroontje.svg`, {
+      scale: 0.8
+    });
   }
 
   onProgress(value) {
-    console.log(`Loading: ${Math.round(value * 100)}%`);
+    //console.log(`Loading: ${Math.round(value * 100)}%`);
     this.preloader.clear();
     this.preloader.fillStyle(0xeb8766, 1);
     this.preloader.fillRect(

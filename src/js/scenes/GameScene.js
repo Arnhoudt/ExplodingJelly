@@ -49,11 +49,31 @@ export default class GameScene extends Phaser.Scene {
               jelly.color === this.playerManager.players[this.i].color
             ) {
               this.playerManager.players[this.i].score += jelly.grow;
-              this.playerManager.players[this.i].enablePlayer = true;
+              this.playerManager.players[this.i].playerActive = true;
             }
           });
         });
-        score.setText(`${this.playerManager.players[this.i].score}`);
+        if (this.playerManager.players[this.i].disablePlayer === false) {
+          score.setText(`${this.playerManager.players[this.i].score}`);
+        }
+      }
+      if (
+        this.playerManager.players[this.i].score < 1 &&
+        this.playerManager.players[this.i].playerActive &&
+        this.jellyManager.animationBuzy === false &&
+        this.playerManager.players[this.i].disablePlayer === false
+      ) {
+        this.playerManager.players[this.i].disablePlayer = true;
+        this.playerManager.playerScores[this.i].setText(`Lost`);
+        this.playerManager.playerScores[this.i].setColor(`grey`);
+        this.playerManager.playerJellys[this.i].setTint(0xa1a1a1);
+        this.playerManager.playerNames[this.i].setColor(`grey`);
+      }
+      if (
+        this.playerManager.players[this.i].disablePlayer &&
+        this.playerManager.players[this.i].active
+      ) {
+        this.playerManager.updatePlayer(true, this);
       }
       this.i ++;
     });

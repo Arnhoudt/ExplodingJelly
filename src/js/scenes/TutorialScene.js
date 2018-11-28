@@ -290,7 +290,7 @@ export default class TutorialScene extends Phaser.Scene {
     this.assets.push(spotlight[0]);
     this.assets.push(spotlight[1]);
     this.assets.push(
-      this.add.text(this.marginLeft, 20, 'Hey,', {
+      this.add.text(this.marginLeft, 50, 'Hey,', {
         fontSize: this.fontSizeTitle,
         fill: this.textColorOrange,
         fontFamily: this.defaultFontFamily,
@@ -300,7 +300,7 @@ export default class TutorialScene extends Phaser.Scene {
     this.assets.push(
       this.add.text(
         this.marginLeft,
-        120,
+        170,
         'So... what is the point of the game?',
         {
           fontSize: this.fontSizeText,
@@ -311,7 +311,7 @@ export default class TutorialScene extends Phaser.Scene {
       )
     );
     this.assets.push(
-      this.add.text(this.marginLeft, 150, 'You need to explode jelly\'s', {
+      this.add.text(this.marginLeft, 200, 'You need to explode jelly\'s', {
         fontSize: this.fontSizeText,
         fill: this.textColorOrange,
         fontFamily: this.defaultFontFamily,
@@ -342,9 +342,18 @@ export default class TutorialScene extends Phaser.Scene {
   }
   tutorialSceneHiWaitForClick() {
     this.hiJelly.on('pointerdown', () => {
-      this.destroyAssets(this.assets);
-      this.tutorialSceneNr = 3;
+      this.hiJelly.destroy();
+      this.assets.push(this.add.image(400, 750, 'redJelly'));
+      this.assets.push(this.add.image(410, 470, 'redJelly'));
+      this.assets.push(this.add.image(280, 600, 'redJelly'));
+      this.assets.push(this.add.image(540, 620, 'redJelly'));
+      this.time.delayedCall(500, this.nextScene, [], this);
     });
+  }
+
+  nextScene() {
+    this.destroyAssets(this.assets);
+    this.tutorialSceneNr = 3;
   }
 
   //scene 2
